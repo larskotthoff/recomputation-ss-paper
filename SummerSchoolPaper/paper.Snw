@@ -10,6 +10,7 @@ Ian P. Gent\footnote{University of St Andrews, St Andrews, Fife, UK, ian.gent@st
 
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
 
 \maketitle
