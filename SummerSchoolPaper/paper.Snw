@@ -2,13 +2,14 @@
 
 \title{An Open and Reproducible Paper on Openness and Reproducibility of Papers in Computer Science}
 \author{%%
-%% Please add your name to this paper 
-%% == 
+%% Please add your name to this paper
+%% ==
 Ian P. Gent\footnote{University of St Andrews, St Andrews, Fife, UK, ian.gent@st-andrews.ac.uk},
-Tristan Henderson, 
-Karen E. J. Petrie \footnote{University of Dundee, Dundee, UK, kpetrie@dundee.ac.uk}, 
+Tristan Henderson,
+Karen E. J. Petrie \footnote{University of Dundee, Dundee, UK, kpetrie@dundee.ac.uk},
+Benjamin M. Gorman \footnote{University of Dundee, Dundee, UK, b.gorman@dundee.ac.uk}, 
 Masih Hajiarabderkani\footnote{University of St Andrews, St Andrews, Fife, UK, mh638@st-andrews.ac.uk}
-%% == 
+%% ==
 }
 
 
@@ -36,6 +37,5 @@ So that tells us the median of the numbers above is \Sexpr{median(a)}.
 
 \section{Papers}
 
-Attendees of the summer school were asked to `bring a paper', i.e. to 
+Attendees of the summer school were asked to `bring a paper', i.e. to
 \end{document}
-
