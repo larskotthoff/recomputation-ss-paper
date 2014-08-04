@@ -1,0 +1,37 @@
+\documentclass[a4paper]{article}
+
+\title{An Open and Reproducible Paper on Openness and Reproducibility of Papers in Computer Science}
+\author{%%
+%% Please add your name to this paper 
+%% == 
+Ian P. Gent\footnote{University of St Andrews, St Andrews, Fife, UK, ian.gent@st-andrews.ac.uk}
+%% == 
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+{This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.}
+\end{abstract}
+
+
+\section{Using Sweave}
+
+This paper has an incredibly simple piece of R in it.
+Here it is.
+<<>>=
+a <- c(1,2,3)
+median(a)
+@
+So that tells us the median of the numbers above is \Sexpr{median(a)}.
+
+
+\section{Papers}
+
+Attendees of the summer school were asked to `bring a paper', i.e. to 
+\end{document}
+
