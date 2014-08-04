@@ -12,7 +12,7 @@ Daniël Reijsbergen
 Michael Bareford
 - a paper on coronal heating
 
-Ben Goreman
+Ben Gorman
 - HCI accessibility experiments might be too hard to reproduce on
   Azure
 
