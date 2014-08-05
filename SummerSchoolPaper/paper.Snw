@@ -1,9 +1,11 @@
 \documentclass[a4paper]{article}
 
 \title{An Open and Reproducible Paper on Openness and Reproducibility of Papers in Computer Science}
+%% TODO discuss alt. title: ... in Computational Science[s]?
 \author{%%
 %% Please add your name to this paper
 %% ==
+Sylwester Arabas\footnote{University of Warsaw, Warsaw, Poland, sarabas@igf.fuw.edu.pl}, %% following alph. order, but I suggest Ian to be the first author
 Michael R. Bareford\footnote{University of St Andrews, St Andrews, Fife, UK, mb236@st-andrews.ac.uk}
 Ian P. Gent\footnote{University of St Andrews, St Andrews, Fife, UK, ian.gent@st-andrews.ac.uk},
 Benjamin M. Gorman \footnote{University of Dundee, Dundee, UK, b.gorman@dundee.ac.uk}, 
