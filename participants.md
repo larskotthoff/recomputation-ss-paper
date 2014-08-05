@@ -12,7 +12,7 @@ Daniël Reijsbergen
 Michael Bareford
 - a paper on coronal heating
 
-Ben Goreman
+Ben Gorman
 - HCI accessibility experiments might be too hard to reproduce on
   Azure
 
@@ -22,10 +22,11 @@ Karen Petrie
 - a combination of HCI and AI research
 
 Sylwester Arabas
-- looking at real "clouds"! Precipitation measurements.
-- has a dataset and code for the intensity of precipitation. Monte
-  Carlo code uses GPUs and so might be vendor-specific and therefore
-  challenging to reproduce on the cloud.
+- looking at real "clouds"! Precipitation simulations.
+- open code + docs on arXiv (http://libcloudphxx.igf.fuw.edu.pl/)
+- Monte Carlo code uses GPUs (optionally, but makes it run much faster)
+  and so might be vendor-specific and therefore challenging
+  to reproduce on the cloud.
 
 Luke Hutton
 - Privacy: is there an app for that?
