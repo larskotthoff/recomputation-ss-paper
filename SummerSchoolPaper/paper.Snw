@@ -37,7 +37,8 @@ Dani\"el Reijsbergen\thanks{University of Edinburgh, Edinburgh, Scotland} %
 \maketitle
 
 \begin{abstract}
-{This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.}
+{This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.
+We report several case studies performed during the school and systematize our experiences.}
 \end{abstract}
 
 \input{intro}
@@ -59,11 +60,6 @@ a <- c(1,2,3)
 median(a)
 @
 So that tells us the median of the numbers above is \Sexpr{median(a)}.
-
-
-\section{Papers}
-
-Attendees of the summer school were asked to `bring a paper', i.e. to
 
 \bibliographystyle{abbrvDOI}
 \bibliography{paper}
