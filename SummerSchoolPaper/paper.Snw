@@ -1,5 +1,10 @@
 \documentclass[a4paper]{article}
 
+\usepackage{url}
+\urlstyle{same}
+
+\usepackage{hyperref}
+
 \title{An Open and Reproducible Paper on Openness and Reproducibility of Papers in Computational Science}
 \author{%%
 %% Please add your name to this paper
@@ -59,4 +64,8 @@ So that tells us the median of the numbers above is \Sexpr{median(a)}.
 \section{Papers}
 
 Attendees of the summer school were asked to `bring a paper', i.e. to
+
+\bibliographystyle{abbrvDOI}
+\bibliography{paper}
+
 \end{document}
