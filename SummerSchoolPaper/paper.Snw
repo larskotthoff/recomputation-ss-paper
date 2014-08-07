@@ -4,22 +4,22 @@
 \author{%%
 %% Please add your name to this paper
 %% ==
-Sylwester Arabas\footnote{University of Warsaw, Warsaw, Poland, sarabas@igf.fuw.edu.pl}, %% following alph. order, but I suggest Ian to be the first author
-Michael R. Bareford\footnote{University of St Andrews, St Andrews, Fife, UK, mb236@st-andrews.ac.uk}
-Ian P. Gent\footnote{University of St Andrews, St Andrews, Fife, UK, ian.gent@st-andrews.ac.uk},
-Benjamin M. Gorman \footnote{University of Dundee, Dundee, UK, b.gorman@dundee.ac.uk}, 
+Sylwester Arabas\thanks{University of Warsaw, Warsaw, Poland, sarabas@igf.fuw.edu.pl}, %% following alph. order, but I suggest Ian to be the first author
+Michael R. Bareford\thanks{University of St Andrews, St Andrews, Fife, UK, mb236@st-andrews.ac.uk}
+Ian P. Gent\thanks{University of St Andrews, St Andrews, Fife, UK, ian.gent@st-andrews.ac.uk},
+Benjamin M. Gorman \thanks{University of Dundee, Dundee, UK, b.gorman@dundee.ac.uk}, 
 \\
-Masih Hajiarabderkani\footnote{University of St Andrews, St Andrews, Fife, UK, mh638@st-andrews.ac.uk},
-Tristan Henderson\footnote{University of St Andrews, St Andrews, Fife, UK, tnhh@st-andrews.ac.uk},
-Luke Hutton\footnote{University of St Andrews, St Andrews, Fife, UK, lh49@st-andrews.ac.uk},
+Masih Hajiarabderkani\thanks{University of St Andrews, St Andrews, Fife, UK, mh638@st-andrews.ac.uk},
+Tristan Henderson\thanks{University of St Andrews, St Andrews, Fife, UK, tnhh@st-andrews.ac.uk},
+Luke Hutton\thanks{University of St Andrews, St Andrews, Fife, UK, lh49@st-andrews.ac.uk},
 \\
-Alexander Konovalov\footnote{University of St Andrews, St Andrews, Fife, UK, alexander.konovalov@st-andrews.ac.uk},
-Lars Kotthoff\footnote{University College Cork, Ireland, lars.kotthoff@insight-centre.org},
-Ciaran McCreesh\footnote{University of Glasgow, Glasgow, Scotland, c.mccreesh.1@research.gla.ac.uk},
-Ruma R. Paul\footnote{Universit\'{e} catholique de Louvain, Louvain-la-Neuve, Belgium, ruma.paul@uclouvain.be},
+Alexander Konovalov\thanks{University of St Andrews, St Andrews, Fife, UK, alexander.konovalov@st-andrews.ac.uk},
+Lars Kotthoff\thanks{University College Cork, Ireland, lars.kotthoff@insight-centre.org},
+Ciaran McCreesh\thanks{University of Glasgow, Glasgow, Scotland, c.mccreesh.1@research.gla.ac.uk},
+Ruma R. Paul\thanks{Universit\'{e} catholique de Louvain, Louvain-la-Neuve, Belgium, ruma.paul@uclouvain.be},
 \\
-Karen E. J. Petrie \footnote{University of Dundee, Dundee, UK, kpetrie@dundee.ac.uk},
-Dani\"el Reijsbergen \footnote{University of Edinburgh, Edinburgh, Scotland, dreijsbe@inf.ed.ac.uk}
+Karen E. J. Petrie \thanks{University of Dundee, Dundee, UK, kpetrie@dundee.ac.uk},
+Dani\"el Reijsbergen \thanks{University of Edinburgh, Edinburgh, Scotland, dreijsbe@inf.ed.ac.uk}
 %% ==
 }
 
@@ -34,6 +34,15 @@ Dani\"el Reijsbergen \footnote{University of Edinburgh, Edinburgh, Scotland, dre
 {This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.}
 \end{abstract}
 
+\input{intro}
+\input{recomputation}
+\input{school}
+\input{obstacles}
+\input{group1}
+\input{group2}
+\input{group3}
+\input{discussion}
+\input{ack}
 
 \section{Using Sweave}
 
