@@ -39,3 +39,6 @@ Masih Hajiarabderkani
 - interested in distributed hash tables
 - wants to take data collected from a single machine and run these on
   multiple machines
+
+Kenji Takeda
+- interested in how cloud computing can be used to enable reproducible research, with a focus on Azure

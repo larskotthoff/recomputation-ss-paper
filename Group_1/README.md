@@ -4,3 +4,4 @@ Members:
 - Ben
 - Karen
 - Luke
+- Razaq
