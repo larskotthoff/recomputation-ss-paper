@@ -4,6 +4,7 @@ HK1 - Project Title
 HK2 - Grant
 	HK2AKa - Funding approved?
 	HK2DCb - Funding body
+	HK2Mc - Investigator financial interest
 HK3 - Account No
 HK4 - PI Name
 HK5 - Department
@@ -48,6 +49,7 @@ AK3 - Supervisor signed/dated
 AK4 - Department chair signed/dated
 AK5 - Project involved experimental drugs/surgical procedures/fetal research/gene cloning
 	AK5ABa - DNA
+	AK5Mb - Radiation
 AK6 - Study purpose
 AK7 - Objectives of study
 AK8 - Methods used
@@ -122,6 +124,7 @@ STA5 - Attached documents
 D1 - Observation of non-participants
 H1 - Who collects data
 H2 - Know identity of participants?
+M1 - Done human subjects training
 
 
 
@@ -175,3 +178,6 @@ H: Hong Kong
 
 ====
 * C: Clinical CUHK
+
+====
+M: MIT
