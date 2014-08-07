@@ -31,6 +31,8 @@ HK22 - Secondary children: Do HK13 - HK19 apply?
 HK23 - Secondary children: School consent sought?
 	HK23ABa - Parental consent
 HK24 - Outline confidentiality of data for non-anon survey
+	HK24STAa - Disclosing anonymity
+	HK24STAb - Opt-out of anonymous data dissemination
 HK25 - Do qualify for expedited?
 HK26 - Declaration signed and dated
 	HK26DCa - Submitted date
@@ -50,6 +52,7 @@ AK8 - Methods used
 AK9 - Duration of study
 AK10 - Duration of participation
 AK11 - Participants recruited from
+	AK11STAa - Recruitment procedure
 AK12 - Subject records
 AK13 - Participant age
 AK14 - Participant gender
@@ -65,6 +68,8 @@ AK18 - Managing therapeutic need
 AK19 - Non-routine tests for laboratory studies?
 	AK19a - Who pays for tests
 AK20 - Location of study
+	AK20STAa - Permission for use of location
+
 AK20 - Benefits to participants
 AK21 - Benefits to society
 AK22 - Benefits to funders
@@ -88,12 +93,22 @@ AB7 - Audio/video recordings?
 AB8 - Conceal identity of investigator?
 AB9 - Disclose participation voluntary?
 AB10 - Disclose participants can withdraw
+	AB10STAa - Can skip questions?
 AB11 - Time to consider participation
 AB12 - Non-anon data stored?
+	AB12STAa - Disclose data storage
 AB13 - Access to non-public individual data?
 AB14 - Risk to environment?
 AB15 - Risk to national security?
 AB16 - Conflicts of interest?
+	AB16STAa - Participants dependent of investigator
+STA1 - Collaborative framework
+STA2 - Ethical approval from externals
+STA3 - Briefing?
+STA4 - Worked outside country in last year?
+STA5 - Attached documents
+
+
 
 
 
@@ -134,4 +149,7 @@ HK13
 ====
 AB: Aberdeen
 
+
+======
+STA: St Andrews
 
