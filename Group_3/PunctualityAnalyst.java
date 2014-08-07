@@ -326,7 +326,7 @@ public class PunctualityAnalyst {
 		
 		int N = 1000000;
 
-		/* Used for SSBHR in paper
+		// Used for SSBHR in paper
 		for(int cf=5;cf<=9;cf++) {determineSamplesForSteadyStateBootstrap(intvsAirport100,airport100Z,cf); bootstrap(N);}
 
 		EVWTbootstrap(airport100Y,N);
