@@ -23,7 +23,7 @@ HK14 - Financial inducments?
 	HK14AKc - Amount of expense reimbursement
 	HK14AKd - Amount of investigator compensation
 	HK14Me - Are incentives offered if participant withdraws?
-HK15 - Sensitive aspects of participants? (Drug used, seuxal conduct etc)
+HK15 - Sensitive aspects of participants? (Drug used, sexual conduct etc)
 HK16 - Participants placed at criminal liability?
 HK17 - Induce stress?
 HK18 - Pain likely?
@@ -68,6 +68,7 @@ AK15 - Justify use of vulernable groups
 	AK15ABa - Learning/communication difficulties
 	AK15Db - Pregnant
 	AK15Dc - >5000 participants
+	AK15STAd - Patients
 AK16 - Criteria for including/excluding subjects
 AK17 - Risk to participants
 	AK17a - Managing risk
@@ -127,7 +128,10 @@ STA2 - Ethical approval from externals
 STA3 - Briefing?
 STA4 - Worked outside country in last year?
 STA5 - Attached documents
+STA6 - Has collaborators
+STA7 - Participants credited
 D1 - Observation of non-participants
+D2 - Disclose procedures
 H1 - Who collects data
 H2 - Know identity of participants?
 M1 - Done human subjects training
@@ -177,17 +181,125 @@ HK17
 AK15
 AK15ABa
 HK9
-
+AK8
+AK8DCa
+AK11STa
+AK13
+AK14
+HK21
+STA3
+HK24
+STA5
+STA2
 
 ====
 AB: Aberdeen
 
+HK4
+AK3DCa
+HK2DCb
+HK26DCa
+AB1
+AB2
+AB3
+AB4
+AB5
+AB6
+AB*
+AK15
+HK15
+HK21
+HK23ABa
+HK13
+AK17
+HK17
+AK17ABc
+AK5
+AK5ABa
+AK26
 
 ======
 STA: St Andrews
 
+HK4
+HK5
+HK1
+AK3DCa
+HK7
+HK26DCa
+AK26
+HK25
+DC3
+DC4
+HK2DCb
+STA1
+STA6
+AK20
+AB1
+AK11
+AK11STAa
+AK10
+AK20STAa
+HK14
+STA2
+AB9
+D2
+AB10
+HK21
+AB7
+AB12
+STA7
+AB12STAa
+STA3
+AB10STAa
+AK15
+AB3
+AK15ABa
+AK15STAd
+HK15
+AB16STAa
+HK13
+STA4
+AK17
+AK26
+STA5
+
 ====
 D: Dundee
+
+HK1
+HK4
+AK3DCa
+DC3
+DC4
+HK26DCa
+D2
+AB9
+AB5
+HK21
+D1
+AB10
+AB10STa
+HK24
+HK24STAa
+HK24STAb
+HK13
+AK17
+HK17
+AK15
+AK15ABa
+AK15Db
+HK15
+DC5
+AK15Dc
+HK9
+AK11STAa
+AK8
+AB12STAa
+HK21
+STA3
+AK9
+STA5
 
 ===
 H: Hong Kong
