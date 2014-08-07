@@ -313,16 +313,16 @@ public class PunctualityAnalyst {
 		String airport100Y = System.getProperty("user.dir")+File.separator+"data"+"Route100AirportDepY.txt";
 
 		//airport 100
-		ArrayList<int[]> intvsAirport100midday = new ArrayList<int[]>();
+		ArrayList<int[]> intvsAirport100 = new ArrayList<int[]>();
 		intv = new int[2];
-		intv[0] = 3600; intv[1] = 11968;
-		intvsAirport100midday.add(intv);
+		intv[0] = 3600; intv[1] = 19593;
+		intvsAirport100.add(intv);
 		intv = new int[2];
-		intv[0] = 84576+3600; intv[1] = 98402;
-		intvsAirport100midday.add(intv);
+		intv[0] = 77821+3600; intv[1] = 105894;
+		intvsAirport100.add(intv);
 		intv = new int[2];
-		intv[0] = 170932+3600; intv[1] = 176668;
-		intvsAirport100midday.add(intv);
+		intv[0] = 163729+3600; intv[1] = 176668;
+		intvsAirport100.add(intv);
 		
 		int N = 1000000;
 
