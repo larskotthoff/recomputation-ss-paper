@@ -10,7 +10,8 @@ HK5 - Department
 HK6 - Telephone
 HK7 - Email
 HK8 - Course Instructor
-HK9 - Reseach Proposal Summary
+HK9 - Research Proposal Summary
+ 
 HK10 - Only use public data?
 HK11 - Only observe public officials?
 HK12 - Involve participants who can't give informed cosnent
@@ -49,6 +50,7 @@ AK5 - Project involved experimental drugs/surgical procedures/fetal research/gen
 AK6 - Study purpose
 AK7 - Objectives of study
 AK8 - Methods used
+	AK8DCa - 
 AK9 - Duration of study
 AK10 - Duration of participation
 AK11 - Participants recruited from
@@ -83,6 +85,8 @@ DC1 - Module code
 DC2 - Module name
 DC3 - Start date
 DC4 - End date
+DC5 - Animals?
+
 AB1 - Involve human subjects?
 AB2 - Involve human remains?
 AB3 - Under 18s?
@@ -107,7 +111,6 @@ STA2 - Ethical approval from externals
 STA3 - Briefing?
 STA4 - Worked outside country in last year?
 STA5 - Attached documents
-
 
 
 
