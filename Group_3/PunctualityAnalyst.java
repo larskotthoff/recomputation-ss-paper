@@ -1,4 +1,3 @@
-package punctualitySimulationWerk;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -308,9 +307,9 @@ public class PunctualityAnalyst {
 	public void start() {
 		
 		int[] intv;
-		String airport100Z = System.getProperty("user.dir")+File.separator+"data"+"Route100AirportDepZ.txt";
+		String airport100Z = System.getProperty("user.dir")+File.separator+"data"+File.separator+"Route100AirportDepZ.txt";
 
-		String airport100Y = System.getProperty("user.dir")+File.separator+"data"+"Route100AirportDepY.txt";
+		String airport100Y = System.getProperty("user.dir")+File.separator+"data"+File.separator+"Route100AirportDepY.txt";
 
 		//airport 100
 		ArrayList<int[]> intvsAirport100 = new ArrayList<int[]>();
