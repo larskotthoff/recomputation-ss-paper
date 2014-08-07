@@ -22,6 +22,7 @@ HK14 - Financial inducments?
 	HK14AKb - Amount of other compensation
 	HK14AKc - Amount of expense reimbursement
 	HK14AKd - Amount of investigator compensation
+	HK14Me - Are incentives offered if participant withdraws?
 HK15 - Sensitive aspects of participants? (Drug used, seuxal conduct etc)
 HK16 - Participants placed at criminal liability?
 HK17 - Induce stress?
@@ -36,6 +37,7 @@ HK23 - Secondary children: School consent sought?
 HK24 - Outline confidentiality of data for non-anon survey
 	HK24STAa - Disclosing anonymity
 	HK24STAb - Opt-out of anonymous data dissemination
+	HK24Mc - Extent of data sharing
 HK25 - Do qualify for expedited?
 HK26 - Declaration signed and dated
 	HK26DCa - Submitted date
@@ -50,6 +52,7 @@ AK4 - Department chair signed/dated
 AK5 - Project involved experimental drugs/surgical procedures/fetal research/gene cloning
 	AK5ABa - DNA
 	AK5Mb - Radiation
+	AK5Mc - Lasers
 AK6 - Study purpose
 AK7 - Objectives of study
 AK8 - Methods used
@@ -105,9 +108,12 @@ AB8 - Conceal identity of investigator?
 AB9 - Disclose participation voluntary?
 AB10 - Disclose participants can withdraw
 	AB10STAa - Can skip questions?
+	AB10Bb - Consequences of withdrawal
 AB11 - Time to consider participation
 AB12 - Non-anon data stored?
 	AB12STAa - Disclose data storage
+	AB12Mb - Data retention after study
+
 AB13 - Access to non-public individual data?
 	AB13Ha - Are datasets publically available?
 	AB13Hb - Original dataset collected for research?
@@ -125,6 +131,11 @@ D1 - Observation of non-participants
 H1 - Who collects data
 H2 - Know identity of participants?
 M1 - Done human subjects training
+M2 - Can affect participant relationships?
+M3 - Use health data?
+U1 - Need to inform insurer?
+U2 - Physical contact from investigator?
+U3 - Using certified medical device?
 
 
 
@@ -181,3 +192,9 @@ H: Hong Kong
 
 ====
 M: MIT
+
+====
+B: Birmingham
+
+===
+U: UCL
