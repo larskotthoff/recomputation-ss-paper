@@ -81,7 +81,7 @@ AK19 - Non-routine tests for laboratory studies?
 AK20 - Location of study
 	AK20STAa - Permission for use of location
 
-AK20 - Benefits to participants
+AK29 - Benefits to participants
 AK21 - Benefits to society
 AK22 - Benefits to funders
 AK23 - Benefits to institution
@@ -303,6 +303,46 @@ STA5
 
 ===
 H: Hong Kong
+
+HK1
+DC3
+DC4
+HK4
+HK5
+HK6
+HK7
+AK3DCa
+HK2
+HK2DCb
+HK9
+AB1
+AB6
+AK11STAa
+AK16
+AK20
+AK29
+AK5
+HK13
+AK17
+AK5ABa
+HK17
+AB7
+HK21
+AB16
+AB7Ha
+HK12
+AB6
+AB13
+AB13Ha
+AB13Hb
+AB13Hc
+AB6Ha
+AB6Hb
+STA5
+
+
+
+
 
 ====
 * C: Clinical CUHK
