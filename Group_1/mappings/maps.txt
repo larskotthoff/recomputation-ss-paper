@@ -2,7 +2,7 @@ Fields
 ======
 HK1 - Project Title
 HK2 - Grant
-	HK2AKa - Funding approved
+	HK2AKa - Funding approved?
 	HK2DCb - Funding body
 HK3 - Account No
 HK4 - PI Name
@@ -11,7 +11,7 @@ HK6 - Telephone
 HK7 - Email
 HK8 - Course Instructor
 HK9 - Research Proposal Summary
- 
+
 HK10 - Only use public data?
 HK11 - Only observe public officials?
 HK12 - Involve participants who can't give informed cosnent
@@ -28,6 +28,7 @@ HK18 - Pain likely?
 HK19 - Prolonged testing?
 HK20 - Summarise data collection procedures
 HK21 - Do get consent?
+	HK21Ha - Getting online/remote consent
 HK22 - Secondary children: Do HK13 - HK19 apply?
 HK23 - Secondary children: School consent sought?
 	HK23ABa - Parental consent
@@ -50,7 +51,7 @@ AK5 - Project involved experimental drugs/surgical procedures/fetal research/gen
 AK6 - Study purpose
 AK7 - Objectives of study
 AK8 - Methods used
-	AK8DCa - 
+	AK8DCa - Analysis 
 AK9 - Duration of study
 AK10 - Duration of participation
 AK11 - Participants recruited from
@@ -60,6 +61,8 @@ AK13 - Participant age
 AK14 - Participant gender
 AK15 - Justify use of vulernable groups
 	AK15ABa - Learning/communication difficulties
+	AK15Db - Pregnant
+	AK15Dc - >5000 participants
 AK16 - Criteria for including/excluding subjects
 AK17 - Risk to participants
 	AK17a - Managing risk
@@ -86,14 +89,16 @@ DC2 - Module name
 DC3 - Start date
 DC4 - End date
 DC5 - Animals?
-
 AB1 - Involve human subjects?
 AB2 - Involve human remains?
 AB3 - Under 18s?
 AB4 - Potential/current client?
 AB5 - Non-English speakers provided for?
-AB6 - Other sources of PII?
+AB6 - Other sources of PII
+	AB6Ha - Extract PII from data?
+	AB6Hb - Augment dataset with new data?
 AB7 - Audio/video recordings?
+	AB7Ha - Waiver of consent affect rights?
 AB8 - Conceal identity of investigator?
 AB9 - Disclose participation voluntary?
 AB10 - Disclose participants can withdraw
@@ -102,6 +107,9 @@ AB11 - Time to consider participation
 AB12 - Non-anon data stored?
 	AB12STAa - Disclose data storage
 AB13 - Access to non-public individual data?
+	AB13Ha - Are datasets publically available?
+	AB13Hb - Original dataset collected for research?
+	AB13Hc - Is use consistent with original purpose?
 AB14 - Risk to environment?
 AB15 - Risk to national security?
 AB16 - Conflicts of interest?
@@ -111,6 +119,9 @@ STA2 - Ethical approval from externals
 STA3 - Briefing?
 STA4 - Worked outside country in last year?
 STA5 - Attached documents
+D1 - Observation of non-participants
+H1 - Who collects data
+H2 - Know identity of participants?
 
 
 
@@ -156,3 +167,11 @@ AB: Aberdeen
 ======
 STA: St Andrews
 
+====
+D: Dundee
+
+===
+H: Hong Kong
+
+====
+* C: Clinical CUHK
