@@ -29,6 +29,13 @@
   
 \end{filecontents*}
 
+\title{Reproducing Parallel and Distributed Experiments}
+\author{%%
+Masih Hajiarabderkani\thanks{University of St Andrews, St Andrews, Fife, UK}, %
+Ciaran McCreesh\thanks{University of Glasgow, Glasgow, Scotland}, %
+Ruma R. Paul\thanks{Universit\'{e} catholique de Louvain, Louvain-la-Neuve, Belgium}, %
+}
+
 \begin{document}
 
 <<setup, include=FALSE, cache=FALSE, echo=FALSE>>=
@@ -36,6 +43,8 @@ Sys.setenv(TEXINPUTS=getwd(),
            BIBINPUTS=getwd(),
            BSTINPUTS=getwd())
 @
+
+\maketitle
 
 .\section*{Abstract}
 This study investigates the challenges of reproducing parallel and distributed experiments on virtualized environment, in particular on cloud infrastructure. We explore two different type of experiments to analyze the deviation of run-time and behavior of the system between real and virtual machines: i) A multi-core Parallel system and ii) A Peer-to-Peer system.
