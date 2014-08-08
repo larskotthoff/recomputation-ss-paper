@@ -57,7 +57,7 @@ AK6 - Study purpose
 AK7 - Objectives of study
 AK8 - Methods used
 	AK8DCa - Analysis 
-AK9 - Duration of study
+*AK9 - Duration of study
 AK10 - Duration of participation
 AK11 - Participants recruited from
 	AK11STAa - Recruitment procedure
@@ -196,7 +196,8 @@ AK5
 AK6
 AK7
 AK8
-AK9
+DC3
+DC4
 AK10
 AK11
 AK12
@@ -381,7 +382,6 @@ AK8
 AB12STAa
 HK21
 STA3
-AK9
 STA5
 AK15Dc
 
