@@ -39,9 +39,20 @@ One of the considerations perhaps under considered in regards to recomputation t
 
 Due to the nature of an HCI experiment, in that it involves gathering data from human participants, it is necessary in order to successfully replicate an HCI experiment you must gather a new set of participants of which must meet the original experiments inclusion and exclusion criteria. In order for this to occur it is also necessary to replicate the ethical approval which the original experimenter sought, at first this may seem trivial however through examination of ethical approval submissions from ten institutions across the UK, EU, and US we found great differences between each and that a very low amount of overlap currently exists.
 
+
 \begin{figure}
-    \centerline{\resizebox{1\linewidth}{!}{\includegraphics{plot-fieldfreq.eps}}}
-    \caption{Histogram showing frequency distribution of fields in ethics applications}
+<<echo=FALSE,fig=TRUE>>=
+library(reshape)
+library(ggplot2)
+maps_data <- read.table("maps_dataframe",header=T)
+maps_melt <- melt(maps_data)
+maps_frame <- as.data.frame(table(maps_melt$Field))
+maps_frame <- maps_frame[order(-maps_frame$Freq),]
+tag_factor <- factor(maps_frame$Var1, levels=maps_frame$Var1)
+p <- ggplot(maps_frame, aes(x=tag_factor, y=Freq)) + geom_bar(stat = "identity",fill="slateblue4",colour="slateblue1") + scale_x_discrete(breaks=NULL,name="Fields") + scale_y_discrete(name="Frequency")
+print(p)
+@
+\caption{Histogram showing frequency distribution of fields in ethics applications}
 \end{figure}
 
 \subsection{Comparison of Ethical Requirements across Universities}
