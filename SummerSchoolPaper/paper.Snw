@@ -55,17 +55,6 @@ but may be incomplete in various ways.}
 \input{discussion}
 \input{ack}
 
-% \section{Using Sweave}
-% 
-% This paper has an incredibly simple piece of R in it.
-% Here it is.
-%%  <<>>=
-% a <- c(1,2,3)
-% median(a)
-% @
-% So that tells us the median of the numbers above is \Sexpr{median(a)}.
-% 
-% Hopefully we will not need this section if at least one of the case studies will make a genuine use of R.
 
 \bibliographystyle{abbrvDOI}
 \bibliography{paper}
