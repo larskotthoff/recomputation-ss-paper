@@ -9,7 +9,4 @@ Members:
 Are Virtual Machines able to accommodate reproducible experiments in the field of parallel and distributed computing?
 
 # Method
-We compare one or more experiments in real and virtualised hardware.
-
-# Results
-TBC
+We compare 2 experiments in real and virtualised hardware.
