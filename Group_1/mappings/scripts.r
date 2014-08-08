@@ -28,4 +28,8 @@ attach(maps_frame)
 
 tag_factor <- factor(maps_frame$Var1, levels=maps_frame$Var1)
 
+	
+postscript("plot-fieldfreq.eps",horizontal=FALSE,onefile=FALSE,paper="special",width=12,height=6)
 p <- ggplot(maps_frame, aes(x=tag_factor, y=Freq)) + geom_bar(stat = "identity",fill="slateblue4",colour="slateblue1") + scale_x_discrete(breaks=NULL,name="Fields") + scale_y_discrete(name="Frequency")
+p
+dev.off()
