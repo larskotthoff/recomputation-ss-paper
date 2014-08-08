@@ -54,7 +54,7 @@ xtable(run_time,
        digits = c(0,2,2))
 @
 
-In both real and virtual hardwares the relative standard deviation is very
+In both real and virtual hardware the relative standard deviation is very
 small (below $1\%$ in every case). We did not encounter any abnormalities when
 running on a virtual machine; this is contrary to the experiences of Kotthoff
 \cite{kotthoff}, who did not always see reliable \emph{sequential} runtimes on
@@ -67,10 +67,16 @@ VMDepot\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}.
 Experiments that are performed across multiple machines are challenging
 to reproduce. This is due to the cost of needed resources, and the complexities
 involved in configuring the machines. Cloud services offer increasingly affordable
-computation. Such services use visualisation and VM images to decrease the cost of
-reconfiguration.
+computation. Such services use virtualisation to decrease the cost of system
+reconfiguration. T
 
-We deployed a Chord \cite{chord} Distributed Hash Table (DHT) of $10$ nodes
-on 10 dedicated machines. Reproducing the same experiment on Microsoft Azure
-proved to be time consuming, and unfortunately we ran out of time before being able
-to reproduce it.
+In order to study the challenges of making such experiments reproducible using cloud
+services, we deployed a Chord \cite{chord} Distributed Hash Table (DHT) of $10$ nodes on 10
+dedicated machines, and then tried to reproduce the same experiment on Microsoft Azure using VMs.
+
+Reproducing the same experiment on Microsoft Azure proved to be time consuming.
+Due to the lack of time we were unable to reproduce the experiment. The reasons are: 1) the steep
+learning curve of using Microsoft Azure's API, 2) complexity of virtual network setup in Microsoft Azure.
+
+
+
