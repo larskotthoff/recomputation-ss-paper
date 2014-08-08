@@ -37,8 +37,75 @@ The goal of recomputation\footnote{http://www.recomputation.org/} is to follow t
 One of the considerations perhaps under considered in regards to recomputation to date is the ethical implications. 
 \subsection{Background}
 
+% human subjects research - experiments needs ethics approval, for legal/moral reasons
+
+% researchers must disclose details of their study for scrutiny before collecting data
+
 Due to the nature of an HCI experiment, in that it involves gathering data from human participants, it is necessary in order to successfully replicate an HCI experiment you must gather a new set of participants of which must meet the original experiments inclusion and exclusion criteria. In order for this to occur it is also necessary to replicate the ethical approval which the original experimenter sought, at first this may seem trivial however through examination of ethical approval submissions from ten institutions across the UK, EU, and US we found great differences between each and that a very low amount of overlap currently exists.
 
+% we expect processes vary between institutions due to myriad factors 
+
+% no standards. replication community in hci is nascent and not considering ethics issues
+% including at workshops like replichi 
+
+% we examine the state of the art to identify whether a base standard can be used to
+% encourage sharing of ethics procedures
+
+
+
+\subsection{Comparison of Ethical Requirements across Universities}
+
+\subsubsection{Gathering academic forms}
+To understand the state of ethics
+procedures between institutions, we collected the ethics applications forms
+for ten public universities located in the UK, EU, and USA. A wide range of
+locations were chosen to represent procedures across research communities,
+stature of the institution, and engagement with the HCI community.
+
+In order to compare each ethical approval form from each instituion, we
+manually transcribed each field and noted unique occurances, mapping minor
+variations in wording to each field.  Where a field potentially encompasses
+additional information, unique requests for additional information were
+counted as additional fields. For example, requesting information about grants
+were considered one field, while providing explicit grant codes and whether
+grant funding was already agreed were considered two further fields. Our
+analysis uncovered 145 unique fields, encompassing generic details, such as
+contact details of co-investigators, methodological details, and institution-
+specific requirements, often for insurance and liability purposes. Of these
+fields, only two were common to all ten ethics forms - the name of the
+principal investigator, and whether informed consent was sought. While this is
+clearly an insufficient  minimum specification for capturing ethics
+requirements, it reveals the crux of the ethics approval process is to ensure
+participant agency is preserved through the experimental process.
+
+
+
+
+Through examination of ethics submissions from ten institutions across the UK, EU, and US,
+we aim to discover a set of ethical concerns common to all. 
+Our analysis uncovered 145 unique fields, 
+encompassing generic details, such as contact details of co-investigators, methodological
+details, and institution-specific requirements, often for insurance and liability purposes.
+Of these fields, only two were common to all ten ethics forms - the name of the principal
+investigator, and whether informed consent was sought. While this is clearly insufficient
+as a minimum specification for capturing ethics requirements, it reveals the crux of the 
+ethics approval process is to ensure participant agency is maintained through the experimental process by mandating informed consent.
+
+
+% Gaterhing forms
+
+% Why did we select each institition?
+
+% Comment on openess? And that only open forms can be found/transcribed
+
+% Gathering of unique fields
+
+
+
+
+
+
+\subsubsection{Comparison Analysis}
 
 \begin{figure}
 <<echo=FALSE,fig=TRUE>>=
@@ -54,36 +121,6 @@ print(p)
 @
 \caption{Histogram showing frequency distribution of fields in ethics applications}
 \end{figure}
-
-\subsection{Comparison of Ethical Requirements across Universities}
-
-<<<<<<< HEAD
-\subsubsection{Gathering academic forms}
-=======
-Through examination of ethics submissions from ten institutions across the UK, EU, and US,
-we aim to discover a set of ethical concerns common to all. 
-Our analysis uncovered 145 unique fields, 
-encompassing generic details, such as contact details of co-investigators, methodological
-details, and institution-specific requirements, often for insurance and liability purposes.
-Of these fields, only two were common to all ten ethics forms - the name of the principal
-investigator, and whether informed consent was sought. While this is clearly insufficient
-as a minimum specification for capturing ethics requirements, it reveals the crux of the 
-ethics approval process is to ensure participant agency is maintained through the experimental process by mandating informed consent.
-
-Examining the frequency with which these fields occur highlights the 
-=======
-% Gaterhing forms
->>>>>>> 24619a8ab877ac591404beb84cdf6780674e4423
-
-% Why did we select each institition?
-
-% Comment on openess? And that only open forms can be found/transcribed
-
-% Gathering of unique fields
-
-In order to compare each ethical approval form from each instituion, we manually transcribed each field and noted unique occurances. Minor changes in wording were ignored(?). However, expansions and additional questions were counted as unique fields. Our analysis uncovered 182 unique fields, encompassing generic details, such as contact details of co-investigators, methodological details, and institution-specific requirements, often for insurance and liability purposes. Of these fields, only two were common to all ten ethics forms - the name of the principal investigator, and whether informed consent was sought. While this is clearly an insufficient  minimum specification for capturing ethics requirements, it reveals the crux of the ethics approval process is to ensure participant agency is preserved through the experimental process.
-
-\subsubsection{Comparison Analysis}
 
 % comment on how we compared each paper and a report of the comparison
 
