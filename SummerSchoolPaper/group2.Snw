@@ -72,13 +72,13 @@ virtualisation to decrease the cost of system reconfiguration.
 
 In order to study the challenges of making distributed experiments reproducible
 using cloud services, we deployed a Chord \cite{chord} Distributed Hash Table
-(DHT) of $10$ nodes on 10 dedicated machines, and tried to reproduce the same
+(DHT) of $10$ nodes on $10$ dedicated machines, and tried to reproduce the same
 experiment on Microsoft Azure.
 
 Reproducing the same experiment on Microsoft Azure proved to be time consuming.
 Due to the lack of time we were unable to reproduce the experiment. The main reason
 is the steep learning curve of using Microsoft Azure's API. The API itself lacks
-documentation and is complex in design. Further, since the Azure's API is not as
+documentation and is complex in design. Since the Azure's API is not as
 popular as the rivals, it is harder to find example usage of the API.
 
 It is possible to make experiments across multiple machines reproducible by writing
@@ -89,4 +89,3 @@ script, and 3) the script cannot be re-used on other cloud services.
 
 Further studies are needed to identify best practices to make distributed experiments
 reproducible using virtual machines.
-
