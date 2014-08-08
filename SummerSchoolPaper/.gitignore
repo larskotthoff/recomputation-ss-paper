@@ -1,5 +1,9 @@
 .Rhistory
+paper.aux
+paper.bbl
+paper.blg
 paper-concordance.tex
+paper.fdb_latexmk
 paper.log
 paper.pdf
 paper.synctex.gz
