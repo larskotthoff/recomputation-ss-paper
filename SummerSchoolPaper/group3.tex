@@ -3,7 +3,7 @@
 
 The focus of this section is on the issues relevant to research reproducibility that are potentially unique to non-CS computational research.
 The discussion is based on experience gained while packaging three computational experiments into self-contained virtual-machines.
-The papers on which the discussion is based (\cite{danielpaper}, \cite{michaelpaper}, \cite{sylesterpaper}) deal with urban planning, solar physics, and atmospheric physics respectively, although the discussion is likely relevant to other non-CS domains.
+The papers on which the discussion is based (\cite{danielpaper}, \cite{bareford2010nanoflare}, \cite{arabas2013libcloud}) deal with urban planning, solar physics, and atmospheric physics respectively, although the discussion is likely relevant to other non-CS domains.
 Our aim was to offer readers (or reviewers) the opportunity to reproduce the figures presented in the paper, to inspect the code, and to possibly test behaviour of the programs with other parameters, all within a ready-to-use environment, namely a single virtual box constructed using the Vagrant tool and which runs the Debian operating system.
 
 %** LEGAL **
@@ -17,7 +17,7 @@ Even if the legal status of the code developed for a given experiment is settled
 This in fact was also the case in one of the programs in question, as the code relied on proprietary software library.
 
 Furthermore, we noted a lack of domain-specific workflows for recomputation in non-CS journals.
-A counterexample is the journal Geoscientific Model Developments (GMD), which encourages reviewers to check the code.\footnote{doi:10.5194/gmd-6-1233-2013 }
+A counterexample is the journal Geoscientific Model Developments (GMD), which encourages reviewers to check the code.\footnote{DOI: 10.5194/gmd-6-1233-2013 }
 The level of computer proficiency in non-CS domains\footnote{For example, see: ``\emph{Computational science: ...Error. Why scientific programming does not compute}''. DOI:10.1038/467775a.} is also likely to influence the ability of researchers to use the Virtual Machines --- it is arguably less likely that a physics or urban-planning journal reviewer will know right away how to deal with a VM, in contrast to CS-related journals.
 
 We give a more detailed description of the experiments in the remainder of this section.
@@ -38,19 +38,19 @@ The resulting virtual machine contains the Java source files, so researchers wit
 
 \subsection*{Experiment 2: Solar Physics}
 
-At the start of the recomputation exercise it was judged that the results presented in Bareford et al. 2010
+At the start of the recomputation exercise it was judged that the results presented in \cite{bareford2010nanoflare}
 would be the easiest (of the three publications outside of computer science) to reproduce. The underlying
 code is serial in nature and not tied to a specific platform or hardware. 
 
-The work discussed in Bareford et al. 2010 concerns the energy released from an idealised cylindrical magnetic
+The work discussed in \cite{bareford2010nanoflare} concerns the energy released from an idealised cylindrical magnetic
 field whenever it becomes unstable and subsequently relaxes to a simpler state. Initially, a field starts in a
 stable configuration and is then taken on a random walk through a known two dimensional region of stability, see Fig 3 of
 the aforementioned publication. When the field crosses the boundary of this region (i.e., the threshold for instability),
 an energy release is determined and the field is moved to simpler stable configuration. 
 
 When this process is repeated many times, the results can take the form of energy distributions. The top right plot
-of Figure 14 (Bareford et al. 2010) shows the energy releases for $10^5$ relaxations involving 100 different stable field
-configurations. We decided to focus on reproducing only this figure from Bareford et al.
+of Figure 14 in \cite{bareford2010nanoflare} shows the energy releases for $10^5$ relaxations involving 100 different stable field
+configurations. We decided to focus on reproducing only this figure from \cite{bareford2010nanoflare}.
 
 This plot was taken from the results produced by a C++ code called Taylor Relaxation of Loop Ensembles, or TRoLE
 for short, that automates the process described above.
@@ -69,8 +69,8 @@ events. Alas, the code could only simulate a fraction of this total (146 events)
 that it had reached a point on the instability threshold for which a stable (relaxed) configuration could not be calculated.
 The relaxed state is determined by ensuring that certain properties are conserved (i.e., the values match those
 calculated for the unstable state). This is essentially a root finding exercise, and at the time of writing
-the cause of this problem was not known. Updates to the TRoLE code subsequent to Bareford et al. 2010, that were
-used to provide the figures for a later publication (Bareford et al. 2011), one that featured a more complex magnetic
+the cause of this problem was not known. Updates to the TRoLE code subsequent to \cite{bareford2010nanoflare}, that were
+used to provide the figures for a later publication (\cite{bareford2011flare}), one that featured a more complex magnetic
 fields, may be behind the immediate failure in recomputation. Given time however (e.g., 2-3 days), this issue
 is likely to be resolved. 
 
