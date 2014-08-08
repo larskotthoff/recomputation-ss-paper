@@ -33,6 +33,7 @@
 % \maketitle
 
 \section{Case study \#1: Ethical requirements for recomputation}
+\label{s:group1}
 
 \subsection{Introduction}
 The goal of recomputation\footnote{http://www.recomputation.org/} is to follow the recompilation manifesto\footnote{http://www.recomputation.org/blog/2013/04/12/the-recomputation-manifesto/} and make computational experiments recomputable by providing tools and a repository to store experiments in. The mission is stated as:
