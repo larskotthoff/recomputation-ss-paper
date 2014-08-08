@@ -24,17 +24,16 @@ We give a more detailed description of the experiments in the remainder of this 
 
 \subsection*{Experiment 1: Urban Planning}
 
-For the first case study, we tried to recompute parts of Table~6 of \cite{danielpaper}, in which the punctuality of a bus service in Edinburgh is evaluated using statistical methods. Table~6 contains confidence intervals that are constructed using a piece of software written in Java. The programme can be compiled after installing a Java Software Development Kit on the virtual machine. The programme uses the SSJ library for Stochastic Simulation;\footnote{http://simul.iro.umontreal.ca/ssj-2/indexe.html} it had to be downloaded from the Internet. After that, the code was able to run.
+For the first case study, we tried to recompute parts of Table~6 of \cite{danielpaper}, in which the punctuality of a bus service in Edinburgh is evaluated using statistical methods. Table~6 contains confidence intervals that are constructed using a piece of software written in Java. It is possible to compile the source code after installing a Java Software Development Kit on the virtual machine. The software uses the SSJ library for Stochastic Simulation,\footnote{http://simul.iro.umontreal.ca/ssj-2/indexe.html} which had to be downloaded from the Internet. After that, the code was able to run.
 The resulting virtual machine is about 550MB - the Java SDK and its dependencies account for over 200MB by themselves, although parts of the development kit could be de-installed after compilation.
 
 We encountered legal obstacles in the following three areas.
 \begin{itemize} 
-\item Code-related: the software was developed as part of the EU project QUANTICOL, which is funded by the European Commission as part of its 7th Framework programme. In the General Conditions part of the project's grant agreement it is stated that the IP rights are awarded to the beneficiary, which in this case would be the University of Edinburgh. In turn, the University of Edinburgh has issued a position statement on intellectual property rights in which it stated that ``\emph{It is the policy of the University of Edinburgh to develop University research capabilities and to assess, develop and promote the transfer of Edinburgh's technology and ideas for society's use and benefit.}'' Still, publication of the code would need to be checked with a supervisor.
+\item Code-related: the software was developed as part of the EU project QUANTICOL, which is funded by the European Commission as part of its 7th Framework programme. In the General Conditions part of the project's grant agreement it is stated that the IP rights are awarded to the beneficiary, which in this case would be the University of Edinburgh. In turn, the University of Edinburgh has issued a position statement on intellectual property rights\footnote{http://www.research-innovation.ed.ac.uk/Portals/0/Documents/University-of-Edinburgh-Position-Statement-on-Intellectual-Property\_December2011.pdf} in which it stated that ``\emph{It is the policy of the University of Edinburgh to develop University research capabilities and to assess, develop and promote the transfer of Edinburgh's technology and ideas for society's use and benefit.}'' Still, publication of the code would need to be checked with a supervisor.
 \item Library-related: the package SSJ is released under the GPL licence from GNU.
 \item Data-related: we code uses a dataset based on bus location measurements provided to us by Lothian Buses. We would need their permission to put this dataset in the public domain.
 \end{itemize}
-
-The resulting virtual machine contains the Java source files, so researchers with knowledge of Java can analyse the correctness of the programme. However, the code is not documented and may be hard to read. Parameters are hard-coded and no interpretation is given of the resulting numbers and LaTeX code.
+The resulting virtual machine contains the Java source files, allowing researchers with knowledge of Java to analyse the correctness of the programme. However, the code is not documented and may be hard to read. Specifically, parameters are hard-coded and no interpretation is given of the resulting numbers and LaTeX code.
 
 \subsection*{Experiment 2: Solar Physics}
 
@@ -56,13 +55,13 @@ This plot was taken from the results produced by a C++ code called Taylor Relaxa
 for short, that automates the process described above.
 
 The TRoLE code was written when the first author was a postgraduate at the University of Manchester. It was
-necessary therefore to check the IP policy for this institution. Section 3.2 of this policy states that the ``...ownership
-of IP created by a Student, who is not an employee of the University, is with the Student.'', which we took to mean
+necessary therefore to check the IP policy for this institution.\footnote{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=487} Section 3.2 of this policy states that the ``\emph{...ownership
+of IP created by a Student, who is not an employee of the University, is with the Student.}'', which we took to mean
 that the first author was free to place the code in a publicly available repository, which will be done at a later date.
 
 The next issue concerned a technical matter: the code was written with the use of a proprietary numerical algorithms
-library (NAG), the licence for which had expired. Fortunately, there is an open source alternative, the GNU Scientific
-Library (GSL). The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
+library (NAG),\footnote{http://www.nag.co.uk/numeric/CL/CLdescription.asp} the licence for which had expired. Fortunately, there is an open source alternative, the GNU Scientific
+Library (GSL).\footnote{http://www.gnu.org/software/gsl/} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
 
 After the code was recompiled and linked with GSL libraries, it was ready to run the simulation of $10^5$ relaxation
 events. Alas, the code could only simulate a fraction of this total (146 events), and instead the code reported
@@ -70,10 +69,12 @@ that it had reached a point on the instability threshold for which a stable (rel
 The relaxed state is determined by ensuring that certain properties are conserved (i.e., the values match those
 calculated for the unstable state). This is essentially a root finding exercise, and at the time of writing
 the cause of this problem was not known. Updates to the TRoLE code subsequent to \cite{bareford2010nanoflare}, that were
-used to provide the figures for a later publication (\cite{bareford2011flare}), one that featured a more complex magnetic
+used to provide the figures for a later publication (i.e., \cite{bareford2011flare}), one that featured a more complex magnetic
 fields, may be behind the immediate failure in recomputation. Given time however (e.g., 2-3 days), this issue
 is likely to be resolved. 
 
 \subsection*{Experiment 3: Atmospheric Physics}
 
-In this case the workaround was feasible as the GNU Scientific Library offered analogous functionality, however, in all three scientific domains mentioned proprietary tools and data formats are widespread and sometimes considered de-facto standards what make transition to other solutions ... (e.g. IDL in astronomy and geoscience, )
+We also attempted to use the virtual machine run code that uses libcloudph++ \cite{arabas2013libcloud}, a library of algorithms
+for representing cloud microphysics in numerical models. We succeeded in running several pieces of software that were used to create figures used in \cite{arabas2013libcloud}. The software is already under a GPL and in a Github repository. The libraries necessary to run the software are a C++ compiler, CMake, and the Boost and Thrust libraries.
+A legal obstacle was encountered; specifically, the libraries optionally use the GPU using non-free-software (CUDA) to make it run faster. In this case the workaround was feasible as the GNU Scientific Library offered analogous functionality. otherwise, the only complication was getting the right software versions on the VM, otherwise all was feasible.
