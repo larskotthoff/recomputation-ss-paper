@@ -38,8 +38,17 @@ Dani\"el Reijsbergen\thanks{University of Edinburgh, Edinburgh, Scotland} %
 
 \begin{abstract}
 {This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.
-We report several case studies performed during the school and systematize our experiences.}
+We report several case studies performed during the school and systematize our experiences. 
+This paper is \emph{open} and \emph{reproducible}: the whole process of writing this paper is
+captured in the GitHub repository hosting both the source of the paper, supplementary codes and data;
+we are providing setup for several experiments on which we were working; finally, we are trying to 
+describe what we have achieved during the week of the school in a way that others may repeat (and 
+hopefully improve) our experiments.}
 \end{abstract}
+
+\emph{This paper is a work-in-progress.  It reports the state of our work at the end of a busy week of a Summer School, 
+but may be incomplete in various ways.}
+
 
 \input{intro}
 \input{recomputation}
@@ -51,17 +60,6 @@ We report several case studies performed during the school and systematize our e
 \input{discussion}
 \input{ack}
 
-\section{Using Sweave}
-
-This paper has an incredibly simple piece of R in it.
-Here it is.
-<<>>=
-a <- c(1,2,3)
-median(a)
-@
-So that tells us the median of the numbers above is \Sexpr{median(a)}.
-
-Hopefully we will not need this section if at least one of the case studies will make a genuine use of R.
 
 \bibliographystyle{abbrvDOI}
 \bibliography{paper}
