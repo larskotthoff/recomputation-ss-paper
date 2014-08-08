@@ -8,7 +8,7 @@
 PDFS = paper.pdf
 
 SWEAVEFILES = ${shell find . -mindepth 1 -maxdepth 1 -name \*.Snw}
-SWEAVETEXFILES = $(SWEAVE:.Snw=.tex)
+SWEAVETEXFILES = $(SWEAVEFILES:.Snw=.tex)
 
 TEXFILES = ${shell find . -mindepth 1 -maxdepth 1 -name \*.tex -not -name \*.Snw}
 
