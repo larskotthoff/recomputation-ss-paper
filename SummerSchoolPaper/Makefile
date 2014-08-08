@@ -7,7 +7,15 @@
 
 PDFS = paper.pdf
 
-TEXS = paper.tex ack.tex group2.tex obstacles.tex recomputation.tex discussion.tex group3.tex  school.tex group1.tex intro.tex
+SWEAVEFILES = ${shell find . -mindepth 1 -maxdepth 1 -name \*.Snw}
+SWEAVETEXFILES = $(SWEAVE:.Snw=.tex)
+
+TEXFILES = ${shell find . -mindepth 1 -maxdepth 1 -name \*.tex -not -name \*.Snw}
+
+TEXS = $(SWEAVETEXFILES) $(TEXFILES)
+
+# temporary files
+CLEAN = $(SWEAVETEX) *.aux *.bbl *.blg *-concordance.tex *.fdb_latexmk *.log *.out *.synctex. gz
 
 paper.pdf: $(TEXS)
 
@@ -22,3 +30,5 @@ all: $(PDFS)
 .tex.pdf: 
 		latexmk -pdf $*.tex
 
+clean:
+		rm -rf $(CLEAN)
