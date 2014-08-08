@@ -1,3 +1,5 @@
+\section{Case study \#2: recomputing parallel and distributed experiments}
+
 The purpose of this section is to describe the experiments we have used to investigate the viability of reproducing parallel and distributed experiments on virtualized exvironment. We have used two experiments: i) A parallel system and ii) A Peer-to-Peer system.
 
 \subsection*{Experiment 1: A Parallel System}
