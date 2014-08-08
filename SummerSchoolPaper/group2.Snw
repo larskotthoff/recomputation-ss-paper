@@ -60,6 +60,9 @@ running on a virtual machine; this is contrary to the experiences of Kotthoff
 \cite{kotthoff}, who did not always see reliable \emph{sequential} runtimes on
 virtualised hardware.
 
+The virtual machine image used for the experiments is available via
+VMDepot\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}.
+
 \subsection{Experiment 2: A Peer-to-Peer System}
 
 We have used Chord (\cite{chord1}, \cite{chord2}) as the Peer-to-Peer (P2P)
