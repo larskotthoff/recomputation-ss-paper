@@ -66,17 +66,26 @@ VMDepot\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}.
 \subsection{Experiment 2: A Peer-to-Peer System}
 Experiments that are performed across multiple machines are challenging
 to reproduce. This is due to the cost of needed resources, and the complexities
-involved in configuring the machines. Cloud services offer increasingly affordable
-computation. Such services use virtualisation to decrease the cost of system
-reconfiguration. T
+involved in configuring the machines and the relationship between the machines.
+Cloud services offer increasingly affordable computation. Such services use
+virtualisation to decrease the cost of system reconfiguration.
 
-In order to study the challenges of making such experiments reproducible using cloud
-services, we deployed a Chord \cite{chord} Distributed Hash Table (DHT) of $10$ nodes on 10
-dedicated machines, and then tried to reproduce the same experiment on Microsoft Azure using VMs.
+In order to study the challenges of making distributed experiments reproducible
+using cloud services, we deployed a Chord \cite{chord} Distributed Hash Table
+(DHT) of $10$ nodes on $10$ dedicated machines, and tried to reproduce the same
+experiment on Microsoft Azure.
 
 Reproducing the same experiment on Microsoft Azure proved to be time consuming.
-Due to the lack of time we were unable to reproduce the experiment. The reasons are: 1) the steep
-learning curve of using Microsoft Azure's API, 2) complexity of virtual network setup in Microsoft Azure.
+Due to the lack of time we were unable to reproduce the experiment. The main reason
+is the steep learning curve of using Microsoft Azure's API. The API itself lacks
+documentation and is complex in design. Since the Azure's API is not as
+popular as the rivals, it is harder to find example usage of the API.
 
+It is possible to make experiments across multiple machines reproducible by writing
+a vendor-specific script that starts and configures any needed VMs before running
+the experiment. This approach raises a number of issues: 1) it relies on external
+services in order to run the experiment, 2) it is time-consuming to produce such an
+script, and 3) the script cannot be re-used on other cloud services.
 
-
+Further studies are needed to identify best practices to make distributed experiments
+reproducible using virtual machines.
