@@ -11,8 +11,17 @@ with materials such as ethics forms and experimental results put into the reposi
 might be half a gigabyte, and such large files can be problematic for git.  This is one reason these are not included directly in the repository.
 
 Finally, by ``Executable'', we mean a paper that can be reconstructed from source 
-materials.\footnote{(The name ``reproducible paper'' is sometimes used for this, but can lead to confusion because a paper can be executable in the sense of being able to produce new figures with 
+materials, and that data can be reanalysed as it changes and new versions of the paper produced, and possibly executable code rerun.  
+This has numerous advantages because as we add data, the paper does not need to be rewritten.  
+\footnote{The name ``reproducible paper'' is sometimes used for this, but can lead to confusion because a paper can be executable in the sense of being able to produce new figures with 
 changed data, but not reproducible if that data can not be reconstructed ab initio.}
+To make our paper executable, we used Sweave, a package that integrates the statistics system R and \latex. 
+To ease the workflow and to make execution of the paper easy, we wrote a Makefile for the generation of the paper pdf, although there are still some issues which need manual intervention such as installation of the necessary R packages. 
+
+To what extent have we succeeded in making this paper open, reproducible, and executable?  At this stage,
+\emph{remembering that this draft is a work in progress}, we would say our success is mixed.  We cannot be completely open because
+some of the data and/or programs used in various parts of our paper do not allow us to share them.  Also our paper is not fully executable in the sense that many 
+computations involved in constructing the data must be run by hand.   In terms of reproducibility, it is interesting to speculate: for example, if we run a second summer school in 2015, we might ask participants to reproduce this paper and see how we did this year.
 
 
 
