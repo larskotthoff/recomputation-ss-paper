@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>uk.ac.standrews.cs.emcsr2014.group_2</groupId>
+    <artifactId>p2p_experiment</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>EMCSR 2014 - Group 2 - P2P Experiment</name>
+
+    <properties>
+        <experiment.host_names>54.77.123.10</experiment.host_names>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <experiment.host_names>${experiment.host_names}</experiment.host_names>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.ac.standrews.cs.t3</groupId>
+            <artifactId>core</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>uk.ac.standrews.cs.t3</groupId>
+            <artifactId>evaluation</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>uk.ac.standrews.cs.t3</groupId>
+            <artifactId>events</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.2</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>uk.ac.standrews.cs.maven.repository</id>
+            <name>School of Computer Science Maven Repository</name>
+            <url>http://maven.cs.st-andrews.ac.uk/</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>org.mashti.maven</id>
+            <name>Mashti Maven Repository</name>
+            <url>http://maven.mashti.org/</url>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>

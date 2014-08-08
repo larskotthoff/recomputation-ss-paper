@@ -17,6 +17,12 @@
 %         	      University of Dundee\\
 %         Dundee DD1 4HN, \underline{Scotland}\\
 %         kpetrie@dundee.ac.uk 
+% 	\and\\
+%         Abdul Razaq \\
+%                School of Engineering and Built Environment,
+%         	     Glasgow Caledonian University\\
+%         Glasgow, G4 0BA, \underline{Scotland}\\
+%         abdul.razaq@gcu.ac.uk 
 %        %add yourself here! 
 % }
 % \date{\today}
@@ -27,6 +33,7 @@
 % \maketitle
 
 \section{Case study \#1: Ethical requirements for recomputation}
+\label{s:group1}
 
 \subsection{Introduction}
 The goal of recomputation\footnote{http://www.recomputation.org/} is to follow the recompilation manifesto\footnote{http://www.recomputation.org/blog/2013/04/12/the-recomputation-manifesto/} and make computational experiments recomputable by providing tools and a repository to store experiments in. The mission is stated as:

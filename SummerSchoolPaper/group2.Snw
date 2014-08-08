@@ -54,7 +54,7 @@ xtable(run_time,
        digits = c(0,2,2))
 @
 
-In both real and virtual hardwares the relative standard deviation is very
+In both real and virtual hardware the relative standard deviation is very
 small (below $1\%$ in every case). We did not encounter any abnormalities when
 running on a virtual machine; this is contrary to the experiences of Kotthoff
 \cite{kotthoff}, who did not always see reliable \emph{sequential} runtimes on
@@ -64,22 +64,28 @@ The virtual machine image used for the experiments is available via
 VMDepot\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}.
 
 \subsection{Experiment 2: A Peer-to-Peer System}
+Experiments that are performed across multiple machines are challenging
+to reproduce. This is due to the cost of needed resources, and the complexities
+involved in configuring the machines and the relationship between the machines.
+Cloud services offer increasingly affordable computation. Such services use
+virtualisation to decrease the cost of system reconfiguration.
 
-We have used Chord (\cite{chord1}, \cite{chord2}) as the Peer-to-Peer (P2P)
-system to run our experiments. To satisfy the pupose of this report, we run
-each experiment once on real hardware and on the Virtual Machines (VMs) on
-Microsoft Azure \cite{azure}. We have created a network of 12 nodes, each
-running on a seperate machine, which is of $4$ cores ($4$*Intel Xeon 2GHz) with
-$8$ GBs RAM and Linux $2.6$ as the operating system. To have a valid comparison
-we have created $12$ VMs on Microsoft Azure, each VM runs on single core. 
+In order to study the challenges of making distributed experiments reproducible
+using cloud services, we deployed a Chord \cite{chord} Distributed Hash Table
+(DHT) of $10$ nodes on $10$ dedicated machines, and tried to reproduce the same
+experiment on Microsoft Azure.
 
-A \emph{Workload} model is a temporal sequence of lookups with exponentially
-distributed intervals. The studied workload models are: i) light (mean interval
-of 10 seconds), and ii) heavy (mean inverval of $1$ second). A \emph{Churn}
-model is a temporal sequence of node arrivals and departures from the network.
-The session lengths and down times of nodes are exponentially distributed. The
-studied churn models are: i) none (nodes stay alive throughout the experiment),
-ii) light (mean session length and downtime is $10$ minutes) and iii) heavy
-(mean session length and downtime is $1$ minute). We run each experiment for
-$1$ hour and repeat each experiment $5$ times. 
+Reproducing the same experiment on Microsoft Azure proved to be time consuming.
+Due to the lack of time we were unable to reproduce the experiment. The main reason
+is the steep learning curve of using Microsoft Azure's API. The API itself lacks
+documentation and is complex in design. Since the Azure's API is not as
+popular as the rivals, it is harder to find example usage of the API.
 
+It is possible to make experiments across multiple machines reproducible by writing
+a vendor-specific script that starts and configures any needed VMs before running
+the experiment. This approach raises a number of issues: 1) it relies on external
+services in order to run the experiment, 2) it is time-consuming to produce such an
+script, and 3) the script cannot be re-used on other cloud services.
+
+Further studies are needed to identify best practices to make distributed experiments
+reproducible using virtual machines.
