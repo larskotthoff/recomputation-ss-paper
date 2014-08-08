@@ -41,6 +41,10 @@ Dani\"el Reijsbergen\thanks{University of Edinburgh, Edinburgh, Scotland} %
 We report several case studies performed during the school and systematize our experiences.}
 \end{abstract}
 
+\emph{This paper is a work-in-progress.  It reports the state of our work at the end of a busy week of a Summer School, 
+but may be incomplete in various ways.}
+
+
 \input{intro}
 \input{recomputation}
 \input{school}
@@ -51,17 +55,17 @@ We report several case studies performed during the school and systematize our e
 \input{discussion}
 \input{ack}
 
-\section{Using Sweave}
-
-This paper has an incredibly simple piece of R in it.
-Here it is.
-<<>>=
-a <- c(1,2,3)
-median(a)
-@
-So that tells us the median of the numbers above is \Sexpr{median(a)}.
-
-Hopefully we will not need this section if at least one of the case studies will make a genuine use of R.
+% \section{Using Sweave}
+% 
+% This paper has an incredibly simple piece of R in it.
+% Here it is.
+%%  <<>>=
+% a <- c(1,2,3)
+% median(a)
+% @
+% So that tells us the median of the numbers above is \Sexpr{median(a)}.
+% 
+% Hopefully we will not need this section if at least one of the case studies will make a genuine use of R.
 
 \bibliographystyle{abbrvDOI}
 \bibliography{paper}
