@@ -1,0 +1,24 @@
+<configuration scan="true">
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>results/experiments.log</file>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--SSHJ error logs only-->
+    <logger name="net.schmizz" level="ERROR"/>
+    <logger name="io.netty" level="ERROR"/>
+
+    <root level="info">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
