@@ -45,7 +45,7 @@ We report several case studies performed during the school and systematize our e
 \input{recomputation}
 \input{school}
 \input{obstacles}
-%\input{group1}
+\input{group1}
 \input{group2}
 \input{group3}
 \input{discussion}
