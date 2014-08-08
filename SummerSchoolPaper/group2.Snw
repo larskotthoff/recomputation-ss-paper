@@ -35,7 +35,7 @@ run_time <- data.frame(real=result_matrix1,
                                 vm=result_matrix2)
 
 xtable(run_time,
-       caption = "Relative Standard Deviations of runimes (as a percentage)",
+       caption = "Relative Standard Deviations of runtimes (as a percentage)",
        label = "run_time",
        align = "lrr",
        digits = c(0,2,2))
