@@ -1,5 +1,5 @@
 # P2P Experiment
-This experimet investigates the challenges of running adistributed experiment on Virtual Machines (VM).
+This experiment investigates the challenges of running s distributed experiment on Virtual Machines (VM).
 
 
 For the control experiment we deployed a Chord network of `10` nodes across dedicated machines. 
