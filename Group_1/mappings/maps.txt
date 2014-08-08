@@ -17,7 +17,7 @@ HK10 - Only use public data?
 HK11 - Only observe public officials?
 HK12 - Involve participants who can't give informed cosnent
 HK13 - Deception?
-HK14 - Financial inducments?
+HK14 - Financial inducements?
 	HK14AKa - Amount of monetary compensation
 	HK14AKb - Amount of other compensation
 	HK14AKc - Amount of expense reimbursement
@@ -64,7 +64,7 @@ AK11 - Participants recruited from
 AK12 - Subject records
 AK13 - Participant age
 AK14 - Participant gender
-AK15 - Justify use of vulernable groups
+AK15 - Justify use of vulnerable groups
 	AK15ABa - Learning/communication difficulties
 	AK15Db - Pregnant
 	AK15Dc - >5000 participants
@@ -140,8 +140,11 @@ M3 - Use health data?
 U1 - Need to inform insurer?
 U2 - Physical contact from investigator?
 U3 - Using certified medical device?
-
-
+U4 - How are results disseminated
+U5 - Number of participants
+U6 - Is participation voluntary?
+U7 - Are our students involved?
+U8 - Health and safety precautions
 
 
 
@@ -340,18 +343,155 @@ AB6Ha
 AB6Hb
 STA5
 
-
-
-
-
-====
-* C: Clinical CUHK
-
 ====
 M: MIT
+
+HK1
+HK4
+HK5
+HK7
+HK6
+AK20
+HK2
+HK2DCb
+HK2Mc
+M1
+M2
+M3
+DC3
+DC4
+HK9
+AK5
+AK5Mb
+AK5Mc
+AK13
+U5
+AK16
+AK15
+AK11STAa
+HK14
+AK17
+AK17a
+AK29
+AK21
+AK8
+AB7
+AB12
+AB12STAa
+AB12Mb
+HK13
+HK21
+HK25
+HK24Mc
+
+
+
+
+
+
+
 
 ====
 B: Birmingham
 
+HK1
+HK4
+HK5
+HK6
+HK7
+AK3DCa
+DC3
+DC4
+HK2
+HK2AKa
+HK2DCb
+HK9
+AK8
+AB1
+AK16
+AK13
+Ak14
+AK11STAa
+HK21
+HK13
+STA3
+AB10
+AB10Bb
+HK14
+HK14Me
+AB12
+AB12STAa
+AB12Mb
+STA2
+AK21
+AK17
+AK17a
+AB14
+AK26
+AK15
+AB3
+HK17
+AK5
+STA5
+HK26
+
 ===
 U: UCL
+
+HK1
+HK26DCa
+DC3
+DC4
+HK4
+HK7
+HK6
+HK26
+HK2
+HK2DCb
+AK4
+HK9
+AK8
+AK20
+STA6
+U4
+AK26
+U5
+AK13
+AB6
+AK15
+AB3
+HK14
+AK11
+U6
+U7
+AB10
+HK21
+HK13
+STA3
+AK17
+U1
+U8
+HK17
+HK15
+AK29
+AK5
+U2
+AK5Mb
+U3
+STA5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
