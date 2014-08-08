@@ -15,7 +15,7 @@ TEXFILES = ${shell find . -mindepth 1 -maxdepth 1 -name \*.tex -not -name \*.Snw
 TEXS = $(SWEAVETEXFILES) $(TEXFILES)
 
 # temporary files
-CLEAN = $(SWEAVETEXFILES) *.aux *.bbl *.blg *-concordance.tex *.fdb_latexmk *.log *.out *.synctex.gz
+CLEAN = $(SWEAVETEXFILES) *.aux *.bbl *.blg *-concordance.tex *.fdb_latexmk *.log *.out *.synctex.gz group1-001.pdf
 
 paper.pdf: $(SWEAVEFILES) $(SWEAVETEXFILES) $(TEXFILES)
 
