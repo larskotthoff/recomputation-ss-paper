@@ -7,7 +7,7 @@
 
 PDFS = paper.pdf
 
-TEXS = paper.tex ack.tex group2.tex obstacles.tex recomputation.tex discussion.tex group3.tex  school.tex group1.tex intro.tex
+TEXS = paper.tex ack.tex group2.tex obstacles.tex paper-concordance.tex recomputation.tex discussion.tex group3.tex  school.tex group1.tex intro.tex
 
 paper.pdf: $(TEXS)
 
