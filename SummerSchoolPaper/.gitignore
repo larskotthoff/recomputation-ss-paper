@@ -1,0 +1,11 @@
+.Rhistory
+*.aux
+*.bbl
+*.blg
+*-concordance.tex
+*.fdb_latexmk
+*.log
+paper.pdf
+*.synctex.gz
+paper.tex
+group1-001.pdf
