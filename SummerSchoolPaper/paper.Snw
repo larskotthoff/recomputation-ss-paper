@@ -54,6 +54,7 @@ but may be incomplete in various ways.}
 \input{recomputation}
 \input{school}
 \input{obstacles}
+\input{open}
 \input{group1}
 \input{group2}
 \input{group3}
