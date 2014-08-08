@@ -29,7 +29,8 @@ This study investigates the challenges of reproducing parallel and distributed e
 The purpose of this section is to describe the experiments we have used to investigate the viability of reproducing parallel and distributed experiments on virtualized exvironment. We have used two experiments: i) A parallel system and ii) A Peer-to-Peer system.
 
 \subsection*{Experiment 1: A Parallel System}
-This experiment is called \emph{Parallel Maximum Clique} which finds out maximum clique in a graph by running a parallel program. The aim is to find out how the run time vary between the run on a real/dedicated hardware (from now on referred as \emph{Real Run Time (RRT)}) and virtual machine (VM) on a cloud (from now on referred as \emph{Virtual Run Time (VRT)}). We have used $4$ core of a node with $16$ Intel cores (2*Intel Xeon E5-2640 2GHz). The node has $64$ Gb RAM and has \emph{Scientific Linux $6$} as the operating system. The algorithm used in this experiment is described in \cite{ciaran}. We have selected $10$ different problem instances (i.e. graphs) to have a valid and reasonable comparative analysis. For each instance, we run the algorithm $50$ times once on the real/dedicated harware to collect the RRTs and on a VM with $4$ cores on Microsoft Azure \cite{azure} to collect the VRTs. We meaaure run time of the algorithm and ignore the input and output times. We compare the relative standard deviation (standard deviation as a proportion of the mean, since processing models varies between real and virtual hardware) of RRTs and VRTs of each problem instance. 
+
+We looked at an existing implementation of a parallel algorithm for the maximum clique problem \cite{ciaran}: given a graph, a clique is a subset of pairwise-adjacent vertices, and the maximum clique problem (which is NP-hard) is to find the largest such subset. On real hardware, for any given graph instance, if we run the program multiple times we get very similar runtimes. The aim of this experiment is to see whether runtimes are similarly consistent when run on a virtual machine (VM) on a cloud. For real runtimes (RRT) we used $4$ cores of a node with $16$ Intel cores (dual Intel Xeon E5-2640 v2 2GHz). The node has $64$ Gb RAM and has \emph{Scientific Linux $6$} as the operating system. We have selected $10$ different ``medium sized'' problem instances (i.e.\ graphs) from the second DIMACS implementation challenge to have a valid and reasonable comparative analysis. For each instance, we run the algorithm $50$ times on real harware to collect the RRTs, and then $50$ times on a VM with $4$ cores on Microsoft Azure \cite{azure} to collect virtual runtimes (VRTs). We measure runtimes of the algorithm and ignore the input and output times. We compare the relative standard deviation (standard deviation as a proportion of the mean, since processing models varies between real and virtual hardware) of RRTs and VRTs of each problem instance.
 
 \subsection*{Experiment 2: A Peer-to-Peer System}
 We have used Chord (\cite{chord1}, \cite{chord2}) as the Peer-to-Peer (P2P) system to run our experiments. To satisfy the pupose of this report, we run each experiment once on real hardware and on the Virtual Machines (VMs) on Microsoft Azure \cite{azure}. We have created a network of 12 nodes, each running on a seperate machine, which is of $4$ cores ($4$*Intel Xeon 2GHz) with $8$ GBs RAM and Linux $2.6$ as the operating system. To have a valid comparison we have created $12$ VMs on Microsoft Azure, each VM runs on single core. 
@@ -41,7 +42,7 @@ A \emph{Workload} model is a temporal sequence of lookups with exponentially dis
 This section presents the two sets of result of each experiments as described above and performs the comparison in terms of the objective of this report. 
 
 \subsection*{A Parallel System}
-We present the result in tabular format. Each row of the table is the standard deviation of RRTs and VRTs of a problem instance. Table~\ref{run_time} shows the result, where the first column is the name of the problem instance i.e. graph that is used for the experiment.
+We present the result in Table~\ref{run_time}. Each row of the table is a problem instance. We show the relative standard deviation of RRTs and VRTs, expressed as a percentage.
 
 <<echo=FALSE,results=tex>>=
 library(xtable)
@@ -62,13 +63,13 @@ run_time <- data.frame(real=result_matrix1,
                                 vm=result_matrix2)
 
 xtable(run_time,
-       caption = "Relative Standard Deviations of Run Time (in percentage)",
+       caption = "Relative Standard Deviations of runimes (as a percentage)",
        label = "run_time",
-       align = "c|rr",
-       digits = c(0,10,10))
+       align = "lrr",
+       digits = c(0,2,2))
 @
 
-In both real and virtual hardwares the relative standard deviation is very small (below $1\%$ in every case). We did not encounter any abnormalities in case of virtual environment.  
+In both real and virtual hardwares the relative standard deviation is very small (below $1\%$ in every case). We did not encounter any abnormalities when running on a virtual machine; this is contrary to the experiences of Kotthoff \cite{kotthoff}, who did not always see reliable \emph{sequential} runtimes on virtualised hardware.
 
 \subsection*{A Peer-to-Peer System}
 
