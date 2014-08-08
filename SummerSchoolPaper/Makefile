@@ -28,6 +28,7 @@ all: $(PDFS)
 		R CMD Sweave $*.Rnw
 
 .tex.pdf: 
+		touch paper-concordance.tex
 		latexmk -pdf $*.tex
 
 clean:
