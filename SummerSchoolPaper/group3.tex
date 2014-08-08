@@ -1,4 +1,79 @@
 \section{Case study \#3: recomputing non-CS experiments}
 \label{s:group3}
 
-Describe group 3's work.
+The focus of this section is on the issues relevant to research reproducibility that are potentially unique to non-CS computational research.
+The discussion is based on experience gained while packaging three computational experiments into self-contained virtual-machines.
+The papers on which the discussion is based (\cite{danielpaper}, \cite{michaelpaper}, \cite{sylesterpaper}) deal with urban planning, solar physics, and atmospheric physics respectively, although the discussion is likely relevant to other non-CS domains.
+Our aim was to offer readers (or reviewers) the opportunity to reproduce the figures presented in the paper, to inspect the code, and to possibly test behaviour of the programs with other parameters, all within a ready-to-use environment, namely a single virtual box constructed using the Vagrant tool and which runs the Debian operating system.
+
+%** LEGAL **
+%
+%The first obstacles in offering reproducibility of a computational experiment might arise due to legal, rather than technical reasons, and in fact these did arise in the cases discussed here.
+We encountered legal obstacles in all case studies.
+All of the software had been developed at universities, which typically resulted in the copyright being held by these institutions.
+Similarly, the decision on whether to allow open-source distribution of the code and the choice of licensing terms are to be taken by a university representative (e.g., a PhD advisor).
+While this is in no way unique to non-CS domains, it is likely that pre-existing IP procedures are less likely to cover software-dissemination aspects in institutions not dealing with computer science.
+Even if the legal status of the code developed for a given experiment is settled and matches reproducibility requirements, the environment needed to run it might prevent unconstrained recomputation.
+This in fact was also the case in one of the programs in question, as the code relied on proprietary software library.
+
+Furthermore, we noted a lack of domain-specific workflows for recomputation in non-CS journals.
+A counterexample is the journal Geoscientific Model Developments (GMD), which encourages reviewers to check the code.\footnote{doi:10.5194/gmd-6-1233-2013 }
+The level of computer proficiency in non-CS domains\footnote{For example, see: ``\emph{Computational science: ...Error. Why scientific programming does not compute}''. DOI:10.1038/467775a.} is also likely to influence the ability of researchers to use the Virtual Machines --- it is arguably less likely that a physics or urban-planning journal reviewer will know right away how to deal with a VM, in contrast to CS-related journals.
+
+We give a more detailed description of the experiments in the remainder of this section.
+
+\subsection*{Experiment 1: Urban Planning}
+
+For the first case study, we tried to recompute parts of Table~6 of \cite{danielpaper}, in which the punctuality of a bus service in Edinburgh is evaluated using statistical methods. Table~6 contains confidence intervals that are constructed using a piece of software written in Java. The programme can be compiled after installing a Java Software Development Kit on the virtual machine. The programme uses the SSJ library for Stochastic Simulation;\footnote{http://simul.iro.umontreal.ca/ssj-2/indexe.html} it had to be downloaded from the Internet. After that, the code was able to run.
+The resulting virtual machine is about 550MB - the Java SDK and its dependencies account for over 200MB by themselves, although parts of the development kit could be de-installed after compilation.
+
+We encountered legal obstacles in the following three areas.
+\begin{itemize} 
+\item Code-related: the software was developed as part of the EU project QUANTICOL, which is funded by the European Commission as part of its 7th Framework programme. In the General Conditions part of the project's grant agreement it is stated that the IP rights are awarded to the beneficiary, which in this case would be the University of Edinburgh. In turn, the University of Edinburgh has issued a position statement on intellectual property rights in which it stated that ``\emph{It is the policy of the University of Edinburgh to develop University research capabilities and to assess, develop and promote the transfer of Edinburgh's technology and ideas for society's use and benefit.}'' Still, publication of the code would need to be checked with a supervisor.
+\item Library-related: the package SSJ is released under the GPL licence from GNU.
+\item Data-related: we code uses a dataset based on bus location measurements provided to us by Lothian Buses. We would need their permission to put this dataset in the public domain.
+\end{itemize}
+
+The resulting virtual machine contains the Java source files, so researchers with knowledge of Java can analyse the correctness of the programme. However, the code is not documented and may be hard to read. Parameters are hard-coded and no interpretation is given of the resulting numbers and LaTeX code.
+
+\subsection*{Experiment 2: Solar Physics}
+
+At the start of the recomputation exercise it was judged that the results presented in Bareford et al. 2010
+would be the easiest (of the three publications outside of computer science) to reproduce. The underlying
+code is serial in nature and not tied to a specific platform or hardware. 
+
+The work discussed in Bareford et al. 2010 concerns the energy released from an idealised cylindrical magnetic
+field whenever it becomes unstable and subsequently relaxes to a simpler state. Initially, a field starts in a
+stable configuration and is then taken on a random walk through a known two dimensional region of stability, see Fig 3 of
+the aforementioned publication. When the field crosses the boundary of this region (i.e., the threshold for instability),
+an energy release is determined and the field is moved to simpler stable configuration. 
+
+When this process is repeated many times, the results can take the form of energy distributions. The top right plot
+of Figure 14 (Bareford et al. 2010) shows the energy releases for $10^5$ relaxations involving 100 different stable field
+configurations. We decided to focus on reproducing only this figure from Bareford et al.
+
+This plot was taken from the results produced by a C++ code called Taylor Relaxation of Loop Ensembles, or TRoLE
+for short, that automates the process described above.
+
+The TRoLE code was written when the first author was a postgraduate at the University of Manchester. It was
+necessary therefore to check the IP policy for this institution. Section 3.2 of this policy states that the ``...ownership
+of IP created by a Student, who is not an employee of the University, is with the Student.'', which we took to mean
+that the first author was free to place the code in a publicly available repository, which will be done at a later date.
+
+The next issue concerned a technical matter: the code was written with the use of a proprietary numerical algorithms
+library (NAG), the licence for which had expired. Fortunately, there is an open source alternative, the GNU Scientific
+Library (GSL). The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
+
+After the code was recompiled and linked with GSL libraries, it was ready to run the simulation of $10^5$ relaxation
+events. Alas, the code could only simulate a fraction of this total (146 events), and instead the code reported
+that it had reached a point on the instability threshold for which a stable (relaxed) configuration could not be calculated.
+The relaxed state is determined by ensuring that certain properties are conserved (i.e., the values match those
+calculated for the unstable state). This is essentially a root finding exercise, and at the time of writing
+the cause of this problem was not known. Updates to the TRoLE code subsequent to Bareford et al. 2010, that were
+used to provide the figures for a later publication (Bareford et al. 2011), one that featured a more complex magnetic
+fields, may be behind the immediate failure in recomputation. Given time however (e.g., 2-3 days), this issue
+is likely to be resolved. 
+
+\subsection*{Experiment 3: Atmospheric Physics}
+
+In this case the workaround was feasible as the GNU Scientific Library offered analogous functionality, however, in all three scientific domains mentioned proprietary tools and data formats are widespread and sometimes considered de-facto standards what make transition to other solutions ... (e.g. IDL in astronomy and geoscience, )
