@@ -17,7 +17,7 @@ TEXS = $(SWEAVETEXFILES) $(TEXFILES)
 # temporary files
 CLEAN = $(SWEAVETEXFILES) *.aux *.bbl *.blg *-concordance.tex *.fdb_latexmk *.log *.out *.synctex.gz
 
-paper.pdf: $(SWEAVEFILES) $(TEXFILES)
+paper.pdf: $(SWEAVEFILES) $(SWEAVETEXFILES) $(TEXFILES)
 
 all: $(PDFS)
 
