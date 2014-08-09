@@ -75,10 +75,9 @@ public class ChordExperiment {
 
         SSH_KEY_FILE = new OpenSSHKeyFile();
         SSH_KEY_FILE.init(new File(System.getProperty("user.home") + File.separator + ".ssh", "id_rsa"));
-        // final File location = new File(System.getProperty("user.home") + File.separator + "credentials", "p2p_experiment.key");
-        // SSH_KEY_FILE.init(location);
-
-        LOGGER.info("key exists? {}", location.isFile());
+        
+        // Example of using a specific private key (used by Amazon and Azure) 
+        // SSH_KEY_FILE.init(new File(System.getProperty("user.home") , "private_key.pem"));
 
         scenario.setLookupRetryCount(5);
         scenario.setExperimentDuration(new Duration(30, TimeUnit.MINUTES));
@@ -88,12 +87,6 @@ public class ChordExperiment {
         for (String host_name : AVAILABLE_HOST_NAMES) {
             scenario.addHost(host_name, 1, PORT_NUMBER_PROVIDER, CHURN, WORKLOAD, CHORD_CONFIGURATION);
         }
-                           try {
-                               System.out.println(InetAddress.getLocalHost()
-                                       .getHostName());
-                           }catch (Exception e){
-
-                           }
     }
 
     private static final int REPETITIONS = 5;
