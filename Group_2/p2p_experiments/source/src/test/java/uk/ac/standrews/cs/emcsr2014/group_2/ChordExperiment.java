@@ -77,7 +77,7 @@ public class ChordExperiment {
         SSH_KEY_FILE.init(new File(System.getProperty("user.home") + File.separator + ".ssh", "id_rsa"));
         
         // Example of using a specific private key (used by Amazon and Azure) 
-        // SSH_KEY_FILE.init(new File(System.getProperty("user.home") , "private_key.pem"));
+        // SSH_KEY_FILE.init(new File("/path/to/private_key.pem"));
 
         scenario.setLookupRetryCount(5);
         scenario.setExperimentDuration(new Duration(30, TimeUnit.MINUTES));
