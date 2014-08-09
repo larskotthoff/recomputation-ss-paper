@@ -17,4 +17,4 @@ The SSH authentication method is customisable via [ChordExperiment.java](https:/
 The port number for the deployed Chord nodes is chosen automatically.
 
 
-A shell script can be found [here](https://github.com/larskotthoff/recomputation-ss-paper/blob/master/Group_2/p2p_experiments/source/src/main/scripts/ubuntu_14_setup.sh) that would install required software on an Ubuntu 14.1 VM in order to run this experiment.
+A shell script can be found [here](https://github.com/larskotthoff/recomputation-ss-paper/blob/master/Group_2/p2p_experiments/source/src/main/scripts/ubuntu_14_setup.sh) that installs required software on an Ubuntu 14.1 VM in order to run this experiment.
