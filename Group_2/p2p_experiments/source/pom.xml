@@ -10,7 +10,7 @@
     <name>EMCSR 2014 - Group 2 - P2P Experiment</name>
 
     <properties>
-        <experiment.host_names>54.77.123.10</experiment.host_names>
+        <experiment.host_names>host1,host2,host3</experiment.host_names>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
