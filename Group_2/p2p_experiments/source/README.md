@@ -7,6 +7,7 @@ To run the experiment, execute:
     mvn clean test -Dtest=ChordExperiment -Dexperiment.host_names=host1,host2,host3
 
 The host names must be specified in a comma separated string via `experiment.host_names` System property.
+Alternatively, host names can be specified in [pom.xml](https://github.com/larskotthoff/recomputation-ss-paper/blob/master/Group_2/p2p_experiments/source/pom.xml#L13) file, in which case there is no need for inline setting of host name parameter.
 
 For each given host, the experiment uploads necessary files via SSH and deploys a Chord node.
 By default the experiment uses `~/.ssh/id_rsa` public key for ssh authentication, and assumes the SSH private key is not encrypted.
