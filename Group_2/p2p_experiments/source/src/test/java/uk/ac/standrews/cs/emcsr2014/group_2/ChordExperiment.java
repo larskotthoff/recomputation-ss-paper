@@ -74,9 +74,9 @@ public class ChordExperiment {
     static {
 
         SSH_KEY_FILE = new OpenSSHKeyFile();
-//        SSH_KEY_FILE.init(new File(System.getProperty("user.home") + File.separator + ".ssh", "id_rsa"));
-        final File location = new File(System.getProperty("user.home") + File.separator + "credentials", "p2p_experiment.key");
-        SSH_KEY_FILE.init(location);
+        SSH_KEY_FILE.init(new File(System.getProperty("user.home") + File.separator + ".ssh", "id_rsa"));
+        // final File location = new File(System.getProperty("user.home") + File.separator + "credentials", "p2p_experiment.key");
+        // SSH_KEY_FILE.init(location);
 
         LOGGER.info("key exists? {}", location.isFile());
 
