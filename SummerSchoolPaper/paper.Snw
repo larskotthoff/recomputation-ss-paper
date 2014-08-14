@@ -8,7 +8,7 @@
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 
-\title{An Open and Reproducible Paper on Openness and Reproducibility of Papers in Computational Science}
+\title{Experience Reports and Challenges on Reproducibility in Computational Science}
 
 \author{%%
 %% Please add your name to this paper
