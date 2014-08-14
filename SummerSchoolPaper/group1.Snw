@@ -105,7 +105,8 @@ by mandating informed consent.
 
 \subsubsection{Comparison Analysis}
 
-\begin{figure*}
+\begin{figure}
+\begin{minipage}{\linewidth}
 <<echo=FALSE,fig=TRUE>>=
 library(reshape)
 library(ggplot2)
@@ -118,7 +119,8 @@ p <- ggplot(maps_frame, aes(x=tag_factor, y=Freq)) + geom_bar(stat = "identity",
 print(p)
 @
 \caption{Histogram showing frequency distribution of fields in ethics applications}
-\end{figure*}
+\end{minipage}
+\end{figure}
 
 % comment on how we compared each paper and a report of the comparison
 
