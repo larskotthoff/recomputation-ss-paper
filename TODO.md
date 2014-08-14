@@ -46,6 +46,7 @@ http://www.computer.org/cms/Computer.org/transactions/cfps/cfp_tetcsi_rrm.pdf
 
 * Citations
     * Make sure each section is bolstered with proper citations
+    * Titus Brown similar experience http://figshare.com/articles/Channeling_community_contributions_to_scientific_software_a_hackathon_experience/1112541
 
 * Non paper things
     * VMs where appropriate
