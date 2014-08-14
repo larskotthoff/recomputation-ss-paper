@@ -1,57 +1,56 @@
-\documentclass[a4paper]{article}
+\documentclass[10pt,journal,cspaper,compsoc]{IEEEtran}
 
 \usepackage{url}
 \urlstyle{same}
 
 \usepackage{hyperref}
 
-\title{An Open and Reproducible Paper on Openness and Reproducibility of Papers in Computational Science}
-\author{%%
-%% Please add your name to this paper
-%% ==
-Sylwester Arabas\thanks{University of Warsaw, Warsaw, Poland}, %
-Michael R. Bareford\thanks{University of St Andrews, St Andrews, Fife, UK}, %
-Ian P. Gent\footnotemark[2], %
-\\%
-Benjamin M. Gorman \thanks{University of Dundee, Dundee, UK}, %
-Masih Hajiarabderkani\footnotemark[2], %
-Tristan Henderson\footnotemark[2], %
-\\%
-Luke Hutton\footnotemark[2], %
-Alexander Konovalov\footnotemark[2], %
-Lars Kotthoff\thanks{University College Cork, Ireland}, %
-\\%
-Ciaran McCreesh\thanks{University of Glasgow, Glasgow, Scotland}, %
-Ruma R. Paul\thanks{Universit\'{e} catholique de Louvain, Louvain-la-Neuve, Belgium}, %
-Karen E. J. Petrie\footnotemark[3], %
-Abdul Razaq\thanks{Glasgow Caledonian University, Glasgow, Scotland}, %
-\\%
-Dani\"el Reijsbergen\thanks{University of Edinburgh, Edinburgh, Scotland}, %
-Kenji Takeda\thanks{Microsoft Research, Cambridge}
-\\%
-%% ==
-}
-
-
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 
+\title{An Open and Reproducible Paper on Openness and Reproducibility of Papers in Computational Science}
 
-\maketitle
+\author{%%
+%% Please add your name to this paper
+%% ==
+Sylwester~Arabas,
+Michael~R.~Bareford,
+Ian~P.~Gent,
+Benjamin~M.~Gorman,
+Masih~Hajiarabderkani,
+Tristan~Henderson,
+Luke~Hutton,
+Alexander~Konovalov,
+Lars~Kotthoff,
+Ciaran~McCreesh,
+Ruma~R.~Paul,
+Karen~E.~J.~Petrie,
+Dani\"el~Reijsbergen,
+Abdul~Razaq,
+and~Kenji~Takeda.%
+\IEEEcompsocitemizethanks
+{
+\IEEEcompsocthanksitem S.~Arabas is with the University of Warsaw. M.~Bareford, I.~Gent, M.~Hajiarabderkani, T.~Henderson, L.~Hutton and A.~Konovalov are with the University of St Andrews. B.~Gorman and K.~Petrie are with the University of Dundee. L.~Kotthoff is with University College Cork. C.~McCreesh is with the University of Glasgow. R.~Paul is with the Universit\'{e} catholique de Louvain. D.~Reijsbergen is with the University of Edinburgh. A.~Razaq is with Glasgow Caledonian University. K.~Takeda is with Microsoft Research.\protect\\
+E-mail: emcsr2014@cs.st-andrews.ac.uk
+}%
+\thanks{This paper is a work-in-progress.  It reports the state of our work at the end of a busy week of a Summer School, 
+but may be incomplete in various ways.}
+}
 
+\IEEEcompsoctitleabstractindextext{
 \begin{abstract}
-{This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.
+This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.
 We report several case studies performed during the school and systematize our experiences. 
 This paper is \emph{open} and \emph{reproducible}: the whole process of writing this paper is
 captured in the GitHub repository hosting both the source of the paper, supplementary codes and data;
 we are providing setup for several experiments on which we were working; finally, we are trying to 
 describe what we have achieved during the week of the school in a way that others may repeat (and 
-hopefully improve) our experiments.}
+hopefully improve) our experiments.
 \end{abstract}
+}
 
-\emph{This paper is a work-in-progress.  It reports the state of our work at the end of a busy week of a Summer School, 
-but may be incomplete in various ways.}
-
+\maketitle
+\IEEEpeerreviewmaketitle
 
 \input{intro}
 \input{recomputation}
