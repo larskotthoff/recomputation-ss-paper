@@ -7,35 +7,49 @@ Call for papers is here, deadline 1 September:
 
 http://www.computer.org/cms/Computer.org/transactions/cfps/cfp_tetcsi_rrm.pdf
 
-* ~~Arrange for proper open access~~ Tristan
-    * generously covered by University of St Andrews
-* ~~Formatting for journal~~ Tristan
-* experience report
-* highlighting challenges
-* Can't make firm conclusions
-* But based on some evidence
-* Suggestions for future research
-* ethics
-* CS one not even on the web
-* Todo list
-* Create VM
-* Ask for people's code if they have it 
-* Introduce the problem/issue in the background section.
-* Agreed upon format for each study
-* ETHICS
-* HCI
-* // computing
-* non CS
-* Each study
-* background 
-* Methodology
-* Results
-* Discussion
-* Challenges 
-* Reproducibility
-* Titus Brown tweet
-* Title: Experiences and Challenges in Reproducible Computational Science
-* Is this an issue for arxiv 
-* Citations 
-* get VMS etc
+* General
+    * ~~Arrange for proper open access~~ Tristan
+        * need proper licence for REF
+        * fees generously covered by University of St Andrews
+    * ~~Formatting for journal~~ Tristan
+    * Page limit 12 pages (poss can go slightly over but no more than 14 pages)
+
+* Title
+    * new working title: *Experiences and Challenges in Reproducible Computational Science*
+        * is there an issue of renaming paper already on arxiv?
+    * focus is on experience report from the summer school groups
+    * raising issues and challenges for reproducibility
+    * no claim conclusions from case studies are generally valid
+
+* Structure
+    * Intro: Ian
+    * Background: Tristan
+        * Introducing the four case studies and the problems they address
+    * Four case studies, 
+        * about 2 pages each
+        * Background (more focussed than general bg)
+        * Methodology
+        * Results
+        * Discussion
+    * Challenges raised
+        * linking to above
+        * Reproducibility of this paper
+
+* Case Study 1, Group 1: ???
+
+* Case Study 2, Group 2: ???
+
+* Case Study 3, Group 3: ???
+
+* Case Study 4: Miguel
+    * If any of the subgroups have R or SPSS code they used, please put it in repo
+
+* Citations
+    * Make sure each section is bolstered with proper citations
+
+* Non paper things
+    * VMs where appropriate
+        * are they releasable legally/ethically?
+        * If not discuss in paper
+    * Create VM for paper so it is always remakable: Ian 
 
