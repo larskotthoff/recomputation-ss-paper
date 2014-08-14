@@ -37,7 +37,7 @@ http://www.computer.org/cms/Computer.org/transactions/cfps/cfp_tetcsi_rrm.pdf
 
 * Case Study 1, Group 1: ???
 
-* Case Study 2, Group 2: ???
+* Case Study 2, Group 2: Ciaran will do the parallel bits, but not before the 20th or so.
 
 * Case Study 3, Group 3: ???
 
