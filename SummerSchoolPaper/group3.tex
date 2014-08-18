@@ -11,14 +11,14 @@ Our aim was to offer readers (or reviewers) the opportunity to reproduce the fig
 %The first obstacles in offering reproducibility of a computational experiment might arise due to legal, rather than technical reasons, and in fact these did arise in the cases discussed here.
 We encountered legal obstacles in all case studies.
 All of the software had been developed at universities, which typically resulted in the copyright being held by these institutions.
-Similarly, the decision on whether to allow open-source distribution of the code and the choice of licensing terms are to be taken by a university representative (e.g., a PhD advisor).
+Furthermore, the decisions concerning whether to allow open-source distribution of the code and the choice of licensing terms might be the prerogative of a university representative (e.g., a PhD supervisor).
 While this is in no way unique to non-CS domains, it is likely that pre-existing IP procedures are less likely to cover software-dissemination aspects in institutions not dealing with computer science.
 Even if the legal status of the code developed for a given experiment is settled and matches reproducibility requirements, the environment needed to run it might prevent unconstrained recomputation.
-This in fact was also the case in one of the programs in question, as the code relied on proprietary software library.
+This in fact was also the case in one of the programs in question, as the code relied on a proprietary software library.
 
-Furthermore, we noted a lack of domain-specific workflows for recomputation in non-CS journals.
+We also noted a lack of domain-specific workflows for recomputation in non-CS journals.
 A counterexample is the journal Geoscientific Model Development (GMD), which encourages reviewers to check the code.\footnote{DOI: 10.5194/gmd-6-1233-2013 }
-The level of computer proficiency in non-CS domains\footnote{For example, see: ``\emph{Computational science: ...Error. Why scientific programming does not compute}''. DOI:10.1038/467775a.} is also likely to influence the ability of researchers to use the Virtual Machines --- it is arguably less likely that a physics or urban-planning journal reviewer will know right away how to deal with a VM, in contrast to CS-related journals.
+The level of computer proficiency in non-CS domains\footnote{For example, see: ``\emph{Computational science: ...Error. Why scientific programming does not compute}''. DOI:10.1038/467775a.} is also likely to influence the ability of researchers to use the Virtual Machines --- it is arguably less likely that a physics or urban-planning journal reviewer will be comfortable using a VM, in contrast to CS-related journals.
 
 We give a more detailed description of the experiments in the remainder of this section.
 
@@ -29,7 +29,7 @@ The resulting virtual machine is about 550MB - the Java SDK and its dependencies
 
 We encountered legal obstacles in the following three areas.
 \begin{itemize} 
-\item Code-related: the software was developed as part of the EU project QUANTICOL, which is funded by the European Commission as part of its 7th Framework programme. In the General Conditions part of the project's grant agreement it is stated that the IP rights are awarded to the beneficiary, which in this case would be the University of Edinburgh. In turn, the University of Edinburgh has issued a position statement on intellectual property rights\footnote{http://www.research-innovation.ed.ac.uk/Portals/0/Documents/University-of-Edinburgh-Position-Statement-on-Intellectual-Property\_December2011.pdf} in which it stated that it ``\emph{is the policy of the University of Edinburgh to develop University research capabilities and to assess, develop and promote the transfer of Edinburgh's technology and ideas for society's use and benefit.}'' Still, publication of the code would need to be checked with a supervisor.
+\item Code-related: the software was developed as part of the EU project QUANTICOL, which is funded by the European Commission as part of its 7th Framework programme. In the General Conditions part of the project's grant agreement, it is stated that the IP rights are awarded to the beneficiary, which in this case would be the University of Edinburgh. In turn, the University of Edinburgh has issued a position statement on intellectual property rights\footnote{http://www.research-innovation.ed.ac.uk/Portals/0/Documents/University-of-Edinburgh-Position-Statement-on-Intellectual-Property\_December2011.pdf} in which it stated that it ``\emph{is the policy of the University of Edinburgh to develop University research capabilities and to assess, develop and promote the transfer of Edinburgh's technology and ideas for society's use and benefit.}'' Still, publication of the code would need to be checked with a supervisor.
 \item Data-related: the code uses a dataset based on bus location measurements provided to us by Lothian Buses. We would need their permission to put this dataset in the public domain.
 \end{itemize}
 The use of the SSJ package is not an obstacle because it is released under the GPL licence from GNU.
@@ -38,45 +38,37 @@ The resulting virtual machine contains the Java source files, allowing researche
 
 \subsection*{Experiment 2: Solar Physics}
 
-At the start of the recomputation exercise it was judged that the results presented in \cite{bareford2010nanoflare}
-would be the easiest (of the three publications outside of computer science) to reproduce. The underlying
-code is serial in nature and not tied to a specific platform or hardware. 
+At the start of the recomputation exercise it was judged that the results presented in \cite{bareford2010nanoflare} would be the easiest (of the three publications outside of computer science) to reproduce. The underlying code is serial in nature and not tied to specific hardware or operating system platform. 
 
-The work discussed in \cite{bareford2010nanoflare} concerns the energy released from an idealised cylindrical magnetic
-field whenever it becomes unstable and subsequently relaxes to a simpler state. Initially, a field starts in a
-stable configuration and is then taken on a random walk through a known two dimensional region of stability, see Fig 3 of
-the aforementioned publication. When the field crosses the boundary of this region (i.e., the threshold for instability),
-an energy release is determined and the field is moved to simpler stable configuration. 
+The work discussed in \cite{bareford2010nanoflare} concerns the energy released from an idealised cylindrical magnetic field when it becomes unstable and subsequently relaxes to a simpler state. Initially, a field (or loop) starts in a stable configuration and is then taken on a random walk through a known two dimensional region of stability, see Figure 3 of the aforementioned publication. When the field crosses the boundary of this region (i.e., the threshold for instability), an energy release is determined and the field is moved to simpler stable configuration. 
 
-When this process is repeated many times, the results can take the form of energy distributions. The top right plot
-of Figure 14 in \cite{bareford2010nanoflare} shows the energy releases for $10^5$ relaxations involving 100 different stable field
-configurations. We decided to focus on reproducing only this figure from \cite{bareford2010nanoflare}.
+When this process is repeated many times, the results can be expressed as energy distributions, see Figure 14 of \cite{bareford2010nanoflare}, which shows the energy releases for $10^5$ relaxations involving a variety of loop lifetimes. We decided to focus on reproducing only this figure from \cite{bareford2010nanoflare}. This plot was taken from the results produced by a C++ code called Taylor Relaxation of Loop Ensembles, or TRoLE for short, that automates the process described above.
 
-This plot was taken from the results produced by a C++ code called Taylor Relaxation of Loop Ensembles, or TRoLE
-for short, that automates the process described above.
+The TRoLE code was written when the first author was a postgraduate at the University of Manchester. It was necessary therefore to check the IP policy for this institution.\footnote{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=487} Section 3.2 of this policy states that the ``\emph{...ownership of IP created by a Student, who is not an employee of the University, is with the Student.}'', which we took to mean that the first author was free to place the code in a publicly available repository.\footnote{https://github.com/mbareford/trole}
 
-The TRoLE code was written when the first author was a postgraduate at the University of Manchester. It was
-necessary therefore to check the IP policy for this institution.\footnote{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=487} Section 3.2 of this policy states that the ``\emph{...ownership
-of IP created by a Student, who is not an employee of the University, is with the Student.}'', which we took to mean
-that the first author was free to place the code in a publicly available repository, which will be done at a later date.
+The next issue concerned a technical matter: the code was written with the use of a proprietary numerical algorithms library (NAG),\footnote{http://www.nag.co.uk/numeric/CL/CLdescription.asp} the licence for which had expired. Fortunately, there is an open source alternative, the GNU Scientific Library (GSL).\footnote{http://www.gnu.org/software/gsl/} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
 
-The next issue concerned a technical matter: the code was written with the use of a proprietary numerical algorithms
-library (NAG),\footnote{http://www.nag.co.uk/numeric/CL/CLdescription.asp} the licence for which had expired. Fortunately, there is an open source alternative, the GNU Scientific
-Library (GSL).\footnote{http://www.gnu.org/software/gsl/} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
+After the code was recompiled and linked with GSL libraries, it was ready to run the simulation of $10^5$ relaxation events. Alas, the code could at first only simulate a fraction of this total (146 events): the code reported that it had reached a point on the instability threshold for which a stable (relaxed) configuration could not be calculated. The relaxed state is determined by ensuring that certain properties are conserved (i.e., the property values match those calculated for the unstable state) - this is essentially a root finding exercise. Further investigation revealed that the magnetic field profiles were being calculated incorrectly for a wide range of threshold states. The cause concerned incorrect substitutions for the NAG Bessel functions. For example, the NAG routine, nag\_bessel\_j0() is the call for a regular cylindrical Bessel function, whereas, what looks like the equivalent in GSL, gsl\_bessel\_j0(), is actually the routine for a regular \textit{spherical} Bessel function. All that was required to call the correct routine was to capitalise the last letter, i.e., gsl\_bessel\_J0().
+ 
+The magnetic field that describes every possible loop configuration is defined in terms of cylindrical Bessel functions: hence, an error here will have dramatic consequences for the results produced by the TRoLE code. Once these function calls were corrected, the recomputation was successful. Figure \ref{fig_recomp_grp3_exp2} shows the recomputated plots in red and the published results are given in blue.
+\begin{figure}[h!] 
+  \vspace{-5pt}
+  \center
+  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle3.eps}
+  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle2.eps}
+  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle1.eps}
+  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle0.eps}
+  \caption{\small{Flare energy distributions over 10$^5$ relaxation events for a variety of loop lifetimes. The lifetimes are 1000 relaxation events (top left), 100 relaxation events (top right), 10 relaxation events (bottom left) and 1 relaxation event (bottom right). The red plots are the recomputated results and the blue are the results from the original paper \cite{bareford2010nanoflare}.}}
+  \label{fig_recomp_grp3_exp2}
+  \vspace{-10pt} 
+\end{figure}
+The differences between the two sets of results are negligible and entirely consistent with the stochastic method used to generate the energy distributions.
 
-After the code was recompiled and linked with GSL libraries, it was ready to run the simulation of $10^5$ relaxation
-events. Alas, the code could only simulate a fraction of this total (146 events), and instead the code reported
-that it had reached a point on the instability threshold for which a stable (relaxed) configuration could not be calculated.
-The relaxed state is determined by ensuring that certain properties are conserved (i.e., the values match those
-calculated for the unstable state). This is essentially a root finding exercise, and at the time of writing
-the cause of this problem was not known. Updates to the TRoLE code subsequent to \cite{bareford2010nanoflare}, that were
-used to provide the figures for a later publication (i.e., \cite{bareford2011flare}), one that featured a more complex magnetic
-fields, may be behind the immediate failure in recomputation. Given time however (e.g., 2-3 days), this issue
-is likely to be resolved. 
 
+ 
 \subsection*{Experiment 3: Atmospheric Physics}
 
 We also attempted to use the virtual machine to run code that uses libcloudph++ \cite{arabas2013libcloud}, a library of algorithms
-for representing cloud microphysics using numerical models. The library allows one to simulate formation of clouds and precipitation, for instance within a fluid-dynamics simulation of an atmospheric flow. We succeeded in running several pieces of software that were used to create figures used in \cite{arabas2013libcloud}. The software is already under a GPL and in a Github repository. The libraries needed to run the software are a C++ compiler, CMake, and the Boost and Thrust libraries.
+for representing cloud microphysics using numerical models. The library allows one to simulate the formation of clouds and precipitation, for instance within a fluid-dynamics simulation of an atmospheric flow. We succeeded in running several pieces of software that were used to create figures used in \cite{arabas2013libcloud}. The software is already under a GPL and in a Github repository. The libraries needed to run the software are a C++ compiler, CMake, and the Boost and Thrust libraries.
 
 Two legal obstacles were encountered. For one, the libraries optionally use the GPU using non-free-software (CUDA) to make it run faster. Additionally, the employed particle-based algorithm is inspired by a technique covered by several patents including a European one (EP1847939A2). As for potential technical obstacles, the only complication was getting the right software versions on the VM, otherwise all was feasible.
