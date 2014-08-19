@@ -80,45 +80,6 @@ public class PunctualityAnalyst {
 		}
 	}
 	
-	public void EVWTbootstrap(String s, int N) {
-		String headwaysFilePath = s;
-		File file = new File(headwaysFilePath); 
-		try {
-			ArrayList<int[]> headways = new ArrayList<int[]>();
-			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "gb2312"));
-			String temp;
-			while((temp = br.readLine()) != null) {
-				int result = Integer.parseInt(temp);
-				int[] res = new int[1]; res[0] = result;
-				headways.add(res);
-			}
-			
-			double[] result = new double[N];
-			for(int i=0;i<N;i++) {
-				double sX = 0;
-				double sX2 = 0;
-				for(int j=0;j<headways.size();j++) {
-					int res = headways.get((int) (Math.floor(Math.random()*headways.size())))[0];
-					sX += res;
-					sX2 += res*res;
-				}
-				double meanY = sX/headways.size();
-				double varY = sX2/headways.size()-meanY*meanY;
-				result[i] = 1-NormalDist.cdf01((900-meanY)/Math.sqrt(varY));
-				//System.out.println(result[i]);
-			}
-			Arrays.sort(result);
-//			for(int i=0;i<N;i++) {
-//				System.out.println(result[i]);
-//			}
-			System.out.println("\\vtwo{"+floatRep(result[(int) Math.floor(0.025*N)],3,true)+"}{"+floatRep(result[(int) Math.floor(0.975*N)],3,true)+"}");
-			
-			br.close();
-		} catch(Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
-	
 	public void determineSamplesForSteadyStateBootstrap(ArrayList<int[]> intervals, String s, int k) {
 		String headways100FilePath = s;
 		File file = new File(headways100FilePath); 
@@ -185,9 +146,6 @@ public class PunctualityAnalyst {
 		
 		int[] intv;
 		String airport100Z = System.getProperty("user.dir")+File.separator+"data"+File.separator+"Route100AirportDepZ.txt";
-
-		String airport100Y = System.getProperty("user.dir")+File.separator+"data"+File.separator+"Route100AirportDepY.txt";
-
 		//airport 100
 		ArrayList<int[]> intvsAirport100 = new ArrayList<int[]>();
 		intv = new int[2];
@@ -204,8 +162,6 @@ public class PunctualityAnalyst {
 
 		// Used for SSBHR in paper
 		for(int cf=5;cf<=9;cf++) {determineSamplesForSteadyStateBootstrap(intvsAirport100,airport100Z,cf); bootstrap(N);}
-
-		EVWTbootstrap(airport100Y,N);
 	}
 	
 	public static void main(String[] args) {
