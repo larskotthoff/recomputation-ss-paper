@@ -41,6 +41,8 @@ implications of that, merging in Karen's background text.
 * Case Study 2, Group 2: Ciaran will do the parallel bits, but not before the 20th or so.
 
 * Case Study 3, Group 3: Daniel and Michael have added their sections, Slywester may still have some material to add. We've yet to finalise the location of the VM image that holds the data for all three non-CS recomputations.
+   * Comment from Ian Gent: suspect we can't put them on recomputation.org though we are happy to if all legalities are in the clear.  If not then maybe lodge them with authors or somewhere?  Is there anything better we can say than the authors have them?
+   * Also: we could have cleansed versions of the experiments at recomptuation - maybe without key bits but still better than nothing.
 
 * Case Study 4: Miguel
     * If any of the subgroups have R or SPSS code they used, please put it in repo
