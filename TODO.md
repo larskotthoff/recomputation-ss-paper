@@ -35,7 +35,8 @@ http://www.computer.org/cms/Computer.org/transactions/cfps/cfp_tetcsi_rrm.pdf
         * linking to above
         * Reproducibility of this paper
 
-* Case Study 1, Group 1: ???
+* Case Study 1, Group 1: Luke will write-up the work we did with the ethics forms and the 
+implications of that, merging in Karen's background text.
 
 * Case Study 2, Group 2: Ciaran will do the parallel bits, but not before the 20th or so.
 
