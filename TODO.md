@@ -39,7 +39,7 @@ http://www.computer.org/cms/Computer.org/transactions/cfps/cfp_tetcsi_rrm.pdf
 
 * Case Study 2, Group 2: Ciaran will do the parallel bits, but not before the 20th or so.
 
-* Case Study 3, Group 3: ???
+* Case Study 3, Group 3: Daniel and Michael have added their sections, Slywester may still have some material to add. We've yet to finalise the location of the VM image that holds the data for all three non-CS recomputations.
 
 * Case Study 4: Miguel
     * If any of the subgroups have R or SPSS code they used, please put it in repo
