@@ -38,7 +38,7 @@ http://www.computer.org/cms/Computer.org/transactions/cfps/cfp_tetcsi_rrm.pdf
 * Case Study 1, Group 1: Luke will write-up the work we did with the ethics forms and the 
 implications of that, merging in Karen's background text.
 
-* Case Study 2, Group 2: Ciaran will do the parallel bits, but not before the 20th or so.
+* Case Study 2, Group 2: Experiment 1 is good to go, but pester Ciaran if you'd like more or less text.
 
 * Case Study 3, Group 3: Daniel and Michael have added their sections, Slywester may still have some material to add. We've yet to finalise the location of the VM image that holds the data for all three non-CS recomputations.
    * Comment from Ian Gent: suspect we can't put them on recomputation.org though we are happy to if all legalities are in the clear.  If not then maybe lodge them with authors or somewhere?  Is there anything better we can say than the authors have them?
