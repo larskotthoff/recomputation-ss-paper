@@ -40,27 +40,32 @@ The resulting virtual machine contains the Java source files, allowing researche
 
 At the start of the recomputation exercise it was judged that the results presented in \cite{bareford2010nanoflare} would be the easiest (of the three publications outside of computer science) to reproduce. The underlying code is serial in nature and not tied to specific hardware or operating system platform. 
 
-The work discussed in \cite{bareford2010nanoflare} concerns the energy released from an idealised cylindrical magnetic field when it becomes unstable and subsequently relaxes to a simpler state. Initially, a field (or loop) starts in a stable configuration and is then taken on a random walk through a known two dimensional region of stability, see Figure 3 of the aforementioned publication. When the field crosses the boundary of this region (i.e., the threshold for instability), an energy release is determined and the field is moved to simpler stable configuration. 
+The work discussed in \cite{bareford2010nanoflare} concerns the energy released from an idealised cylindrical magnetic field when it becomes unstable and subsequently relaxes to a simpler state. Initially, a field (or loop) starts in a stable configuration and is then taken on a random walk through a known two dimensional region of stability, see \mbox{Figure 3} of the aforementioned publication. When the field crosses the boundary of this region (i.e., the threshold for instability), an energy release is determined and the field is moved to simpler stable configuration. 
 
-When this process is repeated many times, the results can be expressed as energy distributions, see Figure 14 of \cite{bareford2010nanoflare}, which shows the energy releases for $10^5$ relaxations involving a variety of loop lifetimes. We decided to focus on reproducing only this figure from \cite{bareford2010nanoflare}. This plot was taken from the results produced by a C++ code called Taylor Relaxation of Loop Ensembles, or TRoLE for short, that automates the process described above.
+When this process is repeated many times, the results can be expressed as energy distributions, see Figure 14 of \cite{bareford2010nanoflare}, which shows the energy releases for $10^5$ relaxations involving a variety of loop lifetimes. We decided to focus on reproducing only this figure. The individual plots were taken from the results produced by a C++ code called Taylor Relaxation of Loop Ensembles, or TRoLE for short, that automates the process described above.
 
-The TRoLE code was written when the first author was a postgraduate at the University of Manchester. It was necessary therefore to check the IP policy for this institution.\footnote{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=487} Section 3.2 of this policy states that the ``\emph{...ownership of IP created by a Student, who is not an employee of the University, is with the Student.}'', which we took to mean that the first author was free to place the code in a publicly available repository.\footnote{https://github.com/mbareford/trole}
+The TRoLE code was written when the first author \cite{bareford2010nanoflare} was a postgraduate at the University of Manchester. It was necessary therefore to check the IP policy for this institution.\footnote{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=487} Section 3.2 of this policy states that the ``\emph{...ownership of IP created by a Student, who is not an employee of the University, is with the Student.}'', which we took to mean that the first author was free to place the code in a publicly available repository.\footnote{https://github.com/mbareford/trole}
 
 The next issue concerned a technical matter: the code was written with the use of a proprietary numerical algorithms library (NAG),\footnote{http://www.nag.co.uk/numeric/CL/CLdescription.asp} the licence for which had expired. Fortunately, there is an open source alternative, the GNU Scientific Library (GSL).\footnote{http://www.gnu.org/software/gsl/} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
 
-After the code was recompiled and linked with GSL libraries, it was ready to run the simulation of $10^5$ relaxation events. Alas, the code could at first only simulate a fraction of this total (146 events): the code reported that it had reached a point on the instability threshold for which a stable (relaxed) configuration could not be calculated. The relaxed state is determined by ensuring that certain properties are conserved (i.e., the property values match those calculated for the unstable state) - this is essentially a root finding exercise. Further investigation revealed that the magnetic field profiles were being calculated incorrectly for a wide range of threshold states. The cause concerned incorrect substitutions for the NAG Bessel functions. For example, the NAG routine, nag\_bessel\_j0() is the call for a regular cylindrical Bessel function, whereas, what looks like the equivalent in GSL, gsl\_bessel\_j0(), is actually the routine for a regular \textit{spherical} Bessel function. All that was required to call the correct routine was to capitalise the last letter, i.e., gsl\_bessel\_J0().
+After the code was recompiled and linked with the GSL libraries, it was ready to run the simulation of $10^5$ relaxation events. Alas, the code could at first only simulate a fraction of this total (146 events): the code reported that it had reached a point on the instability threshold for which a stable (relaxed) configuration could not be calculated. The relaxed state is determined by ensuring that certain properties are conserved (i.e., the property values match those calculated for the unstable state) - this is essentially a root finding exercise. Further investigation revealed that the magnetic field profiles were being calculated incorrectly for a wide range of threshold states. The cause concerned incorrect substitutions for the NAG Bessel functions. For example, the NAG routine, nag\_bessel\_j0() is the call for a regular cylindrical Bessel function, whereas, what looks like the equivalent in GSL, gsl\_bessel\_j0(), is actually the routine for a regular \textit{spherical} Bessel function. All that was required to call the correct routine was to capitalise the last letter, i.e., gsl\_bessel\_J0().
  
-The magnetic field that describes every possible loop configuration is defined in terms of cylindrical Bessel functions: hence, an error here will have dramatic consequences for the results produced by the TRoLE code. Once these function calls were corrected, the recomputation was successful. Figure \ref{fig_recomp_grp3_exp2} shows the recomputated plots in red and the published results are given in blue.
-\begin{figure}[h!] 
-  \vspace{-5pt}
+The magnetic field that describes every possible loop configuration is defined in terms of cylindrical Bessel functions: hence, an error here will have dramatic consequences for the results produced by the TRoLE code. Once these function calls were corrected, the recomputation was successful. Figure \ref{fig_recomp_grp3_exp2} shows two of the recomputated plots, the published energy distributions \cite{bareford2010nanoflare} are given in blue.
+\begin{figure}
+\begin{minipage}{\linewidth} 
+  %\vspace{-10pt}
   \center
-  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle3.eps}
-  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle2.eps}
-  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle1.eps}
-  \includegraphics[scale=0.35]{../Group_3/wrpf_rx10e5_lle0.eps}
-  \caption{\small{Flare energy distributions over 10$^5$ relaxation events for a variety of loop lifetimes. The lifetimes are 1000 relaxation events (top left), 100 relaxation events (top right), 10 relaxation events (bottom left) and 1 relaxation event (bottom right). The red plots are the recomputated results and the blue are the results from the original paper \cite{bareford2010nanoflare}.}}
+  %\includegraphics{../Group_3/wrpf_rx10e5_lle3}
+  %\vspace{5pt}
+  \includegraphics{../Group_3/wrpf_rx10e5_lle2}\\
+  \vspace{5pt}
+  %\includegraphics{../Group_3/wrpf_rx10e5_lle1}
+  %\vspace{5pt}
+  \includegraphics[scale=0.001]{../Group_3/wrpf_rx10e5_lle0}
+  \caption{\small{Flare energy distributions over 10$^5$ relaxation events for two different loop lifetimes, 100 (top) and 1 (bottom) relaxation event(s). The red plots are the recomputated results and the blue are the results from the original paper \cite{bareford2010nanoflare}.}}
   \label{fig_recomp_grp3_exp2}
-  \vspace{-10pt} 
+  %\vspace{-10pt}
+\end{minipage} 
 \end{figure}
 The differences between the two sets of results are negligible and entirely consistent with the stochastic method used to generate the energy distributions.
 
