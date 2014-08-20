@@ -12,22 +12,20 @@ pairwise-adjacent vertices, and the maximum clique problem (which is NP-hard)
 is to find the largest such subset. On real hardware, for any given graph
 instance, if we run the program multiple times we get very similar runtimes.
 The aim of this experiment is to see whether runtimes are similarly consistent
-when run on a virtual machine (VM) on a cloud. For real runtimes (RRT) we used
-$4$ cores of a node with $16$ Intel cores (dual Intel Xeon E5-2640 v2 2GHz).
-The node has $64$ Gb RAM and has \emph{Scientific Linux $6$} as the operating
-system. We have selected $10$ different ``medium sized'' problem instances
-(i.e.\ graphs) from the second DIMACS implementation challenge to have a valid
-and reasonable comparative analysis. For each instance, we run the algorithm
-$50$ times on real harware to collect the RRTs, and then $50$ times on a VM
-with $4$ cores on Microsoft Azure \cite{azure} to collect virtual runtimes
-(VRTs). We measure runtimes of the algorithm and ignore the input and output
-times. We compare the relative standard deviation (standard deviation as a
-proportion of the mean, since processing models varies between real and virtual
-hardware) of RRTs and VRTs of each problem instance.
+when run on a virtual machine on a cloud.
 
-We present the result in Table~\ref{run_time}. Each row of the table is a
-problem instance. We show the relative standard deviation of RRTs and VRTs,
-expressed as a percentage.
+We have selected $10$ different ``medium sized'' problem instances (i.e.\
+graphs) from the second DIMACS implementation challenge to have a valid and
+reasonable comparative analysis.  For each instance, we run the algorithm $50$
+times on real harware (using $4$ cores of a machine with dual Intel Xeon
+E5-2640 v2 processors), and then $50$ times on a VM with $4$ cores on Microsoft
+Azure \cite{azure}. Our measurements include only computation times, and ignore
+the time taken to read in the problem instances from a file. We compare the
+relative standard deviation (that is, standard deviation as a proportion of the
+mean, since processing models varies between real and virtual hardware) of the
+runtimes on real and virtual hardware for each problem instance.  We present
+the result in Table~\ref{run_time}: each row of the table is a problem
+instance, and we show relative standard deviations as a percentage.
 
 <<echo=FALSE,results=tex>>=
 library(xtable)
@@ -43,22 +41,23 @@ f <- function(x) c(r_std_dev = (sd(x)/mean(x))*100)
 
 result_matrix1 = apply(data_matrix1, 2, f)
 result_matrix2 = apply(data_matrix2, 2, f)
- 
+
 run_time <- data.frame(real=result_matrix1,
                                 vm=result_matrix2)
 
 xtable(run_time,
-       caption = "Relative Standard Deviations of runtimes (as a percentage)",
+       caption = "Relative standard deviations of runtimes (as a percentage) for different problem instances, when run on real or virtual hardware.",
        label = "run_time",
        align = "lrr",
        digits = c(0,2,2))
 @
 
-In both real and virtual hardware the relative standard deviation is very
-small (below $1\%$ in every case). We did not encounter any abnormalities when
+In both real and virtual hardware the relative standard deviation is very small
+(below $1\%$ in every case). We did not encounter any abnormalities when
 running on a virtual machine; this is contrary to the experiences of Kotthoff
 \cite{kotthoff}, who did not always see reliable \emph{sequential} runtimes on
-virtualised hardware.
+virtualised hardware. In other words, using virtualised hardware for
+reproducible parallelism experiments is not necessarily infeasible.
 
 The virtual machine image used for the experiments is available via
 VMDepot\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}.
