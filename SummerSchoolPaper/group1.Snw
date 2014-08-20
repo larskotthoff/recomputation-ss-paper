@@ -26,9 +26,9 @@ determine a minimum specification for reporting ethical considerations, and
 discuss the state of the art in standardising ethical requirements by
 professional bodies and research councils.
 
-
-\subsection{Background} Human subjects research often involves the collection
-of sensitive identifiable data  about participants. To ensure participants are
+\subsection{Background}
+Human subjects research often involves the collection
+of sensitive identifiable data about participants. To ensure participants are
 not placed at undue risk by the conduct of an experiment, an increasingly
 rigorous process of oversight of the ethical conduct of research institutions
 has emerged in recent decades in many countries, particularly the US, where
@@ -45,31 +45,43 @@ impose any such requirements on institutions, while in the UK, research
 councils mandate ethics are considered in order to receive funding, however
 the conduct of individual ethics committees is not regulated.
 
-% human subjects research - experiments needs ethics approval, for legal/moral reasons
-
-% researchers must disclose details of their study for scrutiny before collecting data
-
-Due to the nature of an HCI experiment, in that it involves gathering data from human participants, it is necessary in order to successfully replicate an HCI experiment you must gather a new set of participants of which must meet the original experiments inclusion and exclusion criteria. In order for this to occur it is also necessary to replicate the ethical approval which the original experimenter sought, at first this may seem trivial however through examination of ethical approval submissions from ten institutions across the UK, EU, and US we found great differences between each and that a very low amount of overlap currently exists.
-
-% we expect processes vary between institutions due to myriad factors 
+% we expect processes vary between institutions due to myriad factors  Such
+variety in the conduct of ethical approval between institutions a represents a
+significant barrier to reproducibility in HCI research. If a researcher wishes
+to replicate a HCI experiment which uses human subjects data, they will
+usually need to seek ethical approval from their own institution. In our work,
+a survey of 505 papers using online social network (OSN) data found that only
+2\% of papers disclose any of the ethical considerations of their work.
+% cite osn survey!
+As researchers do not routinely disclose the protocol which
+received IRB approval, attempted replications may miss crucial details
+necessary to conduct the experiment, and to provide to IRB when seeking
+ethical approval, which can reduce the correctness of a replication.
 
 % no standards. replication community in hci is nascent and not considering ethics issues
-% including at workshops like replichi 
+% including at workshops like replichi
+
+With IRBs and ethics boards operating largely independently with little policy
+coordination, there is no standardisation of ethics procedures.
+
+Indeed, reproducibility has only recently been considered an important
+ambition for HCI researchers, with nascent efforts including RepliCHI, which
+has operated as a CHI workshop since 2013. Despite such efforts however, the
+wider community has not considered these ethical challenges in detail.
 
 % we examine the state of the art to identify whether a base standard can be used to
 % encourage sharing of ethics procedures
+Next, we assess the state of the art in ethics procedures to determine what commonalities exist between institutional requirements. From this, we aim to derive a minimum ``ethical specification'', encoding fundamental methodological details to help researchers replicate procedures and ethical details, and to make it easier to replicate applications to other IRBs, with the ambition of such specifications being routinely attached to HCI experiments.
 
 
 
 \subsection{Comparison of Ethical Requirements across Universities}
 
-\subsubsection{Gathering academic forms}
-To understand the state of ethics
-procedures between institutions, we collected the ethics applications forms
-for ten public universities located in the UK, EU, and USA. A wide range of
-locations were chosen to represent procedures across research communities,
-stature of the institution, and engagement with the HCI community.
-We aim to discover a set of ethical concerns common to all. 
+To understand the state of ethics procedures between institutions, we
+collected ethics applications forms for ten public universities located in the
+UK, EU, and USA. A range of locations were chosen to represent procedures
+where cultural and regulatory expectations will likely vary.
+
 
 In order to compare each ethical approval form from each institution, two
 researchers independently transcribed each field and noted unique occurences,
