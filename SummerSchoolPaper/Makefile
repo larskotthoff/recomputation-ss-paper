@@ -29,7 +29,7 @@ all: $(PDFS)
 
 .tex.pdf: 
 		touch paper-concordance.tex
-		latexmk -pdf $*.tex
+		latexmk -pdf -pdflatex="pdflatex --shell-escape" $*.tex
 
 clean:
 		rm -rf $(CLEAN)
