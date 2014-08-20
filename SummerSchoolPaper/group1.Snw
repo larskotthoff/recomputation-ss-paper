@@ -1,48 +1,49 @@
-% \title{Case study \#1: Ethical requirements for recomputation}
-% \author{
-% 	Benjamin M. Gorman \\
-%                School of Computing,
-%         University of Dundee\\
-%         Dundee DD1 4HN, \underline{Scotland}\\
-% 	b.gorman@dundee.ac.uk\\
-% 	\and\\
-% 	Luke Hutton \\
-% 		School of Computer Science,
-% 		University of St Andrews\\
-% 		St Andrews KY16 9SX, \underline{Scotland}\\
-% 	lh49@st-andrews.ac.uk	
-% 	\and\\
-%         Karen Petrie \\
-%                School of Computing,
-%         	      University of Dundee\\
-%         Dundee DD1 4HN, \underline{Scotland}\\
-%         kpetrie@dundee.ac.uk 
-% 	\and\\
-%         Abdul Razaq \\
-%                School of Engineering and Built Environment,
-%         	     Glasgow Caledonian University\\
-%         Glasgow, G4 0BA, \underline{Scotland}\\
-%         abdul.razaq@gcu.ac.uk 
-%        %add yourself here! 
-% }
-% \date{\today}
-
-% \documentclass[12pt]{article}
-
-% \begin{document}
-% \maketitle
-
 \section{Case study \#1: Ethical requirements for recomputation}
 \label{s:group1}
 
-\subsection{Introduction}
-The goal of recomputation\footnote{http://www.recomputation.org/} is to follow the recomputation manifesto\footnote{http://www.recomputation.org/blog/2013/04/12/the-recomputation-manifesto/} and make computational experiments recomputable by providing tools and a repository to store experiments in. The mission is stated as:
-\begin{quote}
-``If we can compute your experiment now, anyone can recompute it 20 years from now''
-\end{quote}
+% \subsection{Introduction}
+% The goal of recomputation\footnote{http://www.recomputation.org/} is to follow the recomputation manifesto\footnote{http://www.recomputation.org/blog/2013/04/12/the-recomputation-manifesto/} and make computational experiments recomputable by providing tools and a repository to store experiments in. The mission is stated as:
+% \begin{quote}
+% ``If we can compute your experiment now, anyone can recompute it 20 years from now''
+% \end{quote}
 
-One of the considerations perhaps under considered in regards to recomputation to date is the ethical implications. 
-\subsection{Background}
+% One of the considerations perhaps under considered in regards to recomputation to date is the ethical implications.
+
+Human subjects research involves the collection of data through interaction
+with individuals, or through collection of personally identifiable
+information. Such research poses specific barriers to reproducibility. In
+fields such as human-computer interaction (HCI), there are few replications of
+previous work, attributable to a culture which does not reward
+reproducibility, difficulty in replicating interaction techniques when
+materials are not shared, and an emphasis on formative work which proposes new
+techniques over summative work~\cite{hornbaek:replications}.
+
+In this section, we look at one specific challenge to reproducibility in HCI
+research: capturing and disseminating the ethical requirements of an
+experiment, such that others may better replicate the procedures of a
+study. We evaluate the ethics requirements procedures of ten universities to
+determine a minimum specification for reporting ethical considerations, and
+discuss the state of the art in standardising ethical requirements by
+professional bodies and research councils.
+
+
+\subsection{Background} Human subjects research often involves the collection
+of sensitive identifiable data  about participants. To ensure participants are
+not placed at undue risk by the conduct of an experiment, an increasingly
+rigorous process of oversight of the ethical conduct of research institutions
+has emerged in recent decades in many countries, particularly the US, where
+institutional review boards (IRB) have been charged with reviewing all
+clinical and human subjects research in line with federal regulations, with
+significant penalties for institutions if ethics violations occur. Each
+institution, however, has freedom to implement IRB processes as they see fit
+so long as such regulations are upheld. This leads to great inconsitencies
+between the expectations of institutions, and the processes researchers must
+engage with in order for research protocols to be approved.
+
+Internationally, the situation is even more variable. Many countries may not
+impose any such requirements on institutions, while in the UK, research
+councils mandate ethics are considered in order to receive funding, however
+the conduct of individual ethics committees is not regulated.
 
 % human subjects research - experiments needs ethics approval, for legal/moral reasons
 
