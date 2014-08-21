@@ -54,7 +54,7 @@ public class PunctualityAnalyst {
 		return result;
 	}
 	
-	public void bootstrap(int N) {
+	public void bootstrap(int N, int k) {
 		double[] result = new double[N];
 		for(int i=0;i<N;i++) {
 			double timeInK = 0;
@@ -65,10 +65,11 @@ public class PunctualityAnalyst {
 		}
 		Arrays.sort(result);
 //		for(int i=0;i<N;i++) {
-//			System.out.println(result[i]);
+//			outputString += (result[i]);
 //		}
-		System.out.println("\\vtwo{"+floatRep(result[(int) Math.floor(0.025*N)],3,true)+"}{"+floatRep(result[(int) Math.floor(0.975*N)],3,true)+"}");
-		//System.out.println("["++", "++"]");
+		if(k > 5) outputString += ("&");
+		outputString += ("\\vtwo{"+floatRep(result[(int) Math.floor(0.025*N)],3,true)+"}{"+floatRep(result[(int) Math.floor(0.975*N)],3,true)+"}");
+		//outputString += ("["++", "++"]");
 	}
 	
 	public void filterSets() {
@@ -118,10 +119,10 @@ public class PunctualityAnalyst {
 				z = point[1];
             }
 			filterSets();
-			System.out.println("inside z="+k+" times: ");
-			for(double[] d: inKs) {System.out.print(d[0]+", ");}
-			System.out.println("\noutside z="+k+" times: ");
-			for(double[] d: notInKs) {System.out.print(d[0]+", ");}
+			//outputString += ("inside z="+k+" times: ");
+			//for(double[] d: inKs) {System.out.print(d[0]+", ");}
+			//outputString += ("\noutside z="+k+" times: ");
+			//for(double[] d: notInKs) {System.out.print(d[0]+", ");}
 			
 			double timeInK = 0;
 			double timeNotInK = 0;
@@ -130,15 +131,15 @@ public class PunctualityAnalyst {
 			for(double[] d: notInKs) {timeNotInK += d[0];}
 //			String res = "c("+inKs.get(0)[0]+", "+notInKs.get(0)[0];
 //			for(int i=1;i<Math.min(inKs.size(),notInKs.size());i++) {res +=  ", "+inKs.get(i)[0]+", "+notInKs.get(i)[0];}
-//			System.out.println(res+")");
+//			outputString += (res+")");
 			
-			System.out.println("\nres: "+(timeInK/(timeInK+timeNotInK)));
+			//outputString += ("\nres: "+(timeInK/(timeInK+timeNotInK)));
 			
 			//PrintStream out = new PrintStream(new FileOutputStream("C:\\Users\\Gebruiker\\Dropbox\\utwente backup\\research\\programmatuur\\other tools\\hyperstar-without-mathematica\\hyperstar_data\\Route100CorrectedHeadwaysRho"+rho+".txt"));
 			//out.close();
 			br.close();
 		} catch(Exception e) {
-			System.out.println(e.getMessage());
+			outputString += (e.getMessage());
 		}
 	}
 	
@@ -160,8 +161,41 @@ public class PunctualityAnalyst {
 		
 		int N = 1000000;
 
+		System.out.println("\nThe purpose of this experiment is to reproduce one row from Table 6 of `Formal punctuality analysis of frequent bus services using headway data' by Reijsbergen and Gilmore.\n\nWe estimate the numbers $\\hat{\\pi}_z(k)$, which for a value $k$ represent an estimate of the probability that, upon arrival to the bus stop near Edinburgh airport, $k$ buses of Route 100 will arrive in the next hour. These estimates are produced using bootstrapping with case resampling with a million samples.\n");
+		System.out.println("Computation in progress ...");
+
 		// Used for SSBHR in paper
-		for(int cf=5;cf<=9;cf++) {determineSamplesForSteadyStateBootstrap(intvsAirport100,airport100Z,cf); bootstrap(N);}
+		outputString += ("\\newcommand{\\vtwo}[2]{$\\left[\\begin{array}{l} #1, \\\\ #2 \\end{array}\\right]$}\n");
+		outputString += ("\\newcommand{\\exr}[1]{\\cdot$10$^{#1}}\n");
+		outputString += ("\\newcommand{\\hpi}[1]{\\hat{\\pi}_z(#1)}\n");
+		outputString += ("\\newcommand{\\hpic}[1]{\\multicolumn{1}{c}{$\\hpi{#1}$}}\n");
+		outputString += ("\\newcommand{\\hpicl}[1]{\\multicolumn{1}{|c}{$\\hpi{#1}$}}\n");
+		outputString += ("\\newcommand{\\hpicr}[1]{\\multicolumn{1}{c|}{$\\hpi{#1}$}}\n\n");
+
+		outputString += ("\\def\\arraystretch{1.2}\n");
+		outputString += ("\\setlength{\\tabcolsep}{1pt}\n");
+		outputString += ("%\n");
+		outputString += ("\\begin{table}[htbp]\n");
+		outputString += ("\\centering\n");
+		outputString += ("\\begin{tabular}{| c c c c c  |} \\hline \n");
+ 		outputString += (" \\hpicl{5} & \\hpic{6} & \\hpic{7} & \\hpic{8} & \\hpicr{9} \\\\ \\hline\n");
+ 		outputString += (" ");
+		for(int cf=5;cf<=9;cf++) {determineSamplesForSteadyStateBootstrap(intvsAirport100,airport100Z,cf); bootstrap(N,cf);}
+		outputString += ("\\\\[10pt]\n");
+		outputString += ("\\hline\n");
+		outputString += ("\\end{tabular}\n");
+		outputString += ("\\caption{A reproduction of the first row of Table 6 of \\cite{danielpaper}, which contains confidence interval for estimates of $\\pi_z(k)$. For each $k$, $\\pi_z(k)$ denotes the probability that, upon arrival to the bus stop near Edinburgh airport, $k$ arrivals of buses of Route~100 are observed in the next hour.}\n");
+		outputString += ("\\label{tab: z bootstrapped cis}\n");
+		outputString += ("\\end{table}\n");
+		outputString += ("\\def\\arraystretch{1.5}\n");
+		
+		String outputFilePath = System.getProperty("user.dir")+File.separator+"result"+File.separator+"bus_table.tex";
+		try {
+            		PrintStream out = new PrintStream(new FileOutputStream(outputFilePath));
+			out.print(outputString);
+		} catch(Exception e) {}
+				
+		System.out.println("Done! Output written to "+outputFilePath);
 	}
 	
 	public static void main(String[] args) {
