@@ -36,7 +36,7 @@ institutional review boards (IRB) have been charged with reviewing all
 clinical and human subjects research in line with federal regulations, with
 significant penalties for institutions if ethics violations occur. Each
 institution, however, has freedom to implement IRB processes as they see fit
-so long as such regulations are upheld. This leads to great inconsitencies
+so long as such regulations are upheld. This leads to great inconsistencies
 between the expectations of institutions, and the processes researchers must
 engage with in order for research protocols to be approved.
 
@@ -45,7 +45,9 @@ impose any such requirements on institutions, while in the UK, research
 councils mandate ethics are considered in order to receive funding, however
 the conduct of individual ethics committees is not regulated.
 
-% we expect processes vary between institutions due to myriad factors  Such
+% we expect processes vary between institutions due to myriad factors
+
+Such
 variety in the conduct of ethical approval between institutions a represents a
 significant barrier to reproducibility in HCI research. If a researcher wishes
 to replicate a HCI experiment which uses human subjects data, they will
@@ -74,33 +76,50 @@ wider community has not considered these ethical challenges in detail.
 Next, we assess the state of the art in ethics procedures to determine what commonalities exist between institutional requirements. From this, we aim to derive a minimum ``ethical specification'', encoding fundamental methodological details to help researchers replicate procedures and ethical details, and to make it easier to replicate applications to other IRBs, with the ambition of such specifications being routinely attached to HCI experiments.
 
 
-
 \subsection{Comparison of Ethical Requirements across Universities}
 
 To understand the state of ethics procedures between institutions, we
 collected ethics applications forms for ten public universities located in the
-UK, EU, and USA. A range of locations were chosen to represent procedures
-where cultural and regulatory expectations will likely vary.
+UK, EU, and USA. A range of locations were chosen to capture a range of
+cultural and regulatory expectations, which we expect will manifest in
+different procedures. All forms collected were derived from publicly
+accessible sources, except for one supplied by the authors. This is in
+itself a significant barrier to reproducibility. Without making procedures publicly 
+available, there can be no external scrutiny about the appropriateness of some institution's
+procedures, and makes it more difficult to derive standards.
 
+For each form, two researchers independently coded each field, accounting for
+differences in wording between forms so long as each attribute asked for the
+same atomic information. Where one form requests expanded information
+pertaining to a previously identified attribute, this was added as an
+additional attribute. After independently coding the forms, the two
+researchers discussed any discrepancies to arrive at a set of 145 unique
+attributes, encompassing generic details, such as contact details of co-
+investigators, methodological details, and institution-specific requirements,
+often for insurance and liability purposes. Of these fields, only two were
+common to all ten ethics forms - the name of the principal investigator, and
+whether informed consent was sought. This intersection was significantly
+smaller than anticipated, and clearly does not constitute a useful minimum
+ethical specification. It does however reveal two interesting properties. It
+confirms our intuition that ethical procedures vary greatly between
+institutions, while also identifying perhaps the single most important
+objective of the ethics process: to ensure participants have given informed
+consent to participate in an experiment.
 
-In order to compare each ethical approval form from each institution, two
-researchers independently transcribed each field and noted unique occurences,
-mapping minor variations in wording to each field. Where a field potentially
-encompasses additional information, unique requests for additional information
-were counted as additional fields. For example, requesting information about
-grants were considered one field, while providing explicit grant codes and
-whether grant funding was already agreed were considered two further fields.
-Our analysis uncovered 145 unique fields, encompassing generic details, such
-as contact details of co-investigators, methodological details, and
-institution-specific requirements, often for insurance and liability
-purposes. Agreement was sought on all terms between researchers before
-producing the final set. Of these fields, only two were common
-to all ten ethics forms - the name of the principal investigator, and whether
-informed consent was sought. While this is clearly an insufficient  minimum
-specification for capturing ethics requirements, it reveals the crux of the
-ethics approval process is to ensure participant agency is preserved through
-the experimental process
-by mandating informed consent.
+Figure~\ref{p:ethicsFreq} shows the distribution of attributes across the ten
+forms we examined. As shown in the long tail, 47.6\% of attributes only appear
+in one form. Of these, 42\% are ``sub-attributes'', that is, requesting
+additional information requested on another form. For example, while 60\% of
+forms ask whether participants receive financial compensation, only one asks
+whether co-investigators are compensated. We are most interested in the unique
+``high-level attributes'' which emerge, as it is important to discern between
+questions which capture institution-specific requirements, or may constitute
+important issues which other IRBs ought to consider. We find instances of both
+in our results. For example, while UCL are the only institution to ask whether
+their own students are participants in the research (we assume for liability
+reasons), surprisingly they are the only university to ask outright whether
+health and safety precautions have been considered. 
+% other interesting unique fields
 
 
 % Gaterhing forms
@@ -131,7 +150,7 @@ tag_factor <- factor(maps_frame$Var1, levels=maps_frame$Var1)
 p <- ggplot(maps_frame, aes(x=tag_factor, y=Freq)) + geom_bar(stat = "identity",fill="slateblue4",colour="slateblue1") + scale_x_discrete(breaks=NULL,name="Fields") + scale_y_discrete(name="Frequency")
 print(p)
 @
-\caption{Histogram showing frequency distribution of fields in ethics applications}
+\caption{\label{p:ethicsFreq}Histogram showing frequency distribution of fields in ethics applications}
 \end{minipage}
 \end{figure}
 
