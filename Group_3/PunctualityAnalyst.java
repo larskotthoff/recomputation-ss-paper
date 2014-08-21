@@ -169,7 +169,7 @@ public class PunctualityAnalyst {
 		outputString += ("\\newcommand{\\exr}[1]{\\cdot$10$^{#1}}\n");
 		outputString += ("\\newcommand{\\hpi}[1]{\\hat{\\pi}_z(#1)}\n");
 		outputString += ("\\newcommand{\\hpic}[1]{\\multicolumn{1}{c}{$\\hpi{#1}$}}\n");
-		outputString += ("\\newcommand{\\hpicl}[1]{\\multicolumn{1}{|c}{$\\hpi{#1}$}}\n\n");
+		outputString += ("\\newcommand{\\hpicl}[1]{\\multicolumn{1}{|c}{$\\hpi{#1}$}}\n");
 		outputString += ("\\newcommand{\\hpicr}[1]{\\multicolumn{1}{c|}{$\\hpi{#1}$}}\n\n");
 
 		outputString += ("\\def\\arraystretch{1.2}\n");
