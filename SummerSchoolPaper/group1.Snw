@@ -60,7 +60,13 @@ ambition for HCI researchers, with nascent efforts including RepliCHI, which
 has operated as a CHI workshop since 2013. Despite such efforts however, the
 wider community has not considered these ethical challenges in detail.
 
-Next, we assess the state of the art in ethics procedures to determine what commonalities exist between institutional requirements. From this, we aim to derive a minimum ``ethical specification'', encoding fundamental methodological details to help researchers replicate procedures and ethical details, and to make it easier to replicate applications to other IRBs, with the ambition of such specifications being routinely attached to HCI experiments.
+Next, we assess the state of the art in ethics procedures to determine what
+commonalities exist between institutional requirements. From this, we aim to
+derive a minimum ``ethical specification'', encoding fundamental
+methodological details to help researchers replicate procedures and ethical
+details, and to make it easier to replicate applications to other IRBs, with
+the ambition of such specifications being routinely attached to HCI
+experiments.
 
 
 \subsection{Comparison of Ethical Requirements across Universities}
@@ -126,8 +132,11 @@ health and safety precautions have been considered. Interestingly, only Aga Khan
 University in Pakistan asks whether the study is a replication of a previous experiment.
 
 \subsection{Proposed ethics specification}
-Given the small intersection of attributes in our study, we isolate the twenty most
-common attributes -- those which occurred in six or more of the ten forms we examined. We combine any semantically similar fields to produce the following set of 15 attributes, presented in descending order of frequency.
+Given the small intersection of
+attributes in our study, we isolate the twenty most common attributes -- those
+which occurred in six or more of the ten forms we examined. We combine any
+semantically similar fields to produce the following set of 15 attributes,
+presented in descending order of frequency.
 
 \begin{itemize}
 	\item Was consent sought?
@@ -147,10 +156,11 @@ common attributes -- those which occurred in six or more of the ten forms we exa
 	\item Describe ethical issues 
 \end{itemize}
 
-This set of attributes covers a range of fundamental methodological details, many of which
-can be encoded in a consistent fashion and attached as metadata to support replications.
-In further work, we will demonstrate whether this set of attributes is sufficient to capture
-key methodological details, which we cannot assert from this strictly frequency-based exercise.
+This set of attributes covers a range of fundamental methodological details,
+many of which can be encoded in a consistent fashion and attached as metadata
+to support replications. In further work, we will demonstrate whether this set
+of attributes is sufficient to capture key methodological details, which we
+cannot assert from this strictly frequency-based exercise.
 
 \subsubsection{Limitations}
 This analysis is not intended as a rigorous survey
