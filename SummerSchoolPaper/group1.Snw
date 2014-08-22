@@ -93,45 +93,6 @@ institutions, while also identifying perhaps the single most important
 objective of the ethics process: to ensure participants have given informed
 consent to participate in an experiment.
 
-Figure~\ref{p:ethicsFreq} shows the distribution of attributes across the ten
-forms we examined. As shown in the long tail, 47.6\% of attributes only appear
-in one form. Of these, 42\% are ``sub-attributes'', that is, requesting
-additional information requested on another form. For example, while 60\% of
-forms ask whether participants receive financial compensation, only one asks
-whether co-investigators are compensated. We are most interested in the unique
-``high-level attributes'' which emerge, as it is important to discern between
-questions which capture institution-specific requirements, or may constitute
-important issues which other IRBs ought to consider. We find instances of both
-in our results. For example, while UCL are the only institution to ask whether
-their own students are participants in the research (we assume for liability
-reasons), surprisingly they are the only university to ask outright whether
-health and safety precautions have been considered. Interestingly, only Aga Khan
-University in Pakistan asks whether the study is a replication of a previous experiment.
-
-\subsection{Proposed ethics specification}
-Given the small intersection of attributes in our study, we isolate the twenty most
-common attributes -- those which occurred in six or more of the ten forms we examined. Without any further filtering for appropriateness, and in descending order of frequency, this set consists of:
-\begin{itemize}
-\item PI Name
-\item Was consent sought?
-\item Was deception involved?
-\end{itemize}
-
-
-
-
-\subsubsection{Limitations}
-This analysis is not intended as a rigorous survey
-of ethics procedures internationally. The selection of institutions is
-inherently biased, as we are only able to extract forms which are publicly
-accessible, a barrier to reproducibility, and we have a particular emphasis on
-the UK and US in this study. The intent of this exercise is not to make
-statistical inferences about the state of the art in ethics review, but rather
-to motivate the minimum set of attributes we recommend researchers disclose
-when sharing their experimental methodologies.
-
-
-
 \begin{figure}
 \begin{minipage}{\linewidth}
 <<echo=FALSE,fig=TRUE>>=
@@ -149,23 +110,57 @@ print(p)
 \end{minipage}
 \end{figure}
 
-% comment on how we compared each paper and a report of the comparison
+Figure~\ref{p:ethicsFreq} shows the distribution of attributes across the ten
+forms we examined. As shown in the long tail, 47.6\% of attributes only appear
+in one form. Of these, 42\% are ``sub-attributes'', that is, requesting
+additional information requested on another form. For example, while 60\% of
+forms ask whether participants receive financial compensation, only one asks
+whether co-investigators are compensated. We are most interested in the unique
+``high-level attributes'' which emerge, as it is important to discern between
+questions which capture institution-specific requirements, or may constitute
+important issues which other IRBs ought to consider. We find instances of both
+in our results. For example, while UCL are the only institution to ask whether
+their own students are participants in the research (we assume for liability
+reasons), surprisingly they are the only university to ask outright whether
+health and safety precautions have been considered. Interestingly, only Aga Khan
+University in Pakistan asks whether the study is a replication of a previous experiment.
+
+\subsection{Proposed ethics specification}
+Given the small intersection of attributes in our study, we isolate the twenty most
+common attributes -- those which occurred in six or more of the ten forms we examined. We combine any semantically similar fields to produce the following set of 15 attributes, presented in descending order of frequency.
+
+\begin{itemize}
+	\item Was consent sought?
+	\item Was deception involved?
+	\item Project title
+	\item Study duration
+	\item Are there risks to participants?
+	\item Justify use of vulnerable participants
+	\item PI contact details
+	\item Funding body information
+	\item Is likely to induce participant stress?
+	\item Summarise research proposal/experimental methods
+	\item Are supplementary documents attached? (consent forms, briefing info etc.)
+	\item Are participants financially compensated?
+	\item Is study clinical?
+	\item Supervisor name
+	\item Describe ethical issues 
+\end{itemize}
+
+This set of attributes covers a range of fundamental methodological details, many of which
+can be encoded in a consistent fashion and attached as metadata to support replications.
+In further work, we will demonstrate whether this set of attributes is sufficient to capture
+key methodological details, which we cannot assert from this strictly frequency-based exercise.
+
+\subsubsection{Limitations}
+This analysis is not intended as a rigorous survey
+of ethics procedures internationally. The selection of institutions is
+inherently biased, as we are only able to extract forms which are publicly
+accessible, a barrier to reproducibility, and we have a particular emphasis on
+the UK and US in this study. The intent of this exercise is not to make
+statistical inferences about the state of the art in ethics review, but rather
+to motivate the minimum set of attributes we recommend researchers disclose
+when sharing their experimental methodologies.
 
 
-
-
-
-
-% which fields occur frequently
-
-% thematic overlaps
-
-% surprisingly small common set
-
-% what are the outliers - are they important?
-
-
-\subsection{Comparison of Ethical Requirements across Publishers}
-
-\subsection{Framework for Ethics to accompany data and experiments}
 
