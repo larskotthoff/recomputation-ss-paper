@@ -1,23 +1,73 @@
 \section{Obstacles to Reproducibility in Computational Sciences}
 \label{s:obstacles}
 
-There are various obstacles to reproducibility, and many of these were discussed by speakers and participants during the week. 
-Although not intended to be an exhaustive list,  amongst the obstacles and challenges that we identified are:
-technical (long-term persistence of experiments; amount of efforts required from researchers to create reproducible experiments, 
-which varies very much for different areas), 
-legal and ethical (licensing issues; data protection issues, e.g. with researcher's personal data drifting into the virtual machine 
-while it is in use), 
-community building (why to make your research reproducible and how to to motivate your colleagues/collaborators/supervisors/etc 
-to think the same). 
+There are various obstacles to reproducibility, and many of these were
+  discussed by speakers and participants during the week. 
+The obstacles and challenges are related to various stages of scientific 
+  endeavour and various aspects of reproducibility.
+Although not intended to be an exhaustive list, amongst the obstacles and 
+  challenges that we identified are:
 
-Other problems that came out from the discussions include:
-performance measurement; 
-possibly non-trivial amount of knowledge that is still needed to rerun an experiment;
-ease of reproduction vs independent reproducibility; 
-automation tradeoff (recomputation tends to need automated systems);
-ability to get ethical consent (did they ask to release the data in a form we can use?); 
-not knowing what data was decided not to 
-publish in the paper.
+{\bf Incentives} -- even though the issue of reproducibility is
+  currently actively discussed by the scientific community, 
+  and the funding entities do aim at enforcing, or at least promoting,
+  openness of research, the prevalent impression from the discussions at 
+  the summer school is that there is still a lot to be done to increase 
+  awareness of how one can benefit from reproducibility.
+Mechanisms that would reward those who deliver reproducible results are also
+  still to become widespread.
+It was reiterated during the school that the self-benefits 
+  of reproducibility, such as increased productivity, are likely 
+  a good enough reason to invest time on assuring it.
+However, in general both the self-benefits and the benefits to the community
+  are latent and perceptible only in the longer term.
+Thus investing the time to offer reproducibility is hardly possible without
+  approbation and endorsement from colleagues, collaborators, supervisors,
+  reviewers and executives.
+  
+{\bf Prerequisites} -- offering reproducibility in computational
+  science is linked with giving access to data and code, both of which may
+  be subject to legal limitations due to intellectual property and
+  data protection issues.
+Sharing data may additionally be bound to ethical responsibility, for instance
+  if the data contains personal records or other sensitive information.  
+Even non-sensitive non-commercial data may not be readily redistributed
+  without assuring proper ethical consent from the data originators.
 
-
-
+{\bf Practicalities} -- there is definitely no consensus as to what is the
+  best technique for offering reproducibility of computational experiments. 
+The reasons are at least threefold. 
+First, even the wealth of nomenclature (replicate, recompute, reproduce, 
+  rerun, repeat, reuse) suggests that the aims and the needs of researchers
+  differ.
+Second, the technology advances and continuously offers new methods that can
+  aid researchers in offering reproducible results.
+Third, there are numerous tradeoffs to be made: 
+  (i) embrace cutting edge or widespread technology; 
+  (ii) offer standalone or integrable solutions; 
+  (iii) prioritise independence or ease of reproduction; 
+  (iv) disseminate reduced comprehensible datasets or avoid excluding any data;
+  (v) put efforts on automating experiments with already publishable results or
+    move on to new experiments.
+    
+{\bf Dissemination} -- even if all of the above obstacles are overcome, 
+  distribution and long-term persistence of the reproducible experiments
+  may pose challenges.
+First, finding a venue for long-term preservation of large datasets or even 
+  moderately-sized virtual-machine based packages may be an issue.
+This is especially the case if one aims at blending software and data
+  dissemination with traditional academic publishing.
+Second, given that one of the key aims of reproducibility in science
+  is to offer independent verification, the amount of knowledge 
+  needed to rerun an experiment has to be reasonably adapted to the
+  target audience.
+Interdisciplinary is inherent in the idea of computational sciences that
+  bridge computational techniques with diverse domains of science.
+Consequently, one has to take into account that these may be the
+  astronomers, biologists, chemists, geologists, linguists, mathematicians,
+  oceanographers, physicists or statisticians who will attempt to
+  reproduce the results of an experiment.
+Last but not least, dissemination of data, and especially of executable
+  programs is subject to security issues associated with both security
+  of computer systems and personal data of the researchers who
+  are reproducing the results.
