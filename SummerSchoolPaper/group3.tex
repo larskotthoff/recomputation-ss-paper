@@ -81,7 +81,26 @@ The differences between the two sets of results are negligible and entirely cons
  
 \subsection*{Experiment 3: Atmospheric Physics}
 
-We also attempted to use the virtual machine to run code that uses libcloudph++ \cite{arabas2013libcloud}, a library of algorithms
-for representing cloud microphysics using numerical models. The library allows one to simulate the formation of clouds and precipitation, for instance within a fluid-dynamics simulation of an atmospheric flow. We succeeded in running several pieces of software that were used to create figures used in \cite{arabas2013libcloud}. The software is already under a GPL and in a Github repository. The libraries needed to run the software are a C++ compiler, CMake, and the Boost and Thrust libraries.
+We also prepared a virtual machine with pre-built software for reproducing 
+  simulations of idealised atmospheric clouds presented in \cite{arabas2013libcloud}.
+The paper covers description of an open-source C++ library named libcloudph++. 
+The library is intended for representing microphysics of clouds and precipitation
+  in numerical models -- coupling libcloudph++ with a fluid-dynamics solver 
+  of an atmospheric flow allows one to study the formation of clouds and rain.
 
-Two legal obstacles were encountered. For one, the libraries optionally use the GPU using non-free-software (CUDA) to make it run faster. Additionally, the employed particle-based algorithm is inspired by a technique covered by several patents including a European one (EP1847939A2). As for potential technical obstacles, the only complication was getting the right software versions on the VM, otherwise all was feasible.
+While the software has already been released under an open-source GPL license,
+  and has been accessible through a Github repository, we have still 
+  identified a potential legal issue.
+The library features implementation of an algorithm inspired by a technique 
+  described in scientific literature but also covered by several patents 
+  including a European one (EP1847939A2). 
+
+Furthermore, the crux of the implementation is its support for execution
+  on both CPUs and GPUs, the latter being optional but offering 
+  significantly shorter executions times.
+However, the implementation uses the non-free CUDA standard what limits its potential
+  users to owners of hardware of particular vendor and related proprietary software.
+
+The only challenge in setting the virtual machine up was in providing all needed
+  dependencies, namely recent versions of a C++ compiler, and the CMake, Boost and Thrust 
+  packages.
