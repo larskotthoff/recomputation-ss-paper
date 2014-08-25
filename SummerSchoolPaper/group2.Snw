@@ -22,7 +22,7 @@ E5-2640 v2 processors), and then $50$ times on a VM with $4$ cores on Microsoft
 Azure \cite{azure}. Our measurements include only computation times, and ignore
 the time taken to read in the problem instances from a file. We compare the
 relative standard deviation (that is, standard deviation as a proportion of the
-mean, since processing models varies between real and virtual hardware) of the
+mean, since processor speeds vary between real and virtual hardware) of the
 runtimes on real and virtual hardware for each problem instance.  We present
 the result in Table~\ref{run_time}: each row of the table is a problem
 instance, and we show relative standard deviations as a percentage.
