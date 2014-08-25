@@ -23,6 +23,7 @@ Luke~Hutton,
 Alexander~Konovalov,
 Lars~Kotthoff,
 Ciaran~McCreesh,
+Miguel~A.~Nacenta,
 Ruma~R.~Paul,
 Karen~E.~J.~Petrie,
 Dani\"el~Reijsbergen,
@@ -30,7 +31,7 @@ Abdul~Razaq,
 and~Kenji~Takeda.%
 \IEEEcompsocitemizethanks
 {
-\IEEEcompsocthanksitem S.~Arabas is with the University of Warsaw. M.~Bareford, I.~Gent, M.~Hajiarabderkani, T.~Henderson, L.~Hutton and A.~Konovalov are with the University of St Andrews. B.~Gorman and K.~Petrie are with the University of Dundee. L.~Kotthoff is with University College Cork. C.~McCreesh is with the University of Glasgow. R.~Paul is with the Universit\'{e} catholique de Louvain. D.~Reijsbergen is with the University of Edinburgh. A.~Razaq is with Glasgow Caledonian University. K.~Takeda is with Microsoft Research.\protect\\
+\IEEEcompsocthanksitem S.~Arabas is with the University of Warsaw. M.~Bareford, I.~Gent, M.~Hajiarabderkani, T.~Henderson, L.~Hutton, A.~Konovalov and Miguel~A.~Nacenta are with the University of St Andrews. B.~Gorman and K.~Petrie are with the University of Dundee. L.~Kotthoff is with University College Cork. C.~McCreesh is with the University of Glasgow. R.~Paul is with the Universit\'{e} catholique de Louvain. D.~Reijsbergen is with the University of Edinburgh. A.~Razaq is with Glasgow Caledonian University. K.~Takeda is with Microsoft Research.\protect\\
 E-mail: emcsr2014@cs.st-andrews.ac.uk
 }%
 \thanks{This paper is a work-in-progress.  It reports the state of our work at the end of a busy week of a Summer School, 
