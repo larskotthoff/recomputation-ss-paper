@@ -17,6 +17,8 @@ public class PunctualityAnalyst {
 	ArrayList<double[]> inKs;
 	ArrayList<double[]> notInKs;
 	
+	String outputString = "";
+	
 	public PunctualityAnalyst() {
 
 	}
