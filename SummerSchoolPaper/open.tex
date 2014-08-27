@@ -2,8 +2,8 @@
 
 This paper is intended to be Open, Reproducible, and Executable.  We discuss here what we mean by these words, how we tried to achieve them, and to what extent we achieved this.
 
-By ``Open'', we mean that the paper was openly developed and written.  The authors collaborated via GitHub\footnote{specifically
-\texttt{\url{https://github.com/larskotthoff/recomputation-ss-paper/}}}.   Although authors were usually in the same room, with so many of us other forms of collaboration would have been very 
+By ``Open'', we mean that the paper was openly developed and written.  The authors collaborated via GitHub.\footnote{specifically
+\texttt{\url{https://github.com/larskotthoff/recomputation-ss-paper/}}}   Although authors were usually in the same room, with so many of us other forms of collaboration would have been very 
 difficult.  More importantly, for the current discussion, this means that the development of the paper can be tracked throughout through the commit history on github.  Anybody can download not only the final paper, but its source, and code and other materials collected during its development.  An interesting aside is that this means that anybody can see what each author committed on the paper or supporting materials at any time, although it must be borne in mind that a commit by one person may represent the work of several authors working together offline.
 
 By ``Reproducible'', we mean that it is our intention that other scientists (or ourselves at later dates) will be able to reproduce our work to assess if statements we make are correct and if conclusions are valid.  To enable this we have attempted to collate materials necessary for each study, and make them available to future researchers.  In most cases this has also been done in git, 
@@ -12,8 +12,7 @@ might be half a gigabyte, and such large files can be problematic for git.  This
 
 Finally, by ``Executable'', we mean a paper that can be reconstructed from source 
 materials, and that data can be reanalysed as it changes and new versions of the paper produced, and possibly executable code rerun.  
-This has numerous advantages because as we add data, the paper does not need to be rewritten.  
-\footnote{The name ``reproducible paper'' is sometimes used for this, but can lead to confusion because a paper can be executable in the sense of being able to produce new figures with 
+This has numerous advantages because as we add data, the paper does not need to be rewritten.\footnote{The name ``reproducible paper'' is sometimes used for this, but can lead to confusion because a paper can be executable in the sense of being able to produce new figures with 
 changed data, but not reproducible if that data can not be reconstructed ab initio.}
 To make our paper executable, we used Sweave, a package that integrates the statistics system R and \LaTeX. 
 To ease the workflow and to make execution of the paper easy, we wrote a Makefile for the generation of the paper pdf, although there are still some issues which need manual intervention such as installation of the necessary R packages. 
