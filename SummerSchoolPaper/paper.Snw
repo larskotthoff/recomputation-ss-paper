@@ -58,11 +58,11 @@ hopefully improve) our experiments.
 \input{recomputation}
 \input{school}
 \input{obstacles}
-\input{open}
 \input{group1}
 \input{group2}
 \input{group3}
 \input{group4}
+\input{open}
 \input{discussion}
 \input{ack}
 

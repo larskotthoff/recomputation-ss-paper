@@ -39,7 +39,7 @@ which is widely used for testing maximum clique algorithms, and there are no
 barriers to obtaining or using it.
 
 For each selected instance, we ran our implementation of the algorithm $50$
-times on real harware (using $4$ cores of a machine with dual Intel Xeon
+times on real hardware (using $4$ cores of a machine with dual Intel Xeon
 E5-2640 v2 processors), and then $50$ times on a VM with $4$ cores on Microsoft
 Azure. Our measurements include only computation times, and ignore the time
 taken to read in the problem instances from a file. We compare the relative
