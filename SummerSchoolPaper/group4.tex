@@ -1,6 +1,62 @@
 \section{Case study \#4: Recomputability of HCI Studies}
 \label{s:group4}
 
+Research in computer science often involves humans, especially if the subject of study is how people and machines interact with each other (e.g., in HCI). This kind of research focuses on phenomena that involve human agents and are therefore not addressable strictly through computation. However, there are also strictly computational issues that are critical for the replicability of HCI research. In this case study we looked at current practice in HCI research through an example published experiment, and aimed at identifying the road blocks and difficulties that present themselves when reproducing statistical analysis of data obtained from human behavior.  
+
+\subsection{Background}
+The field of Human-computer Interaction heavily relies on the execution and analysis of empirical studies that involve humans. These results are used to, for example, build new interaction techniques and devices\cite{}, and propose theories of human behavior with computers \cite{}. The reliability of the analysis and conclusions of these studies have been recently questioned. Problems identified include the fact that barely any results are replicated \cite{hornbaek}, that the research is often difficult or impossible to replicate \cite{wilson1}, and that replicated results are difficult to publish and share to the larger community \cite{}. The HCI community is currently trying to address some of these problems through new venues for publication (e.g., ReplyCHI~\cite{replichiVenue}), the creation of new tools~\cite{mackay}, and efforts to change the research culture and incentives (ACM CHI, arguably the most important conference in the field, introduced in 2013 a replication award or distinction for papers that address replicability).
+
+Although the problem of replicability of experiments with humans is difficult and will likely require significant efforts from the community, the recomputability of these results and the associated statistical analysis has received relatively little attention, even though it is probably one of the most significant sources of inaccuracy and incorrect data in the field. Recomputability in HCI experiments refers mostly to the ability of others (not authors) to replicate the statistical analysis and statistical conclusions of a paper utilizing the same recorded data from the experiment. 
+
+Quantitative experiments in HCI analyze data that is obtained from humans to draw conclusions that are relevant for the understanding or development of interfaces. Although the experiments are necessarily affected by the inherent variability introduced by humans, the analyses should not. Ideally, every researcher in the area, and more specifically, every reviewer of a paper containing statistical analysis of quantitative human data should be able to reproduce the analysis. The ability of reviewers to determine if a statistical analysis and interpretation of the data in a paper are correct is currently limited to checking that the reported degrees of freedom in an ANOVA (or a similar inferential statistic procedure) are consistent with the design of the experiment, and that the intermediate statistic figures (e.g., F values, DOF, p-values) are consistent with the statistic analysis. This is obviously not sufficient to detect even relatively simple errors during analysis that could mean the difference between radically opposite interpretations of the data. Examples that have been encountered by some of the authors of this paper include: reading statistics and degrees of freedom from an incorrect column, reading statistics and degrees of freedom from an incorrect table, and performing within-subject analysis on between-subjects data. Several of these errors are virtually impossible to detect if the only provided information are the statistical figures typically found in papers. The problem is further magnified if the analysis is not standard. For example, if a new computational measure is created from the data, it might be impossible to reproduce without having the exact code, and if the analysis applies a machine learning approach there might be large numbers of parameters to adjust and many differently implemented variants of the same analysis (different analysis frameworks might have implementations of the same analysis that might lead to different results).
+
+In order to prevent those errors and the significant loss of credibility of the data that they cause, authors should enable the recomputation of statistical and machine learning analysis on the data of any experiment to the extent allowed by other ethics and privacy issues (See section XXXX). This requires that: a) authors make the data available, b) authors provide suitable meta-data that describes the semantics and structure of the data, c) authors provide instruction on how to reproduce the analysis. In the spirit of openness and scientific integrity, one of the authors (M.A.N.) has been striving to provide the data and the analyses for his own empirical research in HCI. Specifically, a recent research project on the memorability of gestures \cite{Nacenta} was developed from scratch with the idea of sharing the 
+
+
+
+word vs latex
+
+ interpretation of the data 
+
+ that are often difficult or impossible to replicate, 
+
+Several voices have raised concerns that th data being gathered and the conclusions of many studies might be erroneous, mostly
+
+However, it has been noted that the standards of replicability of published studies is not comparable to other related fields \cite{hornbaek,wilson1}. 
+
+Replicability of experimental results in human-computer interaction experiments
+
+
+- Replicability in HCI picking up (replichi, 1,2,3,4 kasper, Mackay, prize) 
+- Efforts to reproduce experiments
+- Little attention to the replication of statistical findings, important parts
+- This is the easy part, and the one that might provide for most benefits
+- Currently, research process only allows for a cursory examination of DOF
+	- typical failures: wrong analysis (SPSS)
+
+\subsection{Experience Report: Recomputing a Memorability Experiment}
+- One of the authors: support for replication, 2 papers
+- Big questions as to whether even if the data is made available, the process is acceptable
+
+- Authors (except main author of the paper), generally a group of experts, set out to reproduce the main selected results in a 1.5h session
+- Presentation on the topic, to allow them to understand
+- 
+
+\subsection{Results}
+- Layers of knowledge needed pretty broad
+- Access to software problematic (SPSS)
+- Specific numbers difficult to find
+- Consistency between 
+
+\subsection{Discussion}
+
+\subsubsection{Challenges}
+
+\subsubsection{Recommendations}
+
+
+
+
 Human subjects research involves the collection of data through interaction
 with individuals, or through collection of personally identifiable
 information. Such research poses specific barriers to reproducibility. In
