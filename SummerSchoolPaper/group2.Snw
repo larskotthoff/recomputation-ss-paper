@@ -1,31 +1,53 @@
 \section{Case study \#2: recomputing parallel and distributed experiments}
 
-We wish to know whether using a virtualised environment can affect the quality
-and reproducibility of parallel and distributed experiments. We looked at a
-multi-core parallel experiment, and a peer-to-peer system.
+The Recomputation.org project has shown that recomputation via a virtual
+machine can been successful when using sequential code on a single machine.  We
+wished to know whether this approach could be extended to cover multi-core
+parallel or distributed systems. For parallelism research, the end goal is
+typically performance: can using more cores make something run faster, or allow
+a larger dataset to be processed in the available time? It is not clear whether
+a virtualised environment would affect the quality of the results for these
+kinds of experiments. For distributed systems, a single virtual machine would
+obviously not suffice, but could multiple virtual machines be used?  To address
+these questions, we looked at a multi-core parallel experiment, and a
+peer-to-peer system.
 
 \subsection{Experiment 1: A Parallel System}
 
-We looked at an existing implementation of a parallel algorithm for the maximum
-clique problem \cite{ciaran}: given a graph, a clique is a subset of
-pairwise-adjacent vertices, and the maximum clique problem (which is NP-hard)
-is to find the largest such subset. On real hardware, for any given graph
-instance, if we run the program multiple times we get very similar runtimes.
-The aim of this experiment is to see whether runtimes are similarly consistent
-when run on a virtual machine on a cloud.
+We looked at an existing implementation of a parallel branch-and-bound
+algorithm for the maximum clique problem \cite{ciaran}: given a graph, a clique
+is a subset of pairwise-adjacent vertices, and the maximum clique problem
+(which is NP-hard) is to find the largest such subset. On real hardware, for
+any given graph instance, if we run the program multiple times we get very
+similar runtimes.  The aim of this experiment is to see whether runtimes are
+similarly consistent when run on a virtual machine on a cloud: the original
+work relies upon performance measurements to explain the behaviour of different
+parallelism mechanisms. We did not attempt to reproduce the entire paper;
+instead, we devised a new experiment to establish whether meaningful,
+consistent parallel performance measurements of the kind required by the
+original work could be obtained using Microsoft Azure \cite{azure}.
 
-We have selected $10$ different ``medium sized'' problem instances (i.e.\
-graphs) from the second DIMACS implementation challenge to have a valid and
-reasonable comparative analysis.  For each instance, we run the algorithm $50$
+The source code of the implementation was available on Github (and was written
+by one of the authors). No changes were required, and all of the dependencies
+were available pre-packaged on a standard Ubuntu install.
+
+For our analysis, we selected $10$ different ``medium sized'' problem instances
+(i.e.\ graphs) from the second DIMACS implementation challenge, so that our
+runtimes would be long enough to be noise-free but short enough to be
+repeatable. This is a publicly available dataset, in an easy to parse format,
+which is widely used for testing maximum clique algorithms, and there are no
+barriers to obtaining or using it.
+
+For each selected instance, we ran our implementation of the algorithm $50$
 times on real harware (using $4$ cores of a machine with dual Intel Xeon
 E5-2640 v2 processors), and then $50$ times on a VM with $4$ cores on Microsoft
-Azure \cite{azure}. Our measurements include only computation times, and ignore
-the time taken to read in the problem instances from a file. We compare the
-relative standard deviation (that is, standard deviation as a proportion of the
-mean, since processor speeds vary between real and virtual hardware) of the
-runtimes on real and virtual hardware for each problem instance.  We present
-the result in Table~\ref{run_time}: each row of the table is a problem
-instance, and we show relative standard deviations as a percentage.
+Azure. Our measurements include only computation times, and ignore the time
+taken to read in the problem instances from a file. We compare the relative
+standard deviation (that is, standard deviation as a proportion of the mean,
+since processor speeds vary between real and virtual hardware) of the runtimes
+on real and virtual hardware for each problem instance.  We present the result
+in Table~\ref{run_time}: each row of the table is a problem instance, and we
+show relative standard deviations as a percentage.
 
 <<echo=FALSE,results=tex>>=
 library(xtable)
@@ -57,7 +79,12 @@ In both real and virtual hardware the relative standard deviation is very small
 running on a virtual machine; this is contrary to the experiences of Kotthoff
 \cite{kotthoff}, who did not always see reliable \emph{sequential} runtimes on
 virtualised hardware. In other words, using virtualised hardware for
-reproducible parallelism experiments is not necessarily infeasible.
+reproducible parallelism experiments is not necessarily infeasible.  However,
+we were limited to 4 cores, rather than the 64 cores used in the original work.
+We are also unsure whether parallel acceleration hardware such as GPUs or the
+Intel Xeon Phi could be used in a virtualised environment, and are doubtful
+that experiments involving this kind of equipment will be recomputable on later
+hardware.
 
 The virtual machine image used for the experiments is available via
 VMDepot\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}.
