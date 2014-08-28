@@ -87,7 +87,7 @@ that experiments involving this kind of equipment will be recomputable on later
 hardware.
 
 The virtual machine image used for the experiments is available via
-VMDepot\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}.
+VMDepot.\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}
 
 \subsection{Experiment 2: A Peer-to-Peer System}
 Experiments that are performed across multiple machines are challenging
