@@ -8,48 +8,73 @@ sciences~\cite{donoho:reproducible}. While reproducibility is
 acknowledged as a fundamental part of the scientific method, various
 studies have shown that many, if not most, research papers are not
 reproducible~\cite{bonnet:repeatability,hornbaek:replications,ioannidis:repeatability}.
+This has led to calls for independent boards to replicate and
+certify research experiments~\cite{baker:verify}. At the same time,
+efforts are ongoing to improve methodologies into determining whether
+an experiment has been reproduced accurately~\cite{johnson:evidence}.
 
 Terminology is important, but unfortunately many terms are used
 interchangeably in this area.  Peng~\cite{peng:reproducible} describes
 a spectrum of reproducibility from a paper that is not reproducible,
 to one that allows ``full replication''. But
 Drummond~\cite{drummond:replicability} distinguishes between
-replicability and reproducibility by saying that the former is the
+replicability and reproducibility, by saying that the former is the
 exact repeating of an experiment as presented, whereas reproducibility
 is broader and allows one to build on an experiment and further
-science. Gent introduces another term, ``recomputation'', to describe
+science. Gent introduces another term, \emph{``recomputation''}, to describe
 the replication of computational experiments~\cite{gent:recomputation}.
 In this paper we consider challenges and ways in which we can enable
 the widespread recomputation of experiments as described in the
 Recomputation Manifesto.
 
 There are many aspects to recomputation, all of which are being
-actively studied. Stodden and Miguez propose a set of best practices,
-including licensing and sharing of data, workflow tracking, making
-code and method available, and citing data and
-software~\cite{stodden:practices}. Davison describes how to make it
-easier to capture workflow and experimental context, including using a
-``consistent, repeatable computing environment'' (the
-recomputation.org project and others~\cite{howe:reproducible} aim to
-make this particular aspect easier through the use of virtual
-machines), version control and clearly separated experimental
+actively studied. Stodden and Miguez propose a set of best practices
+for reproducible and extensible research, including licensing and
+sharing of data, workflow tracking, making code and method available,
+and citing data and software~\cite{stodden:practices}. 
+Companies such as FigShare~\cite{figshare:citable} and
+GitHub~\cite{github:citable} are helping by making it easier for
+researchers to share code and data and also cite them through the use
+of DOIs (Digital Object Identifier). Several initiatives have arisen
+to make researchers more aware of tools, and to further the
+development of tools, to make their research more reproducible, e.g.,
+Mozilla Science Labs\footnote{\url{http://mozillascience.org/}},
+RunMyCode\footnote{\url{http://www.runmycode.org/}} and 
+Software Carpentry\footnote{\url{http://software-carpentry.org/}}. Davison
+describes how to make it easier to capture workflow and experimental
+context, including using a ``consistent, repeatable computing
+environment'' (the recomputation.org project and
+others~\cite{howe:reproducible} aim to make this particular aspect
+easier through the use of virtual machines), version control and
+clearly separated experimental
 parameters~\cite{davison:reproducibility}. Our paper attempts to
 follow these best practices, having used version control and is
 available to recomputate on a VM.  Mesirov describes one particular
 workflow to make it easy to track and package genomic
-data~\cite{mesirov:accessible}.
+data~\cite{mesirov:accessible}. 
 
-OLD TEXT follows:
-In this section we are going to describe the current state of reproducible computational science, and
-in particular the Recomputation.org project, which is aimed at implementing
-the infrastructure for recomputable experiments following the statements of the Recomputation
-Manifesto \cite{gent:recomputation}. We will give an overview of other activities in this
-direction, such as, for example, the Mozilla Science Lab, GitHub and Figshare joint project to fix code
-citations by assigning a DOI to the particular revision, and training initiatives such as Software
-Carpentry to increase the awareness of researchers about tools that they can use to make their
-research more reproducible -- in other words, promote ``Reproduciliteracy'' (a word coined by 
-Ian Gent at one of the group discussions at the Collaborations Workshop 2014).
-
-\emph{This section is in a preliminary state}
-
-\cite{johnson:evidence}
+Each of the case studies presented in this paper builds on the current
+state of the art. While others have looked at code, method and data
+sharing, we highlight one particularly overlooked part of method that
+also needs to be shared: the ethics process. As virtual machines are
+increasingly used for packaging and making experiments recomputatable,
+we highlight the issues when such VMs are used for parallel and
+distributed experiments. As computational science encompasses more
+disciplines than just computer science, we focus on whether any issues
+arise when recomputating non-CS experiments. And finally, we study one
+particular part of computer science that straddles other disiplines
+such as psychology, to see if there are any further challenges to
+reproducibility here.
+%OLD TEXT follows:
+%In this section we are going to describe the current state of reproducible computational science, and
+%in particular the Recomputation.org project, which is aimed at implementing
+%the infrastructure for recomputable experiments following the statements of the Recomputation
+%Manifesto \cite{gent:recomputation}. We will give an overview of other activities in this
+%direction, such as, for example, the Mozilla Science Lab, GitHub and Figshare joint project to fix code
+%citations by assigning a DOI to the particular revision, and training initiatives such as Software
+%Carpentry to increase the awareness of researchers about tools that they can use to make their
+%research more reproducible -- in other words, promote ``Reproduciliteracy'' (a word coined by 
+%Ian Gent at one of the group discussions at the Collaborations Workshop 2014).
+%
+%\emph{This section is in a preliminary state}
+%
