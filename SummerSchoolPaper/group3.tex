@@ -23,11 +23,23 @@ The virtual machine was based on the Debian sid distribution.
 \subsection{Results}
 \subsubsection*{Experiment 1: Urban Planning}
 
-For the first case study, we tried to recompute parts of Table~6 of \cite{danielpaper}, in which the punctuality of a bus service in Edinburgh is evaluated using statistical methods. Table~6 contains confidence intervals that are constructed using a piece of software written in Java. It is possible to compile the source code after installing a Java Software Development Kit on the virtual machine. The software uses the SSJ library for Stochastic Simulation,\footnote{http://simul.iro.umontreal.ca/ssj-2/indexe.html} which had to be downloaded from the Internet. After that, the code was able to run.
+For the first case study, we tried to recompute parts of Table~6 of
+\cite{danielpaper}, in which the punctuality of a bus service in Edinburgh is
+evaluated using statistical methods. Table~6 contains confidence intervals that
+are constructed using a piece of software written in Java. It is possible to
+compile the source code after installing a Java Software Development Kit on the
+virtual machine. The software uses the SSJ library for Stochastic
+Simulation,\footnote{\url{http://simul.iro.umontreal.ca/ssj-2/indexe.html}} which had to be downloaded from the Internet. After that, the code was able to run.
 
 We encountered legal obstacles in the following three areas.
 \begin{itemize} 
-\item Code-related: the software was developed as part of the EU project QUANTICOL, which is funded by the European Commission as part of its 7th Framework programme. In the General Conditions part of the project's grant agreement, it is stated that the IP rights are awarded to the beneficiary, which in this case would be the University of Edinburgh. In turn, the University of Edinburgh has issued a position statement on intellectual property rights\footnote{http://www.research-innovation.ed.ac.uk/Portals/0/Documents/University-of-Edinburgh-Position-Statement-on-Intellectual-Property\_December2011.pdf} in which it stated that it ``\emph{is the policy of the University of Edinburgh to develop University research capabilities and to assess, develop and promote the transfer of Edinburgh's technology and ideas for society's use and benefit.}'' Still, publication of the code would need to be checked with a supervisor.
+\item Code-related: the software was developed as part of the EU project
+QUANTICOL, which is funded by the European Commission as part of its 7th
+Framework programme. In the General Conditions part of the project's grant
+agreement, it is stated that the IP rights are awarded to the beneficiary, which
+in this case would be the University of Edinburgh. In turn, the University of
+Edinburgh has issued a position statement on intellectual property
+rights\footnote{\url{http://tinyurl.com/kh8quod}} in which it stated that it ``\emph{is the policy of the University of Edinburgh to develop University research capabilities and to assess, develop and promote the transfer of Edinburgh's technology and ideas for society's use and benefit.}'' Still, publication of the code would need to be checked with a supervisor.
 \item Data-related: the code uses a dataset based on bus location measurements provided to us by Lothian Buses. We would need their permission to put this dataset in the public domain.
 \end{itemize}
 The use of the SSJ package is not an obstacle because it is released under the GPL licence from GNU.
@@ -46,9 +58,22 @@ The work discussed in \cite{bareford2010nanoflare} concerns the energy released 
 
 When this process is repeated many times, the results can be expressed as energy distributions, see Figure 14 of \cite{bareford2010nanoflare}, which shows the energy releases for $10^5$ relaxations involving a variety of loop lifetimes. We decided to focus on reproducing only this figure. The individual plots were taken from the results produced by a C++ code called Taylor Relaxation of Loop Ensembles, or TRoLE for short, that automates the process described above.
 
-The TRoLE code was written when the first author \cite{bareford2010nanoflare} was a postgraduate at the University of Manchester. It was necessary therefore to check the IP policy for this institution.\footnote{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=487} Section 3.2 of this policy states that the ``\emph{...ownership of IP created by a Student, who is not an employee of the University, is with the Student.}'', which we took to mean that the first author was free to place the code in a publicly available repository.\footnote{https://github.com/mbareford/trole}
+The TRoLE code was written when the first author \cite{bareford2010nanoflare}
+was a postgraduate at the University of Manchester. It was necessary therefore
+to check the IP policy for this
+institution.\footnote{\url{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=487}}
+Section~3.2 of this policy states that the ``\emph{...ownership of IP created by
+a Student, who is not an employee of the University, is with the Student.}'',
+which we took to mean that the first author was free to place the code in a
+publicly available
+repository.\footnote{\url{https://github.com/mbareford/trole}}
 
-The next issue concerned a technical matter: the code was written with the use of a proprietary numerical algorithms library (NAG),\footnote{http://www.nag.co.uk/numeric/CL/CLdescription.asp} the licence for which had expired. Fortunately, there is an open source alternative, the GNU Scientific Library (GSL).\footnote{http://www.gnu.org/software/gsl/} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
+The next issue concerned a technical matter: the code was written with the use
+of a proprietary numerical algorithms library
+(NAG),\footnote{\url{http://www.nag.co.uk/numeric/CL/CLdescription.asp}} the
+licence for which had expired. Fortunately, there is an open source alternative,
+the GNU Scientific Library
+(GSL).\footnote{\url{http://www.gnu.org/software/gsl/}} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
 
 After the code was recompiled and linked with the GSL libraries, it was ready to run the simulation of $10^5$ relaxation events. Alas, the code could at first only simulate a fraction of this total (146 events): the code reported that it had reached a point on the instability threshold for which a stable (relaxed) configuration could not be calculated. The relaxed state is determined by ensuring that certain properties are conserved (i.e., the property values match those calculated for the unstable state)---this is essentially a root finding exercise. Further investigation revealed that the magnetic field profiles were being calculated incorrectly for a wide range of threshold states. The cause concerned incorrect substitutions for the NAG Bessel functions. For example, the NAG routine, nag\_bessel\_j0() is the call for a regular cylindrical Bessel function, whereas, what looks like the equivalent in GSL, gsl\_bessel\_j0(), is actually the routine for a regular \textit{spherical} Bessel function. All that was required to call the correct routine was to capitalise the last letter, i.e., gsl\_bessel\_J0().
  
