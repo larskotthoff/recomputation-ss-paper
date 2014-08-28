@@ -1,4 +1,4 @@
-\section{Case study \#2: recomputing parallel and distributed experiments}
+\section{Case study \#2: Recomputing parallel and distributed experiments}
 
 The Recomputation.org project has shown that recomputation via a virtual
 machine can been successful when using sequential code on a single machine.  We
