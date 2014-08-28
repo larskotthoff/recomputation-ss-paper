@@ -2,44 +2,84 @@
 \label{s:intro}
 
 
-We consider reproducibility in the computational sciences.  We interpret Computational Sciences as including Computer Science, but also 
-work in any other science in which computational work plays an important role.
-Reproducibility is a cornerstone of the scientific method, and should therefore be a cornerstone of Computational Sciences.  
-To what extent is this true?  What challenges arise in reproducing work in computational sciences?  
+We consider reproducibility in the Computational Sciences in this paper.  We
+interpret Computational Sciences as including Computer Science, but also any
+other science in which computational work plays an important role, such as
+physics or psychology. The central hypothesis of this paper is that
+reproducibility is a cornerstone of the scientific method, and should therefore
+be a cornerstone of Computational Sciences. We ask to what extent this is true
+and what challenges arise in reproducing work in Computational Sciences.
 
-To study these questions, we performed four case studies on different questions facing reproducibility in computational sciences.  
-Each case study takes on a different aspect of reproducibility, identifies any problems met, and discusses the issues that they have raised.
-Additionally, we consider the meta-level question of how reproducible this paper itself is.  We have striven to make this paper open, 
-reproducible, and executable, but even while trying to do this we have not been completely successful.
+To study these questions, we performed four case studies that consider different
+issues related to reproducibility in Computational Sciences.  Each case study
+takes on a different aspect of reproducibility, identifies any problems
+encountered, and discusses the points that they have raised.
 
-We identified four questions which we investigated through four case studies.  
-These questions were as follows. 
-How is reproducibility affected by differing ethics requirements at different universities? 
-Are parallel and distributed computational experiments more or less reproducible than serial ones?
-How reproducible are computational scientific experiments from disciplines other than computer science?
-How reproducible is the data analysis is a published experiment in human-computer interaction, where 
-the author made significant efforts to make it reproducible?
+An often-overlooked fact is that reproducibility in the Computational Sciences
+is not only an issue of the actual computations, but also of preliminaries and
+other setup that is not related to computation at all. The first case study asks
+how reproducibility is affected by differing ethics requirements at different
+universities. Ethics approval has to be obtained for any experiments involving
+human subjects, such as the ones that are common in human-computer interaction
+research, but different institutions put emphasis on different aspects. How
+reproducible is research that is ``conditioned'' on one particular ethics form?
 
-Most work for this paper was performed 
-during the Summer School
-on Experimental Methodology in Computational Science Research.   Indeed, a highly provisional first draft of this paper was completed by the end of the Summer School, with ensuing weeks used in completing work and writing.  
-\footnote{St Andrews, Scotland, August 4-8, 2014,
-\url{https://blogs.cs.st-andrews.ac.uk/emcsr2014/}} 
-The first three case studies were selected by discussing the interests of participants, and forming groups and research questions around these. 
-Therefore, these case studies were performed by subsets of the authors. 
-The resulting case studies will be presented below
-in Sections~\ref{s:group1}~--~\ref{s:group3}.
-The final case study was led by a lecturer of the summer school, and was performed by all participants
-and is presented in Section~\ref{s:group4}.
+The second case study considers whether parallel and distributed computational
+experiments are more or less reproducible than serial ones. Computational
+experiments are at the core of a lot of research, especially in artificial
+intelligence, where the motivation for this case study lies. In recent years,
+multi-core and multi-processor machines have become increasingly prevalent. To
+make use of this increased processing power, experiments need to utilise
+multiple resources at once. But is this inherently detrimental to
+reproducibility?
 
-The nature of this paper means that none of our case studies can give exhaustive answers, but we suggest that each raises interesting questions
-for future consideration by researchers wishing to reproduce computational experiments.
+While Computer Science likely accounts for the majority of computational
+experiments, they are becoming increasingly important in other areas. In physics
+or chemistry for example, simulations of physical processes help scientists gain
+insights. Our third case study is motivated by this fact and asks how
+reproducible computational scientific experiments from disciplines other than
+computer science are. We consider experiments from several research areas. Given
+that researchers in other areas use computation only as a tool and may not be
+as aware of issues related to reproducibility as computer scientists, does
+reproducibility suffer?
 
-The paper itself was written to be open, reproducible, and executable.  The entire edit history, including paper and many aspects of the case studies, is available openly on github and indeed was open from the start of writing the paper.  The paper has executable aspects through integration of R and \LaTeX\ via the R package Sweave \cite{sweave}, so that as raw data changes, new tables and figures can be regenerated automatically.
-Finally, we have endeavoured to make it reproducible through measures such as providing virtual machines for aspects of our work, not least a virtual machine in which the paper itself can be rebuilt.
+Our final case study considers whether reproducible for one person is the same
+as reproducible for another. It asks how reproducible the data analysis of a
+published experiment in human-computer interaction where the author made
+significant efforts to make it reproducible is. While it is reasonable to assume
+that the author of an experiment can conduct it in a way that enables her or him
+to do it again, having another person do it is an entirely different matter.
+There may be implicit assumptions that are not specified, background knowledge
+assumed, or environmental aspects unconsidered. Can a carefully prepared
+experiment be recomputable by someone with no specific background in the area?
 
+Most of the work for this paper was performed during the Summer School on
+Experimental Methodology in Computational Science Research. Indeed, a highly
+provisional first draft of this paper was completed by the end of the Summer
+School, with ensuing weeks used in completing work and writing.  \footnote{St
+Andrews, Scotland, August 4-8, 2014,
+\url{https://blogs.cs.st-andrews.ac.uk/emcsr2014/}} The first three case studies
+were selected by discussing the interests of participants and forming groups
+and research questions around these. Therefore, these case studies were
+performed by subsets of the authors. These case studies will be
+presented below in Sections~\ref{s:group1}~--~\ref{s:group3}. The final case
+study was led by a lecturer of the summer school, was performed by all
+participants, and is presented in Section~\ref{s:group4}.
 
+The case studies we consider are not exhaustive and no single one can give
+complete answers. Instead, they shine spotlights on specific, important areas
+related to the issue of reproducibility in Computational Sciences. Furthermore,
+each raises interesting questions for future consideration by researchers
+wishing to reproduce computational experiments.
 
-
-
-
+Additionally, we consider the meta-level question of how reproducible this paper
+itself is.  We have striven to make this paper open, reproducible, and
+executable.
+The entire edit history, including paper and many aspects of the
+case studies, is available openly on GitHub and was indeed open from the start
+of writing the paper.  The paper has executable aspects through integration of R
+and \LaTeX\ via the R package Sweave~\cite{sweave}, so that as the underlying
+data changes, new tables and figures can be regenerated automatically. Finally,
+we have endeavoured to make it reproducible through measures such as providing
+virtual machines for aspects of our work, not least a virtual machine in which
+the paper itself can be rebuilt.
