@@ -4,6 +4,7 @@
 \urlstyle{same}
 
 \usepackage{hyperref}
+\usepackage{paralist}
 
 \begin{document}
 \SweaveOpts{concordance=TRUE}
