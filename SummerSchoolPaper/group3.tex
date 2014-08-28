@@ -1,35 +1,29 @@
 \section{Case study \#3: recomputing non-CS experiments}
 \label{s:group3}
 
-The focus of this section is on the issues relevant to research reproducibility that are potentially unique to non-CS computational research.
-The discussion is based on experience gained while packaging three computational experiments into self-contained virtual-machines.
-The papers on which the discussion is based (i.e., \cite{danielpaper,bareford2010nanoflare,arabas2013libcloud}) deal with urban planning, solar physics, and atmospheric physics respectively, although the discussion is likely relevant to other non-CS domains.
-Our aim was to offer readers (or reviewers) the opportunity to reproduce the figures presented in the paper, to inspect the code, and to possibly test behaviour of the programs with other parameters, all within a ready-to-use environment, namely a single virtual box constructed using the Vagrant tool and which runs the Debian operating system.
+\subsection{Background}
 
-%** LEGAL **
-%
-%The first obstacles in offering reproducibility of a computational experiment might arise due to legal, rather than technical reasons, and in fact these did arise in the cases discussed here.
-We encountered legal obstacles in all case studies.
-All of the software had been developed at universities, which typically resulted in the copyright being held by these institutions.
-Furthermore, the decisions concerning whether to allow open-source distribution of the code and the choice of licensing terms might be the prerogative of a university representative (e.g., a PhD supervisor).
-While this is in no way unique to non-CS domains, it is likely that pre-existing IP procedures are less likely to cover software-dissemination aspects in institutions not dealing with computer science.
-Even if the legal status of the code developed for a given experiment is settled and matches reproducibility requirements, the environment needed to run it might prevent unconstrained recomputation.
-This in fact was also the case in one of the programs in question, as the code relied on a proprietary software library.
+The focus of this section is on the issues relevant to research reproducibility that are potentially 
+  unique to non-CS computational research.
+The discussion is based on experience gained while packaging three computational experiments 
+  into self-contained virtual-machines.
+The papers on which the discussion is based (i.e., \cite{danielpaper,bareford2010nanoflare,arabas2013libcloud}) 
+  deal with urban planning, solar physics, and atmospheric physics respectively, 
+  although the discussion is likely relevant to other non-CS domains.
 
-We also noted a lack of domain-specific workflows for recomputation in non-CS journals.
-A counterexample is the Geoscientific Model Development (GMD) journal, which encourages reviewers to get
-  acquainted with the code behind papers under review \cite{GMD_editorial_2013}.
-Yet, the same journal, as of now, imposes a 50~MB limit on the size of electronic supplements 
-  which effectively rules out shipping a VM together with the paper.
+\subsection{Methodology}
 
-  The level of computer proficiency in non-CS domains\footnote{For example, see: ``\emph{Computational science: \ldots{}Error. Why scientific programming does not compute}''. DOI:10.1038/467775a.} is also likely to influence the ability of researchers to use the Virtual Machines---it is arguably less likely that a physics or urban-planning journal reviewer will be comfortable using a VM, in contrast to CS-related journals.
+Our aim was to offer potential readers (or reviewers) of the papers in question, 
+  the opportunity to reproduce the figures presented in the papers, 
+  to inspect the code, and to possibly test behaviour of the programs with other parameters.
+To offer it all within a ready-to-use environment, we have used the Vagrant tool to
+  construct a single virtual machine with all needed software and its dependencies installed.
+The virtual machine was based on the Debian sid distribution.
 
-We give a more detailed description of the experiments in the remainder of this section.
-
-\subsection*{Experiment 1: Urban Planning}
+\subsection{Results}
+\subsubsection*{Experiment 1: Urban Planning}
 
 For the first case study, we tried to recompute parts of Table~6 of \cite{danielpaper}, in which the punctuality of a bus service in Edinburgh is evaluated using statistical methods. Table~6 contains confidence intervals that are constructed using a piece of software written in Java. It is possible to compile the source code after installing a Java Software Development Kit on the virtual machine. The software uses the SSJ library for Stochastic Simulation,\footnote{http://simul.iro.umontreal.ca/ssj-2/indexe.html} which had to be downloaded from the Internet. After that, the code was able to run.
-The resulting virtual machine is about 550MB---the Java SDK and its dependencies account for over 200MB by themselves, although parts of the development kit could be de-installed after compilation.
 
 We encountered legal obstacles in the following three areas.
 \begin{itemize} 
@@ -44,7 +38,7 @@ The output of the Java code is displayed in Table~\ref{tab: z bootstrapped cis}.
 
 \input{bus_table.tex}
 
-\subsection*{Experiment 2: Solar Physics}
+\subsubsection*{Experiment 2: Solar Physics}
 
 At the start of the recomputation exercise it was judged that the results presented in \cite{bareford2010nanoflare} would be the easiest (of the three publications outside of computer science) to reproduce. The underlying code is serial in nature and not tied to specific hardware or operating system platform. 
 
@@ -77,9 +71,7 @@ The magnetic field that describes every possible loop configuration is defined i
 \end{figure}
 The differences between the two sets of results are negligible and entirely consistent with the stochastic method used to generate the energy distributions.
 
-
- 
-\subsection*{Experiment 3: Atmospheric Physics}
+\subsubsection*{Experiment 3: Atmospheric Physics}
 
 We also prepared a virtual machine with pre-built software for reproducing 
   simulations of idealised atmospheric clouds presented in \cite{arabas2013libcloud}.
@@ -104,3 +96,20 @@ However, the implementation uses the non-free CUDA standard what limits its pote
 The only challenge in setting the virtual machine up was in providing all needed
   dependencies, namely recent versions of a C++ compiler, and the CMake, Boost and Thrust 
   packages.
+
+\subsection{Discussion}
+
+We encountered legal obstacles in all case studies.
+All of the software had been developed at universities, which typically resulted in the copyright being held by these institutions.
+Furthermore, the decisions concerning whether to allow open-source distribution of the code and the choice of licensing terms might be the prerogative of a university representative (e.g., a PhD supervisor).
+While this is in no way unique to non-CS domains, it is likely that pre-existing IP procedures are less likely to cover software-dissemination aspects in institutions not dealing with computer science.
+Even if the legal status of the code developed for a given experiment is settled and matches reproducibility requirements, the environment needed to run it might prevent unconstrained recomputation.
+This in fact was also the case in one of the programs in question, as the code relied on a proprietary software library.
+
+We also noted a lack of domain-specific workflows for recomputation in non-CS journals.
+A counterexample is the Geoscientific Model Development (GMD) journal, which encourages reviewers to get
+  acquainted with the code behind papers under review \cite{GMD_editorial_2013}.
+Yet, the same journal, as of now, imposes a 50~MB limit on the size of electronic supplements 
+  which effectively rules out shipping a VM together with the paper.
+
+The level of computer proficiency in non-CS domains \citep[see discussion by]{Merali_2010} is also likely to influence the ability of researchers to use the Virtual Machines---it is arguably less likely that a physics or urban-planning journal reviewer will be comfortable using a VM, in contrast to CS-related journals.
