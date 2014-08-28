@@ -4,7 +4,7 @@
 Human subjects research involves the collection of data through interaction
 with individuals, or through collection of personally identifiable
 information. Such research poses specific barriers to reproducibility. In
-fields such as human-computer interaction (HCI), there are few replications of
+fields such as human-computer interaction, there are few replications of
 previous work, attributable to a culture which does not reward
 reproducibility, difficulty in replicating interaction techniques when
 materials are not shared, and an emphasis on formative work which proposes new
@@ -73,7 +73,7 @@ experiments.
 
 To understand the state of ethics procedures between institutions, we
 collected ethics applications forms for ten public universities located in the
-UK, EU, and USA, and Asia. A range of locations were chosen to capture a range of
+UK, EU, USA, and Asia. A range of locations were chosen to capture a range of
 cultural and regulatory expectations, which we expect will manifest in
 different procedures. All forms collected were derived from publicly
 accessible sources, except for one supplied by the authors. This is in
@@ -117,8 +117,8 @@ print(p)
 \end{figure}
 
 Figure~\ref{p:ethicsFreq} shows the distribution of attributes across the ten
-forms we examined. As shown in the long tail, 47.6\% of attributes only appear
-in one form. Of these, 42\% are ``sub-attributes'', that is, requesting
+forms we examined. As shown in the long tail, 47.6\% of attributes appear
+in only one form. Of these, 42\% are ``sub-attributes'', that is, requesting
 additional information requested on another form. For example, while 60\% of
 forms ask whether participants receive financial compensation, only one asks
 whether co-investigators are compensated. We are most interested in the unique
