@@ -32,7 +32,10 @@ Abdul~Razaq,
 and~Kenji~Takeda.%
 \IEEEcompsocitemizethanks
 {
-\IEEEcompsocthanksitem S.~Arabas is with the University of Warsaw. M.~Bareford, Lakshitha~de~Silva, I.~Gent, M.~Hajiarabderkani, T.~Henderson, L.~Hutton, A.~Konovalov and Miguel~A.~Nacenta are with the University of St Andrews. B.~Gorman and K.~Petrie are with the University of Dundee. L.~Kotthoff is with University College Cork. C.~McCreesh is with the University of Glasgow. R.~Paul is with the Universit\'{e} catholique de Louvain. D.~Reijsbergen is with the University of Edinburgh. A.~Razaq is with Glasgow Caledonian University. K.~Takeda is with Microsoft Research.\protect\\
+\IEEEcompsocthanksitem S.~Arabas is with the University of Warsaw. M.~Bareford,
+Lakshitha~de~Silva, I.~Gent, M.~Hajiarabderkani, T.~Henderson, L.~Hutton,
+A.~Konovalov and Miguel~A.~Nacenta are with the University of St Andrews.
+B.~Gorman and K.~Petrie are with the University of Dundee. L.~Kotthoff is with Insight Centre for Data Analytics. C.~McCreesh is with the University of Glasgow. R.~Paul is with the Universit\'{e} catholique de Louvain. D.~Reijsbergen is with the University of Edinburgh. A.~Razaq is with Glasgow Caledonian University. K.~Takeda is with Microsoft Research.\protect\\
 E-mail: emcsr2014@cs.st-andrews.ac.uk
 }%
 }
@@ -43,7 +46,8 @@ This paper was written by participants of the First Summer School on Experimenta
 We report several case studies performed during the school and systematize our experiences. 
 This paper is \emph{open} and \emph{reproducible}: the whole process of writing this paper is
 captured in the GitHub repository hosting both the source of the paper, supplementary codes and data;
-we are providing setup for several experiments on which we were working; finally, we are trying to 
+we are providing setup for several experiments on which we were working;
+finally, we try to 
 describe what we have achieved during the week of the school in a way that others may repeat (and 
 hopefully improve) our experiments.
 \end{abstract}

@@ -8,33 +8,22 @@ The field of Human-computer Interaction heavily relies on the execution and anal
 
 Although the problem of replicability of experiments with humans is difficult and will likely require significant efforts from the community, the recomputability of these results and the associated statistical analysis has received relatively little attention, even though it is probably one of the most significant sources of inaccuracy and incorrect data in the field. Recomputability in HCI experiments refers mostly to the ability of others (not authors) to replicate the statistical analysis and statistical conclusions of a paper utilizing the same recorded data from the experiment. 
 
-Quantitative experiments in HCI analyze data that is obtained from humans to draw conclusions that are relevant for the understanding or development of interfaces. Although the experiments are necessarily affected by the inherent variability introduced by humans, the analyses should not. Ideally, every researcher in the area, and more specifically, every reviewer of a paper containing statistical analysis of quantitative human data should be able to reproduce the analysis. The ability of reviewers to determine if a statistical analysis and interpretation of the data in a paper are correct is currently limited to checking that the reported degrees of freedom in an ANOVA (or a similar inferential statistic procedure) are consistent with the design of the experiment, and that the intermediate statistic figures (e.g., F values, DOF, p-values) are consistent with the statistic analysis. This is obviously not sufficient to detect even relatively simple errors during analysis that could mean the difference between radically opposite interpretations of the data. Examples that have been encountered by some of the authors of this paper include: reading statistics and degrees of freedom from an incorrect column, reading statistics and degrees of freedom from an incorrect table, and performing within-subject analysis on between-subjects data. Several of these errors are virtually impossible to detect if the only provided information are the statistical figures typically found in papers. The problem is further magnified if the analysis is not standard. For example, if a new computational measure is created from the data, it might be impossible to reproduce without having the exact code, and if the analysis applies a machine learning approach there might be large numbers of parameters to adjust and many differently implemented variants of the same analysis (different analysis frameworks might have implementations of the same analysis that might lead to different results).
+Quantitative experiments in HCI analyze data that is obtained from humans to draw conclusions that are relevant for the understanding or development of interfaces. Although the experiments are necessarily affected by the inherent variability introduced by humans, the analyses should not. Ideally, every researcher in the area, and more specifically, every reviewer of a paper containing statistical analysis of quantitative human data should be able to reproduce the analysis. The ability of reviewers to determine if a statistical analysis and interpretation of the data in a paper are correct is currently limited to checking that the reported degrees of freedom in an ANOVA (or a similar inferential statistic procedure) are consistent with the design of the experiment, and that the intermediate statistic figures (e.g., F values, DOF, p-values) are consistent with the statistic analysis. This is obviously not sufficient to detect even relatively simple errors during analysis that could mean the difference between radically opposite interpretations of the data. Examples that have been encountered by some of the authors of this paper include: reading statistics and degrees of freedom from an incorrect column in the software, reading statistics and degrees of freedom from an incorrect table, and performing within-subject analysis on between-subjects data. Some of these errors are virtually impossible to detect if the only provided information are the statistical figures typically found in papers. The problem is further magnified if the analysis is not standard. For example, if a new computational measure is created from the data, it might be impossible to reproduce without having the exact code, and if the analysis applies a machine learning approach there might be large numbers of parameters to adjust and many differently implemented variants of the same analysis (different analysis frameworks might have implementations of the same analysis that might lead to different results).
 
-In order to prevent those errors and the significant loss of credibility of the data that they cause, authors should enable the recomputation of statistical and machine learning analysis on the data of any experiment to the extent allowed by other ethics and privacy issues (See section XXXX). This requires that: a) authors make the data available, b) authors provide suitable meta-data that describes the semantics and structure of the data, c) authors provide instruction on how to reproduce the analysis. In the spirit of openness and scientific integrity, one of the authors (M.A.N.) has been striving to provide the data and the analyses for his own empirical research in HCI. Specifically, a recent research project on the memorability of gestures \cite{Nacenta} was developed from scratch with the idea of sharing the 
+In order to prevent those errors and the significant loss of credibility of the data that they cause, authors should enable the recomputation of statistical and machine learning analysis on the data of any experiment, to the extent allowed by other ethics and privacy issues (See section XXXX). This requires that: a) authors make the data available, b) authors provide suitable meta-data that describes the semantics and structure of the data, c) authors provide instruction on how to reproduce the analysis. Sharing the data and the procedures of the analysis has advantages that go beyond the pure verifiability of the correctness of the result: the data can also be reanalysed (individually or in combination with other sources) to discover new insights, the analysis can serve as educational material for students in the area, and scientific fraud becomes, at least in theory, much harder to perpetrate. 
 
+In this spirit of openness and scientific integrity, one of the authors (M.A.N.) has been striving to provide the data and the analyses for his own empirical research in HCI. Specifically, a recent research project on the memorability of gestures \cite{Nacenta:memorability} was developed from scratch as a pilot experience that would enable anyone to reproduce the analysis. For this purpose, the data and the basic analysis scripts necessary to perform the inferential statistics contained in the paper were prepared and included as an attachment to the original paper, which is currently accessible through the institutional research repository at the University of St Andrews~\cite{Nacenta:memorability_data}. This data and the required auxiliary files took approximately 6 hours to compile and prepare by the main author (excluding the time spent compiling and designing the statistical analyses). If this paper is representative of other work in the area, this amount of effort on the side of the authors does seem reasonable in exchange for the expected quality improvements for the field that recomputability could deliver. However, we have little knowledge about the challenges and difficulties encountered by the replicators (rather than the authors) in order to verify and check that the analysis is correct.
 
-
-word vs latex
-
- interpretation of the data 
-
- that are often difficult or impossible to replicate, 
-
-Several voices have raised concerns that th data being gathered and the conclusions of many studies might be erroneous, mostly
-
-However, it has been noted that the standards of replicability of published studies is not comparable to other related fields \cite{hornbaek,wilson1}. 
-
-Replicability of experimental results in human-computer interaction experiments
-
-
-- Replicability in HCI picking up (replichi, 1,2,3,4 kasper, Mackay, prize) 
-- Efforts to reproduce experiments
-- Little attention to the replication of statistical findings, important parts
-- This is the easy part, and the one that might provide for most benefits
-- Currently, research process only allows for a cursory examination of DOF
-	- typical failures: wrong analysis (SPSS)
+For this purpose, and in the context of the summer school that this article reflects on, we decided to set up an experiment in which the participants of the summer school (and authors of this article) with the exception of the author of the data, would try to replicate the results of the paper. The main objective of this research is to learn about the challenges and difficulties of a simple recomputation exercise of standard statistical analysis, to provide real examples of experience in recomputation of analysis in HCI, and to enable improvement of the provided data in the future.
 
 \subsection{Experience Report: Recomputing a Memorability Experiment}
+The authors of this article (hence the \emph{reanalysts}), with the exception of M.A.N. were divided into four groups (4,4,5, and 3 persons per group), each of which would try to reproduce a selection of the results of the gesture memorability study reported in reference \cite{Nacenta:memorability}. Approximately half of the reanalysts had a good understanding of HCI or had performed research in the HCI field. To provide sufficient background, the author of the reanalized paper gave a 20 minute presentation on the content of the paper, aimed at a moderately knowledgeable audience. Reanalysts were allowed to ask any number of questions at the end.
+
+The reanalysts received also a physical and a digital version of the original paper and a URL from where to download the data (as distributed originally to the public in \cite{Nacenta:memorability_data}). The data is provided in a comma separated file (with column heading names in the first row). The data includes 
+
+
+
+
 - One of the authors: support for replication, 2 papers
 - Big questions as to whether even if the data is made available, the process is acceptable
 
@@ -57,104 +46,6 @@ Replicability of experimental results in human-computer interaction experiments
 
 
 
-Human subjects research involves the collection of data through interaction
-with individuals, or through collection of personally identifiable
-information. Such research poses specific barriers to reproducibility. In
-fields such as human-computer interaction (HCI), there are few replications of
-previous work, attributable to a culture which does not reward
-reproducibility, difficulty in replicating interaction techniques when
-materials are not shared, and an emphasis on formative work which proposes new
-techniques over summative work~\cite{hornbaek:replications}.
-
-In this section, we look at one specific challenge to reproducibility in HCI
-research: capturing and disseminating the ethical requirements of an
-experiment, such that others may better replicate the procedures of a
-study. We evaluate the ethics requirements procedures of ten universities to
-determine a minimum specification for reporting ethical considerations, and
-discuss the state of the art in standardising ethical requirements by
-professional bodies and research councils.
-
-\subsection{Background}
-Human subjects research often involves the collection
-of sensitive identifiable data about participants. To ensure participants are
-not placed at undue risk by the conduct of an experiment, an increasingly
-rigorous process of oversight of the ethical conduct of research institutions
-has emerged in recent decades in many countries, particularly the US, where
-institutional review boards (IRB) have been charged with reviewing all
-clinical and human subjects research in line with federal regulations, with
-significant penalties for institutions if ethics violations occur. Each
-institution, however, has freedom to implement IRB processes as they see fit
-so long as such regulations are upheld. This leads to great inconsistencies
-between the expectations of institutions, and the processes researchers must
-engage with in order for research protocols to be approved.
-
-Internationally, the situation is even more variable. Many countries may not
-impose any such requirements on institutions, while in the UK, research
-councils mandate ethics are considered in order to receive funding, however
-the conduct of individual ethics committees is not regulated.
-
-Such variety in the conduct of ethical approval between institutions a
-represents a significant barrier to reproducibility in HCI research.
-If a researcher wishes to replicate a HCI experiment which uses human
-subjects data, they will usually need to seek ethical approval from
-their own institution. In our recent work, a survey of 505 papers
-using online social network (OSN) data found that only 2\% of papers
-disclose any of the ethical considerations of their
-work~\cite{hutton:reproducibility}.
-
-% cite osn survey!
-
-As researchers do not routinely disclose the protocol which
-received IRB approval, attempted replications may miss crucial details
-necessary to conduct the experiment, and to provide to IRB when seeking
-ethical approval, which can reduce the correctness of a replication.
-
-With IRBs and ethics boards operating largely independently with little policy
-coordination, there is no standardisation of ethics procedures.
-
-Indeed, reproducibility has only recently been considered an important
-ambition for HCI researchers, with nascent efforts including RepliCHI, which
-has operated as a CHI workshop since 2013. Despite such efforts however, the
-wider community has not considered these ethical challenges in detail.
-
-Next, we assess the state of the art in ethics procedures to determine what
-commonalities exist between institutional requirements. From this, we aim to
-derive a minimum ``ethical specification'', encoding fundamental
-methodological details to help researchers replicate procedures and ethical
-details, and to make it easier to replicate applications to other IRBs, with
-the ambition of such specifications being routinely attached to HCI
-experiments.
-
-
-\subsection{Comparison of Ethical Requirements across Universities}
-
-To understand the state of ethics procedures between institutions, we
-collected ethics applications forms for ten public universities located in the
-UK, EU, and USA, and Asia. A range of locations were chosen to capture a range of
-cultural and regulatory expectations, which we expect will manifest in
-different procedures. All forms collected were derived from publicly
-accessible sources, except for one supplied by the authors. This is in
-itself a significant barrier to reproducibility. Without making procedures publicly 
-available, there can be no external scrutiny about the appropriateness of some institution's
-procedures, and makes it more difficult to derive standards.
-
-For each form, two researchers independently coded each field, accounting for
-differences in wording between forms so long as each attribute asked for the
-same atomic information. Where one form requests expanded information
-pertaining to a previously identified attribute, this was added as an
-additional attribute. After independently coding the forms, the two
-researchers discussed any discrepancies to arrive at a set of 145 unique
-attributes, encompassing generic details, such as contact details of co-
-investigators, methodological details, and institution-specific requirements,
-often for insurance and liability purposes. Of these fields, only two were
-common to all ten ethics forms - the name of the principal investigator, and
-whether informed consent was sought. This intersection was significantly
-smaller than anticipated, and clearly does not constitute a useful minimum
-ethical specification. It does however reveal two interesting properties. It
-confirms our intuition that ethical procedures vary greatly between
-institutions, while also identifying perhaps the single most important
-objective of the ethics process: to ensure participants have given informed
-consent to participate in an experiment.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -163,61 +54,4 @@ consent to participate in an experiment.
 \end{minipage}
 \end{figure}
 
-Figure~\ref{p:ethicsFreq} shows the distribution of attributes across the ten
-forms we examined. As shown in the long tail, 47.6\% of attributes only appear
-in one form. Of these, 42\% are ``sub-attributes'', that is, requesting
-additional information requested on another form. For example, while 60\% of
-forms ask whether participants receive financial compensation, only one asks
-whether co-investigators are compensated. We are most interested in the unique
-``high-level attributes'' which emerge, as it is important to discern between
-questions which capture institution-specific requirements, or may constitute
-important issues which other IRBs ought to consider. We find instances of both
-in our results. For example, while UCL are the only institution to ask whether
-their own students are participants in the research (we assume for liability
-reasons), surprisingly they are the only university to ask outright whether
-health and safety precautions have been considered. Interestingly, only Aga Khan
-University in Pakistan asks whether the study is a replication of a previous experiment.
-
-\subsection{Proposed ethics specification}
-Given the small intersection of
-attributes in our study, we isolate the twenty most common attributes -- those
-which occurred in six or more of the ten forms we examined. We combine any
-semantically similar fields to produce the following set of 15 attributes,
-presented in descending order of frequency.
-
-\begin{itemize}
-	\item Was consent sought?
-	\item Was deception involved?
-	\item Project title
-	\item Study duration
-	\item Are there risks to participants?
-	\item Justify use of vulnerable participants
-	\item PI contact details
-	\item Funding body information
-	\item Is likely to induce participant stress?
-	\item Summarise research proposal/experimental methods
-	\item Are supplementary documents attached? (consent forms, briefing info etc.)
-	\item Are participants financially compensated?
-	\item Is study clinical?
-	\item Supervisor name
-	\item Describe ethical issues 
-\end{itemize}
-
-This set of attributes covers a range of fundamental methodological details,
-many of which can be encoded in a consistent fashion and attached as metadata
-to support replications. In further work, we will demonstrate whether this set
-of attributes is sufficient to capture key methodological details, which we
-cannot assert from this strictly frequency-based exercise.
-
-\subsubsection{Limitations}
-This analysis is not intended as a rigorous survey
-of ethics procedures internationally. The selection of institutions is
-inherently biased, as we are only able to extract forms which are publicly
-accessible, a barrier to reproducibility, and we have a particular emphasis on
-the UK and US in this study. The intent of this exercise is not to make
-statistical inferences about the state of the art in ethics review, but rather
-to motivate the minimum set of attributes we recommend researchers disclose
-when sharing their experimental methodologies.
-
-
-
+Figure~\ref{p:ethicsFreq} shows the distribution of attributes 
