@@ -25,11 +25,11 @@ work relies upon performance measurements to explain the behaviour of different
 parallelism mechanisms. We did not attempt to reproduce the entire paper;
 instead, we devised a new experiment to establish whether meaningful,
 consistent parallel performance measurements of the kind required by the
-original work could be obtained using Microsoft Azure \cite{azure}.
+original work could be obtained using the Microsoft Azure cloud~\cite{azure}.
 
-The source code of the implementation was available on Github (and was written
+The source code of the implementation was available on GitHub (and was written
 by one of the authors). No changes were required, and all of the dependencies
-were available pre-packaged on a standard Ubuntu install.
+were available pre-packaged on a standard Ubuntu installation.
 
 For our analysis, we selected $10$ different ``medium sized'' problem instances
 (i.e.\ graphs) from the second DIMACS implementation challenge, so that our
@@ -41,13 +41,11 @@ barriers to obtaining or using it.
 For each selected instance, we ran our implementation of the algorithm $50$
 times on real hardware (using $4$ cores of a machine with dual Intel Xeon
 E5-2640 v2 processors), and then $50$ times on a VM with $4$ cores on Microsoft
-Azure. Our measurements include only computation times, and ignore the time
-taken to read in the problem instances from a file. We compare the relative
-standard deviation (that is, standard deviation as a proportion of the mean,
-since processor speeds vary between real and virtual hardware) of the runtimes
-on real and virtual hardware for each problem instance.  We present the result
-in Table~\ref{run_time}: each row of the table is a problem instance, and we
-show relative standard deviations as a percentage.
+Azure. Our measurements include only computation times and ignore the time
+taken to read in the problem instances from a file. We compare the coefficient
+of variation of the runtimes
+on real and virtual hardware for each problem instance.  We present the results
+in Table~\ref{run_time}. Each row of the table represents a problem instance.
 
 <<echo=FALSE,results=tex>>=
 library(xtable)
@@ -59,7 +57,7 @@ data_matrix2 = read.csv(file.path(data.folder,"cloud.csv"), sep=",", row.names=1
 data_matrix1<-as.matrix(data_matrix1)
 data_matrix2<-as.matrix(data_matrix2)
 
-f <- function(x) c(r_std_dev = (sd(x)/mean(x))*100)
+f <- function(x) c(r_std_dev = sd(x)/mean(x))
 
 result_matrix1 = apply(data_matrix1, 2, f)
 result_matrix2 = apply(data_matrix2, 2, f)
@@ -68,16 +66,17 @@ run_time <- data.frame(real=result_matrix1,
                                 vm=result_matrix2)
 
 xtable(run_time,
-       caption = "Relative standard deviations of runtimes (as a percentage) for different problem instances, when run on real or virtual hardware.",
+       caption = "Coefficient of variation of runtimes for different problem instances, when run on real or virtual hardware.",
        label = "run_time",
        align = "lrr",
-       digits = c(0,2,2))
+       digits = c(0,3,3))
 @
 
-In both real and virtual hardware the relative standard deviation is very small
-(below $1\%$ in every case). We did not encounter any abnormalities when
-running on a virtual machine; this is contrary to the experiences of Kotthoff
-\cite{kotthoff}, who did not always see reliable \emph{sequential} runtimes on
+In both real and virtual hardware the coefficient of variation is very small
+(at or below $0.01$ in every case). We did not encounter any abnormalities when
+running on a virtual machine; this is contrary to the experiences of
+Kotthoff~\cite{kotthoff}, who did not always see reliable \emph{sequential}
+runtimes on
 virtualised hardware. In other words, using virtualised hardware for
 reproducible parallelism experiments is not necessarily infeasible.  However,
 we were limited to 4 cores, rather than the 64 cores used in the original work.
@@ -92,26 +91,32 @@ VMDepot.\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}
 \subsection{Experiment 2: A Peer-to-Peer System}
 Experiments that are performed across multiple machines are challenging
 to reproduce. This is due to the cost of needed resources, and the complexities
-involved in configuring the machines and the relationship between the machines.
+involved in configuring the machines, the network, and the relationship between the machines.
 Cloud services offer increasingly affordable computation. Such services use
-virtualisation to decrease the cost of system reconfiguration.
+virtualisation to decrease the cost of system (re)configuration.
 
 In order to study the challenges of making distributed experiments reproducible
-using cloud services, we deployed a Chord \cite{chord} Distributed Hash Table
+using cloud services, we deployed a Chord~\cite{chord} Distributed Hash Table
 (DHT) of $10$ nodes on $10$ dedicated machines, and tried to reproduce the same
 experiment on Microsoft Azure.
 
 Reproducing the same experiment on Microsoft Azure proved to be time consuming.
 Due to the lack of time we were unable to reproduce the experiment. The main reason
 is the steep learning curve of using Microsoft Azure's API. The API itself lacks
-documentation and is complex in design. Since the Azure's API is not as
-popular as the rivals, it is harder to find example usage of the API.
+documentation and is complex in design. Since Azure is not as
+popular as the competitor products, it is harder to find examples of the API
+usage.
 
-It is possible to make experiments across multiple machines reproducible by writing
+It is possible to run experiments across multiple machines reproducible by writing
 a vendor-specific script that starts and configures any needed VMs before running
-the experiment. This approach raises a number of issues: 1) it relies on external
-services in order to run the experiment, 2) it is time-consuming to produce such an
-script, and 3) the script cannot be re-used on other cloud services.
+the experiment. This approach raises a number of issues:
+\begin{inparaenum}[(i)]
+\item it relies on external
+services in order to run the experiment,
+\item it is time-consuming to produce such an
+script, and
+\item the script cannot be re-used on other cloud services.
+\end{inparaenum}
 
 Further studies are needed to identify best practices to make distributed experiments
 reproducible using virtual machines.
