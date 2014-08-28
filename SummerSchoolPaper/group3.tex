@@ -38,7 +38,7 @@ Simulation\footnote{\url{http://simul.iro.umontreal.ca/ssj-2/indexe.html}},
 which had to be downloaded from the Internet. After that, we were able to run
 the code.
 
-We encountered legal obstacles in the following three areas.
+We encountered legal obstacles in the following two areas.
 \begin{itemize} 
 \item Code-related: the software was developed as part of the EU project
 QUANTICOL\footnote{\url{http://blog.inf.ed.ac.uk/quanticol/}}, which is funded by the European Commission as part of its 7th
@@ -63,10 +63,10 @@ The output of the Java code is displayed in Table~\ref{tab: z bootstrapped cis}.
 
 \subsubsection*{Experiment 2: Solar Physics}
 
-At the start of the recomputation exercise it was judged that the results
-presented in \cite{bareford2010nanoflare} would be the easiest (of the three
-publications outside of computer science) to reproduce. The underlying code is
-serial in nature and not tied to specific a hardware or operating system platform. 
+%At the start of the recomputation exercise it was judged that the results
+%presented in \cite{bareford2010nanoflare} would be the easiest (of the three
+%publications outside of computer science) to reproduce. The underlying code is
+%serial in nature and not tied to specific hardware or operating system platform. 
 
 The work discussed in~\cite{bareford2010nanoflare} concerns the energy released
 from an idealised cylindrical magnetic field when it becomes unstable and
@@ -94,23 +94,29 @@ licence for which had expired. Fortunately, there is an open source alternative,
 the GNU Scientific Library
 (GSL).\footnote{\url{http://www.gnu.org/software/gsl/}} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
 
-After the code was recompiled and linked with the GSL libraries, it was ready to
-run the simulation of $10^5$ relaxation events. Alas, the code could at first
-only simulate a fraction of this total (146 events): the code reported that it
-had reached a point on the instability threshold for which a stable (relaxed)
-configuration could not be calculated. The relaxed state is determined by
-ensuring that certain properties are conserved (i.e.\ the property values match
-those calculated for the unstable state)---this is essentially a root finding
-exercise. Further investigation revealed that the magnetic field profiles were
-being calculated incorrectly for a wide range of threshold states. The cause
-concerned incorrect substitutions for the NAG Bessel functions. For example, the
-NAG routine, nag\_bessel\_j0() is the call for a regular cylindrical Bessel
-function, whereas, what looks like the equivalent in GSL, gsl\_bessel\_j0(), is
-actually the routine for a regular \textit{spherical} Bessel function. All that
-was required to call the correct routine was to capitalise the last letter,
-i.e.\ gsl\_bessel\_J0().
- 
-The magnetic field that describes every possible loop configuration is defined in terms of cylindrical Bessel functions: hence, an error here will have dramatic consequences for the results produced by the TRoLE code. Once these function calls were corrected, the recomputation was successful. Figure \ref{fig_recomp_grp3_exp2} shows two of the recomputated plots, the published energy distributions \cite{bareford2010nanoflare} are given in blue.
+%After the code was recompiled and linked with the GSL libraries, it was ready to
+%run the simulation of $10^5$ relaxation events. Alas, the code could at first
+%only simulate a fraction of this total (146 events): the code reported that it
+%had reached a point on the instability threshold for which a stable (relaxed)
+%configuration could not be calculated. The relaxed state is determined by
+%ensuring that certain properties are conserved (i.e.\ the property values match
+%those calculated for the unstable state)---this is essentially a root finding
+%exercise. Further investigation revealed that the magnetic field profiles were
+%being calculated incorrectly for a wide range of threshold states. The cause
+%concerned incorrect substitutions for the NAG Bessel functions. For example, the
+%NAG routine, nag\_bessel\_j0() is the call for a regular cylindrical Bessel
+%function, whereas, what looks like the equivalent in GSL, gsl\_bessel\_j0(), is
+%actually the routine for a regular \textit{spherical} Bessel function. All that
+%was required to call the correct routine was to capitalise the last letter,
+%i.e.\ gsl\_bessel\_J0().
+% 
+%The magnetic field that describes every possible loop configuration is defined in terms of cylindrical 
+%  Bessel functions: hence, an error here will have dramatic consequences for the results produced by the 
+%  TRoLE code. 
+%Once these function calls were corrected, the recomputation was successful. 
+
+Figure \ref{fig_recomp_grp3_exp2} shows two of the recomputated plots, the published energy distributions 
+  \cite{bareford2010nanoflare} are given in blue.
 \begin{figure}
 \begin{minipage}{\linewidth} 
   %\vspace{-10pt}
@@ -131,7 +137,7 @@ The differences between the two sets of results are negligible and entirely cons
 
 \subsubsection*{Experiment 3: Atmospheric Physics}
 
-For the third paper, we prepared a virtual machine with pre-built software for reproducing 
+For the third paper, we prepared pre-built software for reproducing 
   simulations of idealised atmospheric clouds presented in \cite{arabas2013libcloud}.
 The paper covers description of an open-source C++ library named libcloudph++. 
 The library is intended for representing microphysics of clouds and precipitation
@@ -159,7 +165,7 @@ The only challenge in setting up the virtual machine was in providing all needed
 \subsection{Discussion}
 
 We encountered legal obstacles with all papers.
-All of the software had been developed at universities, which typically resulted in the copyright being held by these institutions.
+All of the software had been developed at universities, which typically results in the copyright being held by these institutions.
 Furthermore, the decisions of whether to allow open-source distribution of the
 code and the choice of licensing terms might be the prerogative of a university
 representative (e.g.\ a PhD supervisor).
