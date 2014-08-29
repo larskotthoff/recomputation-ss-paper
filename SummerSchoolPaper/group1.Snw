@@ -122,6 +122,7 @@ consent to participate in an experiment.
 <<echo=FALSE,fig=TRUE,height=5,width=7>>=
 library(reshape)
 library(ggplot2)
+library(plyr)
 maps_data <- read.table("maps_dataframe_primary",header=T)
 maps_melt <- melt(maps_data)
 attach(maps_melt)
