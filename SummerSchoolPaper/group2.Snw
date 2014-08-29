@@ -1,8 +1,9 @@
 \section{Case study \#2: Recomputing parallel and distributed experiments}
 
 The Recomputation.org project has shown that recomputation via a virtual
-machine can been successful when using sequential code on a single machine.  We
-wished to know whether this approach could be extended to cover multi-core
+machine can been successful when using sequential code on a single
+machine.  Our second case study examined 
+whether this approach could be extended to cover multi-core
 parallel or distributed systems. For parallelism research, the end goal is
 typically performance: can using more cores make something run faster, or allow
 a larger dataset to be processed in the available time? It is not clear whether
@@ -101,7 +102,7 @@ using cloud services, we deployed a Chord~\cite{chord} Distributed Hash Table
 experiment on Microsoft Azure.
 
 Reproducing the same experiment on Microsoft Azure proved to be time consuming.
-Due to the lack of time we were unable to reproduce the experiment. The main reason
+Due to lack of time during the school, we were unable to reproduce the experiment. The main reason
 is the steep learning curve of using Microsoft Azure's API. The API itself lacks
 documentation and is complex in design. Since Azure is not as
 popular as the competitor products, it is harder to find examples of the API

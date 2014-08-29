@@ -10,7 +10,7 @@ reproducibility, difficulty in replicating interaction techniques when
 materials are not shared, and an emphasis on formative work which proposes new
 techniques over summative work~\cite{hornbaek:replications}.
 
-In this section, we look at one specific challenge to reproducibility in HCI
+In the first of our case studies, we look at one specific challenge to reproducibility in HCI
 research: capturing and disseminating the ethical requirements of an
 experiment, such that others may better replicate the procedures of a
 study. We evaluate the ethics requirements procedures of ten universities to
@@ -90,7 +90,7 @@ researchers discussed any discrepancies to arrive at a set of 145 unique
 attributes, encompassing generic details, such as contact details of co-
 investigators, methodological details, and institution-specific requirements,
 often for insurance and liability purposes. Of these fields, only two were
-common to all ten ethics forms - the name of the principal investigator, and
+common to all ten ethics forms --- the name of the principal investigator, and
 whether informed consent was sought. This intersection was significantly
 smaller than anticipated, and clearly does not constitute a useful minimum
 ethical specification. It does however reveal two interesting properties. It

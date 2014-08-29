@@ -3,8 +3,8 @@
 This paper is intended to be \emph{open}, 
 \emph{reproducible}, and \emph{executable}.  We discuss here what we mean by these words, how we tried to achieve them, and to what extent we achieved this.
 
-By ``open'', we mean that the paper was openly developed and written.  The authors collaborated via GitHub.\footnote{specifically
-\texttt{\url{https://github.com/larskotthoff/recomputation-ss-paper/}}}   Although authors were usually in the same room, with so many of us other forms of collaboration would have been very 
+By ``open'', we mean that the paper was openly developed and written.  The authors collaborated via GitHub.
+Although authors were usually in the same room, with so many of us other forms of collaboration would have been very 
 difficult.  More importantly, for the current discussion, this means that the
 development of the paper can be tracked throughout through the commit history on
 GitHub.  Anybody can download not only the final paper, but its source, and code and other materials collected during its development.  An interesting aside is that this means that anybody can see what each author committed on the paper or supporting materials at any time, although it must be borne in mind that a commit by one person may represent the work of several authors working together offline.
@@ -26,8 +26,8 @@ changed data, but not reproducible if that data can not be reconstructed ab init
 To make our paper executable, we used Sweave~\cite{lmucs-papers:Leisch:2002}, a package that integrates the statistics system R and \LaTeX. 
 To ease the workflow and to make execution of the paper easy, we wrote a Makefile for the generation of the paper PDF, although there are still some issues which need manual intervention such as installation of the necessary R packages. 
 
-To what extent have we succeeded in making this paper open, reproducible, and executable?  At this stage,
-\emph{remembering that this draft is a work in progress}, we would say our success is mixed.  We cannot be completely open because
+To what extent have we succeeded in making this paper open,
+reproducible, and executable?  At this point in time, we would say our success is mixed.  We cannot be completely open because
 some of the data and/or programs used in various parts of our paper do not allow us to share them.  Also our paper is not fully executable in the sense that many 
 computations involved in constructing the data must be run by hand.   In terms of reproducibility, it is interesting to speculate: for example, if we run a second summer school in 2015, we might ask participants to reproduce this paper and see how we did this year.
 
