@@ -15,7 +15,8 @@ peer-to-peer system.
 
 \subsection{Experiment 1: A Parallel System}
 
-We looked at an existing implementation of a parallel branch-and-bound
+We looked at an existing implementation\footnote{\url{https://github.com/ciaranm/parasols/}}
+of a parallel branch-and-bound
 algorithm for the maximum clique problem \cite{ciaran}: given a graph, a clique
 is a subset of pairwise-adjacent vertices, and the maximum clique problem
 (which is NP-hard) is to find the largest such subset. On real hardware, for
@@ -33,7 +34,8 @@ by one of the authors). No changes were required, and all of the dependencies
 were available pre-packaged on a standard Ubuntu installation.
 
 For our analysis, we selected $10$ different ``medium sized'' problem instances
-(i.e.\ graphs) from the second DIMACS implementation challenge, so that our
+(i.e.\ graphs) from the second DIMACS implementation
+challenge,\footnote{\url{http://dimacs.rutgers.edu/Challenges/}} so that our
 runtimes would be long enough to be noise-free but short enough to be
 repeatable. This is a publicly available dataset, in an easy to parse format,
 which is widely used for testing maximum clique algorithms, and there are no
@@ -67,7 +69,7 @@ run_time <- data.frame(real=result_matrix1,
                                 vm=result_matrix2)
 
 xtable(run_time,
-       caption = "Coefficient of variation of runtimes for different problem instances, when run on real or virtual hardware.",
+       caption = "Coefficient of variation of runtimes for different problem instances, when run on real or virtual hardware. In every case, the value is very low, and virtualised hardware is as reliable than real hardware.",
        label = "run_time",
        align = "lrr",
        digits = c(0,3,3))
