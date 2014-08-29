@@ -14,6 +14,7 @@
 
 ENTRY
   { address
+    arxiv
     author
     booktitle
     chapter
@@ -199,10 +200,14 @@ INTEGERS { nameptr namesleft numnames }
 %% give preference to DOI, if present
 FUNCTION {format.doi.or.url}
 { doi empty$
-    { url empty$
-	{ "" }
-	{ "Online at \url{" url * "}" * }
-      if$
+    { arxiv empty$
+        { url empty$
+        { "" }
+        { "Online at \url{" url * "}" * }
+          if$
+        }
+    { "arXiv preprint arXiv:\Arxivbbl{" arxiv * "}" * }
+        if$
     }
     { "doi:\DOIbbl{" doi * "}" * }
   if$
@@ -1183,10 +1188,13 @@ FUNCTION {begin.bib}
   "\begin{thebibliography}{"  longest.label  * "}" *			write$ newline$
   "\urlstyle{same} % format URLs in normal font"				write$ newline$
   "\DeclareUrlCommand\DOIasURL{\urlstyle{same}} % format DOIs same"	write$ newline$
+  "\DeclareUrlCommand\ArxivasURL{\urlstyle{same}} % format Arxivs same"	write$ newline$
   "\ifx\undefined\hypersetup% hyperref is not loaded"			write$ newline$
   " \newcommand\DOIbbl[1]{\DOIasURL{#1}}"				write$ newline$
+  " \newcommand\Arxivbbl[1]{\ArxivasURL{#1}}"				write$ newline$
   "\else% hyperref is loaded, we can put a link under the DOI"		write$ newline$
   " \newcommand\DOIbbl[1]{\href{http://dx.doi.org/#1}{\DOIasURL{#1}}}"	write$ newline$
+  " \newcommand\Arxivbbl[1]{\href{http://arxiv.org/abs/#1}{\ArxivasURL{#1}}}"	write$ newline$
   "\fi"									write$ newline$
 }
 
