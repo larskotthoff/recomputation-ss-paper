@@ -45,8 +45,6 @@ institution. In our recent work, a survey of 505 papers using online social netw
 (OSN) data found that only 2\% of papers disclose any of the ethical
 considerations of their work~\cite{hutton:reproducibility}.
 
-% cite osn survey!
-
 As researchers do not routinely disclose the protocol which
 received IRB approval, attempted replications may miss crucial details
 necessary to conduct the experiment, and to provide to IRB when seeking
@@ -99,22 +97,54 @@ institutions, while also identifying perhaps the single most important
 objective of the ethics process: to ensure participants have given informed
 consent to participate in an experiment.
 
+% \begin{figure}
+% \begin{minipage}{\linewidth}
+% <<echo=FALSE,fig=TRUE>>=
+% library(reshape)
+% library(ggplot2)
+% maps_data <- read.table("maps_dataframe",header=T)
+% maps_melt <- melt(maps_data)
+% maps_frame <- as.data.frame(table(maps_melt$Field))
+% maps_frame <- maps_frame[order(-maps_frame$Freq),]
+% tag_factor <- factor(maps_frame$Var1, levels=maps_frame$Var1)
+% p <- ggplot(maps_frame, aes(x=tag_factor, y=Freq)) + geom_bar(stat = "identity",fill="slateblue4",colour="slateblue1") + scale_x_discrete(breaks=NULL,name="Fields") + scale_y_discrete(name="Frequency")
+% print(p)
+% @
+% \caption{\label{p:ethicsFreq}Histogram showing frequency distribution of fields in ethics applications}
+% \end{minipage}
+% \end{figure}
+
+
 \begin{figure}
+
 \begin{minipage}{\linewidth}
-<<echo=FALSE,fig=TRUE>>=
+\begin{center}
+<<echo=FALSE,fig=TRUE,height=5,width=7>>=
 library(reshape)
 library(ggplot2)
-maps_data <- read.table("maps_dataframe",header=T)
+maps_data <- read.table("maps_dataframe_primary",header=T)
 maps_melt <- melt(maps_data)
-maps_frame <- as.data.frame(table(maps_melt$Field))
+attach(maps_melt)
+maps_table <- table(Field)
+maps_table <- rev(sort(maps_table))
+maps_melt <- melt(maps_data)
+maps_frame <- as.data.frame(table(maps_melt$Field,maps_melt$Type))
 maps_frame <- maps_frame[order(-maps_frame$Freq),]
-tag_factor <- factor(maps_frame$Var1, levels=maps_frame$Var1)
-p <- ggplot(maps_frame, aes(x=tag_factor, y=Freq)) + geom_bar(stat = "identity",fill="slateblue4",colour="slateblue1") + scale_x_discrete(breaks=NULL,name="Fields") + scale_y_discrete(name="Frequency")
+#$ only to shut up my syntax highlighter
+
+maps_frame_cdf <- melt(maps_frame)
+maps_frame_cdf <- ddply(maps_frame_cdf, .(variable), transform, ecd=ecdf(value)(value))
+maps_frame_cdf <- subset(maps_frame_cdf,value!=0)
+
+p <- ggplot(maps_frame_cdf, aes(x=value)) + scale_x_continuous(breaks=1:10,name="Forms") + scale_y_continuous(name="Field frequency") + stat_ecdf(aes(colour=Var2)) + theme(panel.background = element_rect(fill = "transparent",colour = "black")) + scale_colour_manual(name="Field type",labels=c("High level","Sub-attribute"),values=c("#13456f", "#e02828"))
 print(p)
 @
-\caption{\label{p:ethicsFreq}Histogram showing frequency distribution of fields in ethics applications}
+\end{center}
+\caption{\label{p:ethicsFreq}CDF showing the distribution of high-level and sub-attributes across the forms we examine. Half of high-level attributes only occur in one form, while no sub-attributes appear in more than seven forms.}
+
 \end{minipage}
 \end{figure}
+
 
 Figure~\ref{p:ethicsFreq} shows the distribution of attributes across the ten
 forms we examined. As shown in the long tail, 47.6\% of attributes appear
