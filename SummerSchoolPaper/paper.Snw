@@ -59,7 +59,7 @@ hopefully improve) our experiments.
 
 \input{intro}
 \input{recomputation}
-\input{school}
+%\input{school}
 \input{obstacles}
 \input{group1}
 \input{group2}
