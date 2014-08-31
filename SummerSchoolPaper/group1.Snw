@@ -128,7 +128,6 @@ maps_melt <- melt(maps_data)
 attach(maps_melt)
 maps_table <- table(Field)
 maps_table <- rev(sort(maps_table))
-maps_melt <- melt(maps_data)
 maps_frame <- as.data.frame(table(maps_melt$Field,maps_melt$Type))
 maps_frame <- maps_frame[order(-maps_frame$Freq),]
 #$ only to shut up my syntax highlighter
