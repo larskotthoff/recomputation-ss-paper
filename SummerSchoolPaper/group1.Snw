@@ -21,12 +21,12 @@ study. What we wish to make possible is the following scenario:
 \item[Step 3:] To compile with recompilation standards Alice then creates a virtual machine (vm) 
 which contains the data she collected and scripts to create the statistics used in the paper 
 and places the vm on recompilation.org. 
-\item[Step 4:] Bob reads Alice’s research paper and is interested in comparing her work to his own.
+\item[Step 4:] Bob reads Alice's research paper and is interested in comparing her work to his own.
 \item[Step 5:] Bob goes to recompilation.org and downloads the virtual machine. 
-He recomputes all of Alice’s experiments in order to verify the analysis in her paper.
+He recomputes all of Alice's experiments in order to verify the analysis in her paper.
 \item[Step 6:] Bob compares the data Alice has provided with his own and publishes his own paper.
 \item[Step 7:] To compile with recompilation standards Bob then creates a virtual machine (vm) which contains 
-the data he collected and Alice’s data and scripts to create the statistics used in the paper 
+the data he collected and Alice's data and scripts to create the statistics used in the paper 
 then places this vm on recompilation.org
 \end{description}
 
