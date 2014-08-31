@@ -1,7 +1,7 @@
 \section{Case study \#2: Recomputing parallel and distributed experiments}
 
 The Recomputation.org project has shown that recomputation via a 
-VM can been successful when using sequential code on a single
+VM can be successful when using sequential code on a single
 machine.  Our second case study examined 
 whether this approach could be extended to cover multi-core
 parallel or distributed systems. For parallelism research, the end goal is
