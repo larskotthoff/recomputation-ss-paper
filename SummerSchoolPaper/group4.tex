@@ -47,35 +47,21 @@ This section summarizes the four main groups of problems and challenges identifi
 \emph{Required Knowledge Breadth.} All groups highlighted the depth and breadth of knowledge required to achieve recomputation of data. At the lowest levels of abstraction, reanalysts had to be knowledgeable in SPSS operation. Knowledge on the use of data formats is also a requirement. Those groups that used R for analysis did not only have to show a significant mastery of R, but also of the relationship between R and SPSS Syntax and, more importantly, of the specific statistical procedures and how they are performed in both platforms. Finally, the reanalysts had to achieve a grounded understanding of the experimental design and purpose of the experiment, something that requires detailed and thoughtful study.
 
 \subsection{Discussion and Recommendations}
-Although the main focus to achieve replicability in HCI has focused on the replication of empipirical data collection, there is still much to do (and much benefit to get) from improving the recomputability of the analyses of the data gathered. In this section we discuss the main issues and lessons learnt from our experience, as well as limitations from our methods and a set of recommendations on how to improve the impact and feasibility of recomputation in HCI.
+Although the main focus to achieve replicability in HCI has focused on the replication of empirical data collection (replicated experiments), there is still much to do (and much benefit to get) from improving the recomputability of the analyses of the data gathered. In this section we discuss the main issues and lessons learned from our experience, as well as limitations from our methods and a set of recommendations on how to improve the impact and feasibility of recomputation in HCI.
 
 \subsubsection{Reasonable Success}
+Our experience shows that a group of motivated individuals achieved a modest amount of success in reanalyzing a set of simple statistical analysis of HCI empirical data. The results suggest that recomputability is within reach of the experimental HCI community, and data and analysis sharing practices will allow researchers with a stake in the correctness of other researchers' results to verify their analysis. This is possible even in the current state of affairs (many different tools being used, lack of explicit support for recomputation), but requires a significant amount of time, effort, and expertise from multiple sources. This effort and time is often not available for recomputation scenarios that require agile and fast reanalysis, such as paper article reviewing. For this, tool support and a culture change will be required. 
 
 \subsubsection{Tools are Key (and not ready)}
+SPSS might be an adequate tool for performing statistical analysis; it is successfully used by many in HCI and many other areas. However, reanalysis imposes a different set of constraints and requirements, and our reanalists had many problems with the tool. Some of the problems are related to the general usability of the tool (which makes reanalysis difficult if you are not an SPSS expert), some related to the implicit design assumption in SPSS that the data is collected, analized and interpreted by the same person. One of the key problems of using SPSS to enable recomputation is that there is no easy way to establish a clear correspondence between the results of the analysis in SPSS and the specific statistics extracted for the paper text, tables and graphics. 
+
+R seems better suited for these tasks. Tt is possible to write R code that integrates with the text through SWeave \cite{sweave} so that the specific analyses are compiled together with the pdf document. This makes the origin and procedure used to obtain a particular numerical result traceable to the data, and therefore easier to check and recompute. Although this is highly desirable it might still be unreasonable to demand that everyone writing or reviewing HCI and psychology papers master a programming language and tools that are generally not renowned for their usability, and that everyone is able to deal with the installation hassles of R, SWeave, ggplot2, LaTeX, etc. in their operating system of choice. There is room for improvement for these tools, but commercial tools still have an opportunity to retain their business if they provide features that adapt to the demands of easy recomputation and better support for scientific reporting. Although our experience only involved R and SPSS, the example extrapolates to other commercial tools (e.g., SAS) and open source projects (SciPy) in the statistical arena.
 
 \subsubsection{A Culture Change}
-
-SPSS might be an adequate tool for performing statistical analysis; it is successfully used by many in HCI and many other areas. However, the reanalysts had many problems with the tool, some related to the general usability of the tool, some related to the implicit design assumption in SPSS that the data is collected, analized and interpreted by the same person.
-
-Do not underestimate the effort of collecting and preparing the analysis for other's consumption. Specifically, the analysis should probably be re-written, adjusting for new names and variables contained in the paper.
-
-- Reasonable performance for a 90 minute. Feasible, makes the effort worth it.
-- Not perfect - tools not ideal for this task
-- A good recomputation set is like a program: needs to have comments and an easily traceable structure.
-- Additionaly, problematic to 
-
-- Problems with the amounts of the analysis
-- Problems with the design of the software (SPSS)
+Recomputation is therefore feasible and likely to become easier in the near future through better support and tools. However, it is unclear whether the research community will embrace it. Recomputability requires more work for researchers writing papers, new habits in the analysis and reporting of experiments and, for most researchers, learning and mastering new tools. A change of culture will, however, not only mean better science through more recomputable results, but also enhanced opportunities for new analysis on old data, enabling learning from others, and making scientific fraud and bad practices easier to detect. For this all to happen, we need to start demanding from authors that they share data and analyses, and that they consider the needs of the reanalyst while planning, performing, and reporting their quantitative empirical research. 
 
 \subsubsection{Limitations}
-
-- Limitations in this experience
-
-- Layers of knowledge needed pretty broad
-- Access to software problematic (SPSS)
-- Specific numbers difficult to find
-- Consistency between 
-
+To our knowledge, this section reports the first study of recomputation of the statistical analysis of HCI empirical data. We have been able to learn valuable lessons from this experience, including ways to improve the actual data and analysis sharing for the original study. However this only represents a semi-informal study with semi-controlled observation for one specific case analyzed using a specific tool (SPSS). Further research is required to validate these results and generalize the lessons learned to other tools and other types of reanalysts; specifically, it would be useful to investigate how experts in a particular field go about reanalysing existing results, and what are the specific barriers present when the data and analyses are prepared with a more sophisticated system such as R with Sweave and LaTeX.
 
 \subsubsection{Recommendations}
-
+When reporting 
