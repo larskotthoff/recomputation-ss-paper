@@ -15,9 +15,9 @@ peer-to-peer system.
 
 \subsection{Experiment 1: A Parallel System}
 
-We looked at an existing implementation \cite{parasols}
+We looked at an existing implementation~\cite{parasols}
 of a parallel branch-and-bound
-algorithm for the maximum clique problem \cite{ciaran}: given a graph, a clique
+algorithm for the maximum clique problem~\cite{ciaran}: given a graph, a clique
 is a subset of pairwise-adjacent vertices, and the maximum clique problem
 (which is NP-hard) is to find the largest such subset. On real hardware, for
 any given graph instance, if we run the program multiple times we get very

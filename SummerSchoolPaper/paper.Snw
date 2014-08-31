@@ -5,6 +5,7 @@
 
 \usepackage{hyperref}
 \usepackage{paralist}
+\usepackage[usenames]{color}
 
 \begin{document}
 \SweaveOpts{concordance=TRUE}

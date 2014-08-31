@@ -7,7 +7,7 @@ We discuss here what we mean by these words, how we tried to achieve them, and t
 
 By ``open'', we mean that the paper was openly developed and written.  The paper was first sketched out in the week of the summer school, and then 
 developed further over the following three weeks.  The authors collaborated via GitHub: this is not unusual but distributed source code control was  particularly important with so may authors working in parallel over a short period of time.
-Because we used a public github repository \cite{summerschoolpaper}, 
+Because we used a public github repository~\cite{summerschoolpaper}, 
 the
 development of the paper can be tracked throughout through the commit history on
 GitHub.  
@@ -15,7 +15,7 @@ Anybody can download not only the final paper, but its source, and code and othe
 An interesting aside, relevant to cases where statements of contribution are required, is that anybody can see what each author committed on the paper or supporting materials throughout its life.  However, it must be borne in mind that a commit by one person may represent the work of several authors working together offline.  
 
 By ``executable'', we mean that the paper that can be reconstructed from source 
-materials, and that data can be reanalysed as it changes and new versions of the paper produced, and possibly executable code rerun.   The name has been used, for example, by the ``Executable Papers Grand Challenge'' \cite{executablepaper}.
+materials, and that data can be reanalysed as it changes and new versions of the paper produced, and possibly executable code rerun.   The name has been used, for example, by the ``Executable Papers Grand Challenge''~\cite{executablepaper}.
 This has numerous advantages because as we add data, the paper does not need to be rewritten.\footnote{The name ``reproducible paper'' is sometimes used for this, but can lead to confusion because a paper can be executable in the sense of being able to produce new figures with 
 changed data, but not reproducible if that data can not be reconstructed ab initio.}
 To make our paper executable, we used Sweave~\cite{lmucs-papers:Leisch:2002}, a package that integrates the statistics system R and \LaTeX. 
@@ -36,19 +36,19 @@ As well as reproducibility, this helped us during the writing of the paper.  At 
 Even a small VM 
 might be half a gigabyte, and such large files can be problematic for git.
 These are therefore stored elsewhere.  
-Our approach can be seen as similar to that of Brown \cite{brown} for one of his papers with colleagues \cite{Brown2012}.
+Our approach can be seen as similar to that of Brown~\cite{brown} for one of his papers with colleagues~\cite{Brown2012}.
 
 
 To what extent have we succeeded in our efforts?
 Our success is mixed.  We cannot be completely open because
 some of the data and/or programs used in various parts of our paper do not allow us to share them.  This is particularly true of the third case study, and as a result we cannot distribute the VM embodying those experiments. Also our paper is not fully executable since 
-many computations involved in constructing the data must be run by hand.  Also some of the tables in this paper are static, with data entered manually rather than reanalysed by Sweave. This constrasts negatively with Brown's executable paper, \cite{brown}.  
+many computations involved in constructing the data must be run by hand.  Also some of the tables in this paper are static, with data entered manually rather than reanalysed by Sweave. This contrasts negatively with Brown's executable paper~\cite{brown}.  
 In terms of reproducibility, we feel we have been mostly successful.  
 Provision of materials via github will be helpful for those who wish to adapt or reproduce our work.
 We have provided VMs where possible and appropriate, and can distribute two of them: this should enable the recomputation of our paper.  
 While we might pat ourselves on the back for this, we feel it is better to be cautious. We ourselves have discussed potential issues, such as ethical and legal, and unforeseen technical issues might prevent reproducibility. The real test of reproducibility must be time.
 It is interesting to speculate: for example, if we run a second summer school in 2015, we might ask participants to reproduce this paper and see how we did this year!
 
-\textbf{Put in links somewhere to VMS and recomputation.org?}.
+\textcolor{red}{Put in links somewhere to VMs: recomputation.org and Azure VM Depot. Should we try and get a GitHub DOI?}
 
 
