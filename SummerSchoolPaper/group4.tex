@@ -18,31 +18,46 @@ For this purpose, and in the context of the summer school that this article refl
 
 \subsection{Experience Report: Recomputing a Memorability Experiment}
 The authors of this article (hence the \emph{reanalysts}), with the exception of
-M.A.N. divided themselves into four groups (4, 4, 5, and 3 people per group), each of which would try to reproduce the same selection of results of the gesture memorability study reported in reference \cite{Nacenta:memorability}. The target results for reanalysis were the averages and ANOVA analyses of the first paragraph of the <emph{Results} section of \emph{Experiment 3}. Approximately half of the reanalysts had a good understanding of HCI or had performed research in the HCI field. To provide sufficient background, the author of the reanalyzed paper gave a 20 minute presentation on the content of the paper, aimed at a moderately knowledgeable audience. Reanalysts were allowed to ask any number of questions at the end.
+M.A.N. divided themselves into four teams (4, 3, 4, and 5 people per team), each of which would try to reproduce the same selection of results of the gesture memorability study reported in reference \cite{Nacenta:memorability}. The target results for reanalysis were the averages and ANOVA analyses of the first paragraph of the /emph{Results} section of \emph{Experiment 3}. This paragraph contained three types of analysis: simple calculations of averages (recall rates), omnibus parametric ANOVA analyses, and pairwise post-hoc parametric t-tests. Approximately half of the reanalysts had a good understanding of HCI or had performed research in the HCI field. To provide sufficient background, the author of the reanalyzed paper gave a 20 minute presentation on the content of the paper, aimed at a moderately knowledgeable audience. Reanalysts were allowed to ask any number of questions at the end.
 
 The reanalysts received also a physical and a digital version of the original paper and a URL from where to download the data (as distributed originally to the public in \cite{Nacenta:memorability_data}). The data is provided in a comma separated file (with column heading names in the first row). The data package also includes IBM SPSS Syntax files (SPSS's scripting language), and a README.txt file that contains descriptions of the different files, including explanations of the meanings of columns. SPSS syntax files were provided because it was the platform in which the analyses were performed, and it is commonly used as statistical software for the analysis of experiments in the HCI and Psychology communities. 
 
-Groups were given approximately 90 minutes to replicate the results contained in the paragraph of the paper indicated above. Of the four groups, two opted to try to replicate the results by using SPSS (installed in the machines available to the reanalysts), one opted to replicate the results using R, and one opted to replicate the results using R while simultaneously recording the recomputation in a virtual machine. The leader of the session provided help to the SPSS groups strictly on issues related to the SPSS interface. Each group was asked to assign one person to take notes on a paper notepad of the development of the session (specifically, steps taken, difficulties found, misunderstandings, and breakthroughs).
+Teams were given approximately 90 minutes to replicate the results contained in the paragraph of the paper indicated above. Of the four groups, two opted to try to replicate the results by using SPSS (installed in the machines available to the reanalysts), one opted to replicate the results using R, and one opted to replicate the results using R while simultaneously recording the recomputation in a virtual machine. The leader of the session provided help to the SPSS groups strictly on issues related to the SPSS interface. Each group was asked to assign one person to take notes on a paper notepad of the development of the session (specifically, steps taken, difficulties found, misunderstandings, and breakthroughs).
 
 \subsection{Results}
+All the reanalysts spent the allocated time (approximately 90 minutes) working on the recomputation of the results while recording on their notepads the actions and obstacles encountered. After the session was over, the reanalysts shared in public their results, conclusions and main obstacles for the benefit of the rest of the groups. The notepads were later analyzed by M.A.N. by identifying problems, creating a physical affinity diagram of problems \cite{GUIBook}, and identifying the most relevant groups of related problems. The two following subsections report the degree of success achieved in the recomputation and the main categories of challenges and obstacles found.
 
-\subsubsection{Effectiveness}
-\emph{Group 1 (SPSS)} achieved 
-\emph{Group 2 (SPSS)} achieved
-\emph{Group 3 (SPSS)} achieved
-\emph{Group 4 (SPSS)} achieved
+\subsubsection{Measures of Success}
+Groups 2, 3 and 4 were able to achieve some kind of verification of data present in the paper in the time allocated.
 
-\subsubsection{Difficulties and Challenges}
+\emph{Group 1 (SPSS)} were able to open the data, read the README file, and run the script that loads and performs the analysis. However, they were not able to find the appropriate correspondence between results on the paper and the output of SPSS. 
+\emph{Group 2 (SPSS)} were able to open the data, read the README file, load the data with SPSS independently of the SPSS script, verify the integrity and structure of the data, run the scripts, find one of the ANOVA analyses in the output, and verify its correctness.
+\emph{Group 3 (R)} were able to find and open the data, read the data with R, and run some basic descriptive statistics (averages).
+\emph{Group 4 (R + Virtual Machine)} were able to create a Virtual Machine to store the analysis of the data, unpack the data, read the README file, failed at converting the provided SPSS Syntax scripts into R scripts, but were finally able to reproduce some basic descriptive statistics (averages).
 
+\subsubsection{Identified Problems and Challenges}
+This section summarizes the four main groups of problems and challenges identified
+
+-Graphics
+-SPSS syntax designed for different purpose
+-Confusing elements
+-Rounding and finding results
+-Amount of output
+
+\subsection{Discussion and Recommendation}
+
+- Reasonable performance for a 90 minute. Feasible, makes the effort worth it.
+- Not perfect
+- Problems with the amounts of the analysis
+- Problems with the design of the software (SPSS)
+
+- Limitations in this experience
 
 - Layers of knowledge needed pretty broad
 - Access to software problematic (SPSS)
 - Specific numbers difficult to find
 - Consistency between 
 
-\subsection{Discussion}
-
-\subsubsection{Challenges}
 
 \subsubsection{Recommendations}
 
