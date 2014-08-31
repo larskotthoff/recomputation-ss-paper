@@ -15,7 +15,7 @@ peer-to-peer system.
 
 \subsection{Experiment 1: A Parallel System}
 
-We looked at an existing implementation\footnote{\url{https://github.com/ciaranm/parasols/}}
+We looked at an existing implementation \cite{parasols}
 of a parallel branch-and-bound
 algorithm for the maximum clique problem \cite{ciaran}: given a graph, a clique
 is a subset of pairwise-adjacent vertices, and the maximum clique problem
