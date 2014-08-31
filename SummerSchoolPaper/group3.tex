@@ -4,7 +4,7 @@
 In this case study we focus on the issues relevant to research reproducibility that are potentially 
   unique to non-CS computational research.
 The discussion is based on experience gained while packaging three computational experiments 
-  into recomputable virtual machines.
+  into recomputable VMs.
 The papers on which the discussion is based 
   deal with urban planning~\cite{danielpaper}, solar
   physics~\cite{bareford2010nanoflare}, and atmospheric
@@ -20,8 +20,8 @@ Our aim was to offer potential readers (or reviewers) of the papers in question,
 To offer it all within a ready-to-use environment, we have used the Vagrant
 tool\footnote{\url{https://www.vagrantup.com/}}
 to
-  construct a single virtual machine with all needed software and its dependencies installed.
-The virtual machine was based on the Debian Sid GNU/Linux distribution.
+  construct a single VM with all needed software and its dependencies installed.
+The VM was based on the Debian Sid GNU/Linux distribution.
 
 \subsection{Results}
 \subsubsection*{Experiment 1: Urban Planning}
@@ -31,7 +31,7 @@ For the first paper, we tried to recompute parts of Table~6 of
 evaluated using statistical methods. Table~6 contains confidence intervals that
 are constructed using a piece of software written in Java. It is possible to
 compile the source code after installing a Java Software Development Kit on the
-virtual machine. The software uses the SSJ library for Stochastic
+VM. The software uses the SSJ library for Stochastic
 Simulation\footnote{\url{http://simul.iro.umontreal.ca/ssj-2/indexe.html}},
 which had to be downloaded from the Internet. After that, we were able to run
 the code.
@@ -50,7 +50,7 @@ in which it stated that it ``\emph{is the policy of the University of Edinburgh 
 \end{itemize}
 The use of the SSJ package is not an obstacle because it is released under the GPL licence from GNU.
 
-The resulting virtual machine contains the Java source files, allowing
+The resulting VM contains the Java source files, allowing
 researchers with knowledge of Java to analyse the correctness of the programme.
 However, the code is not documented and may be hard to read. Specifically,
 parameters are hard-coded and no interpretation is given of the produced
@@ -157,7 +157,7 @@ Furthermore, the crux of the implementation is its support for execution
 However, the implementation uses the non-free CUDA standard what limits its potential
   users to owners of hardware of particular vendor and related proprietary software.
 
-The only challenge in setting up the virtual machine was in providing all needed
+The only challenge in setting up the VM was in providing all needed
   dependencies, namely recent versions of a C++ compiler, and the CMake, Boost and Thrust 
   packages.
 
@@ -178,4 +178,5 @@ A counterexample is the Geoscientific Model Development (GMD) journal, which enc
 Yet, the same journal, as of now, imposes a 50~MB limit on the size of electronic supplements 
   which effectively rules out shipping a VM together with the paper.
 
-The level of computer proficiency in non-CS domains~\cite{Merali_2010} is also likely to influence the ability of researchers to use the virtual machines -- it is arguably less likely that a physics or urban-planning journal reviewer will be comfortable using a VM, in contrast to CS-related journals.
+The level of computer proficiency in non-CS domains~\cite{Merali_2010}
+is also likely to influence the ability of researchers to use the VMs -- it is arguably less likely that a physics or urban-planning journal reviewer will be comfortable using a VM, in contrast to CS-related journals.

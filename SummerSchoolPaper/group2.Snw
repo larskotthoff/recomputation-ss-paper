@@ -1,15 +1,15 @@
 \section{Case study \#2: Recomputing parallel and distributed experiments}
 
-The Recomputation.org project has shown that recomputation via a virtual
-machine can been successful when using sequential code on a single
+The Recomputation.org project has shown that recomputation via a 
+VM can been successful when using sequential code on a single
 machine.  Our second case study examined 
 whether this approach could be extended to cover multi-core
 parallel or distributed systems. For parallelism research, the end goal is
 typically performance: can using more cores make something run faster, or allow
 a larger dataset to be processed in the available time? It is not clear whether
 a virtualised environment would affect the quality of the results for these
-kinds of experiments. For distributed systems, a single virtual machine would
-obviously not suffice, but could multiple virtual machines be used?  To address
+kinds of experiments. For distributed systems, a single VM would
+obviously not suffice, but could multiple VMs be used?  To address
 these questions, we looked at a multi-core parallel experiment, and a
 peer-to-peer system.
 
@@ -22,7 +22,7 @@ is a subset of pairwise-adjacent vertices, and the maximum clique problem
 (which is NP-hard) is to find the largest such subset. On real hardware, for
 any given graph instance, if we run the program multiple times we get very
 similar runtimes.  The aim of this experiment is to see whether runtimes are
-similarly consistent when run on a virtual machine on a cloud: the original
+similarly consistent when run on a VM on a cloud: the original
 work relies upon performance measurements to explain the behaviour of different
 parallelism mechanisms. We did not attempt to reproduce the entire paper;
 instead, we devised a new experiment to establish whether meaningful,
@@ -77,7 +77,7 @@ xtable(run_time,
 
 In both real and virtual hardware the coefficient of variation is very small
 (at or below $0.01$ in every case). We did not encounter any abnormalities when
-running on a virtual machine; this is contrary to the experiences of
+running on a VM; this is contrary to the experiences of
 Kotthoff~\cite{kotthoff}, who did not always see reliable \emph{sequential}
 runtimes on
 virtualised hardware. In other words, using virtualised hardware for
@@ -88,7 +88,7 @@ Intel Xeon Phi could be used in a virtualised environment, and are doubtful
 that experiments involving this kind of equipment will be recomputable on later
 hardware.
 
-The virtual machine image used for the experiments is available via
+The VM image used for the experiments is available via
 VMDepot.\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}
 
 \subsection{Experiment 2: A Peer-to-Peer System}
@@ -122,4 +122,4 @@ script, and
 \end{inparaenum}
 
 Further studies are needed to identify best practices to make distributed experiments
-reproducible using virtual machines.
+reproducible using VMs. 

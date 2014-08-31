@@ -15,21 +15,22 @@ research: capturing and disseminating the ethical requirements of an
 experiment, such that others may better replicate the procedures of a
 study. What we wish to make possible is the following scenario: 
 
-\begin{description}
-\item[Step 1:] Alice undertakes an experiment where she collects human data. 
-\item[Step 2:] Alice then analyses that data and publishes an academic paper.
-\item[Step 3:] To compile with recompilation standards Alice then creates a virtual machine (vm) 
+\renewcommand{\labelenumi}{Step \arabic{enumi}:}
+\begin{enumerate}
+\item Alice undertakes an experiment where she collects human data. 
+\item Alice then analyses that data and publishes an academic paper.
+\item To compile with recomputation standards Alice then creates a VM 
 which contains the data she collected and scripts to create the statistics used in the paper 
-and places the vm on recompilation.org. 
-\item[Step 4:] Bob reads Alice's research paper and is interested in comparing her work to his own.
-\item[Step 5:] Bob goes to recompilation.org and downloads the virtual machine. 
+and places the VM on recomputation.org. 
+\item Bob reads Alice's research paper and is interested in comparing her work to his own.
+\item Bob goes to recomputation.org and downloads the VM.
 He recomputes all of Alice's experiments in order to verify the analysis in her paper.
-\item[Step 6:] Bob compares the data Alice has provided with his own and publishes his own paper.
-\item[Step 7:] To compile with recompilation standards Bob then creates a virtual machine (vm) which contains 
+\item Bob compares the data Alice has provided with his own and publishes his own paper.
+\item To compile with recomputation standards Bob then creates a VM which contains 
 the data he collected and Alice's data and scripts to create the statistics used in the paper 
-then places this vm on recompilation.org
-\end{description}
-
+then places this VM on recomputation.org
+\end{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}}
 
 We evaluate the ethics requirements procedures of ten universities to
 determine a minimum specification for reporting ethical considerations, and
