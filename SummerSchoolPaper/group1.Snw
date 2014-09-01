@@ -19,15 +19,21 @@ study. What we wish to make possible is the following scenario:
 \begin{enumerate}
 \item Alice undertakes an experiment where she collects human data. 
 \item Alice then analyses that data and publishes an academic paper.
-\item To compile with recomputation standards Alice then creates a VM 
-which contains the data she collected and scripts to create the statistics used in the paper 
+\item To comply with recomputation standards Alice then creates a VM 
+which contains the data she collected and scripts to create the statistics
+used in the paper. She includes an ethics specification which enumerates
+key methodological details and ethical considerations,
 and places the VM on recomputation.org. 
 \item Bob reads Alice's research paper and is interested in comparing her work to his own.
 \item Bob goes to recomputation.org and downloads the VM.
 He recomputes all of Alice's experiments in order to verify the analysis in her paper.
 \item Bob compares the data Alice has provided with his own and publishes his own paper.
-\item To compile with recomputation standards Bob then creates a VM which contains 
-the data he collected and Alice's data and scripts to create the statistics used in the paper 
+From Alice's ethics specification, he can ensure his experiment meets the same
+ethical standard
+to avoid any confounding effects on his experiment. 
+\item To comply with recomputation standards Bob then creates a VM which contains 
+the data he collected and Alice's data and scripts to create the statistics used in the paper. He includes his own ethics specification which can be directly compared to Alice's for
+the benefit of any further replications, 
 then places this VM on recomputation.org
 \end{enumerate}
 \renewcommand{\labelenumi}{\arabic{enumi}}
