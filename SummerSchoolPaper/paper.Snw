@@ -44,9 +44,14 @@ E-mail: emcsr2014@cs.st-andrews.ac.uk
 
 \IEEEcompsoctitleabstractindextext{
 \begin{abstract}
-This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research.
-We report several case studies performed during the school and
-systematize our experiences. First, we consider how to reproduce
+This paper investigates the reproducibility of computational 
+science research and identifies key challenges facing the community today. 
+It is the result of the  First Summer School on Experimental Methodology 
+in Computational Science Research.
+
+%This paper was written by participants of the First Summer School on Experimental Methodology in Computational Science Research. We report several case studies performed during the school and ystematize our experiences. 
+
+First, we consider how to reproduce
 experiments that involve human subjects, and in particular how to
 deal with different ethics requirements at different institutions.
 Second, we look at whether parallel and distributed computational
