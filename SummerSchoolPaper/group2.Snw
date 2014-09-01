@@ -34,8 +34,8 @@ by one of the authors). No changes were required, and all of the dependencies
 were available pre-packaged on a standard Ubuntu installation.
 
 For our analysis, we selected $10$ different ``medium sized'' problem instances
-(i.e.\ graphs) from the second DIMACS implementation
-challenge,\footnote{\url{http://dimacs.rutgers.edu/Challenges/}} so that our
+(i.e., graphs) from the second DIMACS implementation
+challenge~\cite{dimacs}, so that our
 runtimes would be long enough to be noise-free but short enough to be
 repeatable. This is a publicly available dataset, in an easy to parse format,
 which is widely used for testing maximum clique algorithms, and there are no

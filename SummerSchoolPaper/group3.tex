@@ -32,14 +32,14 @@ evaluated using statistical methods. Table~6 contains confidence intervals that
 are constructed using a piece of software written in Java. It is possible to
 compile the source code after installing a Java Software Development Kit on the
 VM. The software uses the SSJ library for Stochastic
-Simulation\footnote{\url{http://simul.iro.umontreal.ca/ssj-2/indexe.html}},
+Simulation~\cite{ssj},
 which had to be downloaded from the Internet. After that, we were able to run
 the code.
 
 We encountered legal obstacles in the following two areas.
 \begin{itemize} 
 \item Code-related: the software was developed as part of the EU project
-QUANTICOL\footnote{\url{http://blog.inf.ed.ac.uk/quanticol/}}, which is funded by the European Commission as part of its 7th
+    QUANTICOL~\cite{quanticol}, which is funded by the European Commission as part of its 7th
 Framework programme. In the General Conditions part of the project's grant
 agreement, it is stated that the IP rights are awarded to the beneficiary, which
 in this case is the University of Edinburgh. In turn, the University of
@@ -84,14 +84,14 @@ Section~3.2 of this policy states that the ``\emph{...ownership of IP created by
 a Student, who is not an employee of the University, is with the Student.}'',
 which we took to mean that the first author was free to place the code in a
 publicly available
-repository.\footnote{\url{https://github.com/mbareford/trole}}
+repository~\cite{trole}.
 
 The next issue concerned a technical matter: the code uses
 a proprietary numerical algorithms library
-(NAG),\footnote{\url{http://www.nag.co.uk/numeric/CL/CLdescription.asp}} the
+(NAG)~\cite{nag}, the 
 licence for which had expired. Fortunately, there is an open source alternative,
 the GNU Scientific Library
-(GSL).\footnote{\url{http://www.gnu.org/software/gsl/}} The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
+(GSL)~\cite{gsl}. The TRoLE code was updated such that all NAG calls were replaced with the GSL alternative. 
 
 %After the code was recompiled and linked with the GSL libraries, it was ready to
 %run the simulation of $10^5$ relaxation events. Alas, the code could at first
