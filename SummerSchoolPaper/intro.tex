@@ -3,15 +3,15 @@
 
 
 We consider reproducibility in the computational sciences in this paper.  We
-interpret computational sciences as including computer science, but also any
+interpret the computational sciences as including computer science, but also any
 other science in which computational work plays an important role, such as
 physics or psychology. The central hypothesis of this paper is that
 reproducibility is a cornerstone of the scientific method, and should therefore
-be a cornerstone of computational sciences. We ask to what extent this is true
-and what challenges arise in reproducing work in computational sciences.
+be a cornerstone of the computational sciences. We ask to what extent this is true
+and what challenges arise in reproducing work in the computational sciences.
 
-To study these questions, we performed four case studies that consider different
-issues related to reproducibility in computational sciences.  Each case study
+To study these questions, we perform four case studies that consider different
+issues related to reproducibility in the computational sciences.  Each case study
 takes on a different aspect of reproducibility, identifies any problems
 encountered, and discusses the points that they have raised.
 
@@ -26,7 +26,7 @@ reproducible is research that is ``conditioned'' on one particular ethics form?
 
 The second case study considers whether parallel and distributed computational
 experiments are more or less reproducible than serial ones. Computational
-experiments are at the core of a lot of research, especially in artificial
+experiments are at the core of much research, especially in artificial
 intelligence, where the motivation for this case study lies. In recent years,
 multi-core and multi-processor machines have become increasingly prevalent. To
 make use of this increased processing power, experiments need to utilise
@@ -37,8 +37,8 @@ While computer science likely accounts for the majority of computational
 experiments, they are becoming increasingly important in other areas. In physics
 or chemistry for example, simulations of physical processes help scientists gain
 insights. Our third case study is motivated by this fact and asks how
-reproducible computational scientific experiments from disciplines other than
-computer science are. We consider experiments from several research areas. Given
+reproducible computational scientific experiments are from disciplines other than
+computer science. We consider experiments from several research areas. Given
 that researchers in other areas use computation only as a tool and may not be
 as aware of issues related to reproducibility as computer scientists, does
 reproducibility suffer?
@@ -51,7 +51,7 @@ that the author of an experiment can conduct it in a way that enables her or him
 to do it again, having another person do it is an entirely different matter.
 There may be implicit assumptions that are not specified, background knowledge
 assumed, or environmental aspects unconsidered. Can a carefully prepared
-experiment be recomputable by someone with no specific background in the area?
+experiment be reproduced by someone with no specific background in the area?
 
 Most of the work for this paper was performed during the Summer School on
 Experimental Methodology in Computational Science Research.\footnote{St
@@ -59,7 +59,7 @@ Andrews, Scotland, August 4-8, 2014,
 \url{https://blogs.cs.st-andrews.ac.uk/emcsr2014/}}
 Indeed, a highly
 provisional first draft of this paper was completed by the end of the Summer
-School~\cite{emcsr_arxiv_draft}, with ensuing weeks used in completing work and writing.  
+School~\cite{emcsr_arxiv_draft}, with the ensuing weeks used in completing work and writing.  
 The first three case studies
 were selected by discussing the interests of participants and forming groups
 and research questions around these. Therefore, these case studies were
@@ -70,7 +70,7 @@ participants, and is presented in Section~\ref{s:group4}.
 
 The case studies we consider are not exhaustive and no single one can give
 complete answers. Instead, they shine spotlights on specific, important areas
-related to the issue of reproducibility in computational sciences. Furthermore,
+related to the issue of reproducibility in the computational sciences. Furthermore,
 each raises interesting questions for future consideration by researchers
 interested in the reproducibility of computational experiments, be it trying to
 reproduce someone else's experiments, or making their own experiments
@@ -89,4 +89,5 @@ and \LaTeX\ via the R package Sweave~\cite{lmucs-papers:Leisch:2002}, so that as
 data change, new tables and figures can be regenerated automatically. Finally,
 we have endeavoured to make it reproducible through measures such as providing
 virtual machines (VMs) for aspects of our work, not least a VM in which
-the paper itself can be rebuilt.
+the paper itself can be rebuilt, and we welcome readers to attempt to
+reproduce it.
