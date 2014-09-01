@@ -28,9 +28,8 @@ and places the VM on recomputation.org.
 \item Bob goes to recomputation.org and downloads the VM.
 He recomputes all of Alice's experiments in order to verify the analysis in her paper.
 \item Bob compares the data Alice has provided with his own and publishes his own paper.
-From Alice's ethics specification, he can ensure his experiment meets the same
-ethical standard
-to avoid any confounding effects on his experiment. 
+From Alice's ethics specification, he can directly compare ethical considerations to account
+for any methodological differences.
 \item To comply with recomputation standards Bob then creates a VM which contains 
 the data he collected and Alice's data and scripts to create the statistics used in the paper. He includes his own ethics specification which can be directly compared to Alice's for
 the benefit of any further replications, 
@@ -39,9 +38,7 @@ then places this VM on recomputation.org.
 \renewcommand{\labelenumi}{\arabic{enumi}}
 
 We evaluate the ethics requirements procedures of ten universities to
-determine a minimum specification for reporting ethical considerations, and
-discuss the state of the art in standardising ethical requirements by
-professional bodies and research councils.
+determine a minimum specification for reporting ethical considerations.
 
 \subsection{Background}
 Human subjects research often involves the collection
@@ -95,32 +92,33 @@ experiments.
 \subsection{Comparison of Ethical Requirements across Universities}
 
 To understand the state of ethics procedures between institutions, we
-collected ethics applications forms for ten universities located in the
-UK, EU, USA, and Asia. A range of locations were chosen and a mixture of both large research intensive and smaller institutions to capture a range of
+collected ethics applications forms for ten universities located in the UK,
+EU, USA, and Asia. A range of locations were chosen and a mixture of both
+large research intensive and smaller institutions to capture a range of
 cultural and regulatory expectations, which we expect will manifest in
 different procedures. All forms collected were derived from publicly
-accessible sources, except for one supplied by the authors. This is in
-itself a significant barrier to reproducibility. Without making procedures publicly 
-available, there can be no external scrutiny about the appropriateness of some institution's
-procedures, and makes it more difficult to derive standards.
+accessible sources, except for one supplied by the authors. This is in itself
+a significant barrier to reproducibility. Without making procedures publicly
+available, there can be no external scrutiny about the appropriateness of some
+institution's procedures, which makes it more difficult to derive standards.
 
-For each form, two researchers independently coded each field, accounting for
+For each form, two researchers independently identified unique fields, accounting for
 differences in wording between forms so long as each attribute asked for the
 same atomic information. Where one form requests expanded information
-pertaining to a previously identified attribute, this was added as an
-additional attribute. After independently coding the forms, the two
-researchers discussed any discrepancies to arrive at a set of 145 unique
-attributes, encompassing generic details, such as contact details of co-
-investigators, methodological details, and institution-specific requirements,
-often for insurance and liability purposes. Of these fields, only two were
-common to all ten ethics forms --- the name of the principal investigator, and
-whether informed consent was sought. This intersection was significantly
-smaller than anticipated, and clearly does not constitute a useful minimum
-ethical specification. It does however reveal two interesting properties. It
-confirms our intuition that ethical procedures vary greatly between
-institutions, while also identifying perhaps the single most important
-objective of the ethics process: to ensure participants have given informed
-consent to participate in an experiment.
+pertaining to a previously identified attribute, this was considered a
+\emph{sub-attribute}. After independently coding the forms, the two researchers
+discussed any discrepancies to arrive at a set of 145 unique attributes,
+encompassing generic details, such as contact details of co- investigators,
+methodological details, and institution-specific requirements, often for
+insurance and liability purposes. Of these fields, only two were common to all
+ten ethics forms --- the name of the principal investigator, and whether
+informed consent was sought. This intersection was significantly smaller than
+anticipated, and clearly does not constitute a useful minimum ethical
+specification. It does however reveal two interesting properties. It confirms
+our intuition that ethical procedures vary greatly between institutions, while
+also identifying perhaps the single most important objective of the ethics
+process: to ensure participants have given informed consent to participate in
+an experiment.
 
 % \begin{figure}
 % \begin{minipage}{\linewidth}
@@ -172,26 +170,27 @@ print(p)
 
 
 Figure~\ref{p:ethicsFreq} shows the distribution of attributes across the ten
-forms we examined. As shown in the long tail, 47.6\% of attributes appear
-in only one form. Of these, 42\% are ``sub-attributes'', that is, requesting
-additional information requested on another form. For example, while 60\% of
-forms ask whether participants receive financial compensation, only one asks
-whether co-investigators are compensated. We are most interested in the unique
-``high-level attributes'' that emerge, as it is important to discern between
-questions which capture institution-specific requirements, or may constitute
-important issues which other IRBs ought to consider. We find instances of both
-in our results. For example, while UCL are the only institution to ask whether
-their own students are participants in the research (we assume for liability
-reasons), surprisingly they are the only university to ask outright whether
-health and safety precautions have been considered. Interestingly, only Aga Khan
-University in Pakistan asks whether the study is a replication of a previous experiment.
+forms we examined for both high-level and sub-attributes. As shown, half of
+high-level attributes only appear in one form, while 60\% of sub-attributes
+are unique to one form. For example, while 60\% of forms ask whether
+participants receive financial compensation (high level), only one asks
+whether co-investigators are compensated (sub-attribute). We are most
+interested in the unique high-level attributes that emerge, as it is important
+to discern between questions which capture institution-specific requirements,
+or may constitute important issues which other IRBs ought to consider. We find
+instances of both in our results. For example, while UCL are the only
+institution to ask whether their own students are participants in the research
+(we assume for liability reasons), surprisingly they are the only university
+to ask outright whether health and safety precautions have been considered.
+Interestingly, only Aga Khan University in Pakistan asks whether the study is
+a replication of a previous experiment.
 
 \subsection{Proposed ethics specification}
-Given the small intersection of
-attributes in our study, we isolate the twenty most common attributes -- those
-which occurred in six or more of the ten forms we examined. We combine any
-semantically similar fields to produce the following set of 15 attributes,
-presented in descending order of frequency.
+Given the small intersection of attributes in our study, we isolate the twenty
+most common high-level attributes -- those which occurred in six or more of
+the ten forms we examined. We combine any semantically similar fields to
+produce the following set of 15 attributes, presented in descending order of
+frequency.
 
 \begin{itemize}
 	\item Was consent sought?
@@ -218,15 +217,16 @@ of attributes is sufficient to capture key methodological details, which we
 cannot assert from this strictly frequency-based exercise.
 
 \subsubsection{Limitations}
-This analysis is not intended as a rigorous survey
-of ethics procedures internationally. The selection of institutions is
-inherently biased, as we are only able to extract forms which are publicly
-accessible, a barrier to reproducibility, and we have a particular emphasis on
-the UK and USA in this study. The intent of this exercise is not to make
+This analysis is not intended as a rigorous survey of ethics procedures
+internationally. The selection of institutions is inherently biased, as we are
+only able to extract forms which are publicly accessible, a barrier to
+reproducibility, and we have a particular emphasis on the UK in this study,
+with six institutions represented. The intent of this exercise is not to make
 statistical inferences about the state of the art in ethics review, but rather
 to motivate the minimum set of attributes we recommend researchers disclose
-when sharing their experimental methodologies. We also wish to raise awareness of the
-importance of ethical procedures when considering reproducibility of research. 
+when sharing their experimental methodologies. We also wish to raise awareness
+of the importance of ethical procedures when considering reproducibility of
+research.
 
 
 
