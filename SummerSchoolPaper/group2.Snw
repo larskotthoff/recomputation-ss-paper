@@ -69,7 +69,7 @@ run_time <- data.frame(real=result_matrix1,
                                 vm=result_matrix2)
 
 xtable(run_time,
-       caption = "Coefficient of variation of runtimes for different problem instances, when run on real or virtual hardware. In every case, the value is very low, and virtualised hardware is as reliable than real hardware.",
+       caption = "Coefficient of variation of runtimes for different problem instances, when run on real or virtual hardware. In every case, the value is very low, implies virtualised hardware is as reliable as real hardware.",
        label = "run_time",
        align = "lrr",
        digits = c(0,3,3))
