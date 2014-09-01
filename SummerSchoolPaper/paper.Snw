@@ -56,7 +56,7 @@ computer science. Our final case study looks at whether
 reproducibility for one researcher is the same as for another, by
 having an author attempt to have others reproduce their own,
 reproducible, paper.
-This paper is \emph{open} and \emph{reproducible}: the whole process of writing this paper is
+This paper is \emph{open}, \emph{executable} and \emph{reproducible}: the whole process of writing this paper is
 captured in the source control repository hosting both the source of the paper, supplementary codes and data;
 we are providing setup for several experiments on which we were working;
 finally, we try to 
