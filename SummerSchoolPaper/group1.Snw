@@ -41,7 +41,7 @@ then places this VM on recomputation.org.
 We evaluate the ethics requirements procedures of ten universities to
 determine a minimum specification for reporting ethical considerations.
 
-\subsection{Background}
+\groupsubsec{4.1 Background}
 Human subjects research often involves the collection
 of sensitive identifiable data about participants. To ensure participants are
 not placed at undue risk by the conduct of an experiment, an increasingly
@@ -91,7 +91,7 @@ the ambition of such specifications being routinely attached to HCI
 experiments.
 
 
-\subsection{Ethical Requirements across Institutions}
+\groupsubsec{4.2 Ethical Requirements across Institutions}
 
 To understand the state of ethics procedures between institutions, we
 collected ethics applications forms for ten universities located in the UK,
@@ -187,7 +187,7 @@ to ask outright whether health and safety precautions have been considered.
 Interestingly, only Aga Khan University in Pakistan asks whether the study is
 a replication of a previous experiment.
 
-\subsection{Proposed ethics specification}
+\groupsubsec{4.3 Proposed ethics specification}
 Given the small intersection of attributes in our study, we isolate the 20 
 most common high-level attributes -- those which occurred in six or more of
 the ten forms we examined. We combine any semantically similar fields to
@@ -218,7 +218,7 @@ to support replications. In future work, we aim to demonstrate whether this set
 of attributes is sufficient to capture key methodological details, which we
 cannot assert from this strictly frequency-based exercise.
 
-\subsubsection{Limitations}
+\groupsubsubsec{4.3.1 Limitations}
 This analysis is not intended as a rigorous survey of ethics procedures
 internationally. The selection of institutions is inherently biased, as we are
 only able to extract forms which are publicly accessible, a barrier to

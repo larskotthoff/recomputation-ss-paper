@@ -12,7 +12,7 @@ The papers on which the discussion is based
   although the discussion is likely relevant to other non-CS domains. One of the
   authors of each paper was involved in this case study.
 
-\subsection{Methodology}
+\groupsubsec{6.1 Methodology}
 
 Our aim was to offer potential readers (or reviewers) of the papers in question, 
   the opportunity to reproduce the figures presented in the papers, 
@@ -23,8 +23,8 @@ to
   construct a single VM with all needed software and its dependencies installed.
 The VM was based on the Debian Sid GNU/Linux distribution.
 
-\subsection{Results}
-\subsubsection*{Experiment 1: Urban Planning}
+\groupsubsec{6.2 Results}
+\groupsubsubsec{6.2.1 Experiment 1: Urban Planning}
 
 For the first paper, we tried to recompute parts of Table~6 of
 \cite{danielpaper}, in which the punctuality of a bus service in Edinburgh is
@@ -60,7 +60,7 @@ The output of the Java code is displayed in Table~\ref{tab: z bootstrapped cis}.
 
 \input{bus_table.tex}
 
-\subsubsection*{Experiment 2: Solar Physics}
+\groupsubsubsec{6.2.2 Experiment 2: Solar Physics}
 
 %At the start of the recomputation exercise it was judged that the results
 %presented in~\cite{bareford2010nanoflare} would be the easiest (of the three
@@ -134,7 +134,7 @@ Figure \ref{fig_recomp_grp3_exp2} shows two of the recomputed plots, the publish
 \end{figure}
 The differences between the two sets of results are negligible and entirely consistent with the stochastic method used to generate the energy distributions.
 
-\subsubsection*{Experiment 3: Atmospheric Physics}
+\groupsubsubsec{6.2.3 Experiment 3: Atmospheric Physics}
 
 For the third paper, we prepared pre-built software for reproducing 
   simulations of idealised atmospheric clouds presented in~\cite{arabas2013libcloud}.
@@ -161,7 +161,7 @@ The only challenge in setting up the VM was in providing all needed
   dependencies, namely recent versions of a C++ compiler, and the CMake, Boost and Thrust 
   packages.
 
-\subsection{Discussion}
+\groupsubsec{6.4 Discussion}
 
 We encountered legal obstacles with all papers.
 All of the software had been developed at universities, which typically results in the copyright being held by these institutions.

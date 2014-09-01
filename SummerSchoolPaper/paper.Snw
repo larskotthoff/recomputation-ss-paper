@@ -73,6 +73,9 @@ hopefully improve) our experiments.
 \maketitle
 \IEEEpeerreviewmaketitle
 
+\newcommand{\groupsubsec}[1]{\paragraph*{\textbf{#1}}}
+\newcommand{\groupsubsubsec}[1]{\paragraph*{\textbf{#1}}}
+
 \input{intro}
 \input{recomputation}
 %\input{school}
@@ -88,5 +91,6 @@ hopefully improve) our experiments.
 
 \bibliographystyle{abbrvDOI}
 \bibliography{paper}
+
 
 \end{document}

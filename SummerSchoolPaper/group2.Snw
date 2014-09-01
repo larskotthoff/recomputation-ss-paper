@@ -13,7 +13,7 @@ obviously not suffice, but could multiple VMs be used?  To address
 these questions, we looked at a multi-core parallel experiment, and a
 peer-to-peer system.
 
-\subsection{Experiment 1: A Parallel System}
+\groupsubsec{5.1 Experiment 1: A Parallel System}
 
 We looked at an existing implementation~\cite{parasols}
 of a parallel branch-and-bound
@@ -91,7 +91,7 @@ hardware.
 The VM image used for the experiments is available via
 VMDepot.\footnote{\url{http://vmdepot.msopentech.com/Vhd/Show?vhdId=44545}}
 
-\subsection{Experiment 2: A Peer-to-Peer System}
+\groupsubsec{5.2 Experiment 2: A Peer-to-Peer System}
 Experiments that are performed across multiple machines are challenging
 to reproduce. This is due to the cost of needed resources, and the complexities
 involved in configuring the machines, the network, and the relationship between the machines.
