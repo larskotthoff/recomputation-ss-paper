@@ -19,10 +19,10 @@ We looked at an existing implementation~\cite{parasols}
 of a parallel branch-and-bound
 algorithm for the maximum clique problem~\cite{ciaran}: given a graph, a clique
 is a subset of pairwise-adjacent vertices, and the maximum clique problem
-(which is NP-hard) is to find the largest such subset. On real hardware, for
+(which is NP-hard) is to find the largest such subset. On physical hardware, for
 any given graph instance, if we run the program multiple times we get very
 similar runtimes.  The aim of this experiment is to see whether runtimes are
-similarly consistent when run on a VM on a cloud: the original
+similarly consistent when run on a VM on a public cloud computing infrastructure: the original
 work relies upon performance measurements to explain the behaviour of different
 parallelism mechanisms. We did not attempt to reproduce the entire paper;
 instead, we devised a new experiment to establish whether meaningful,
@@ -42,7 +42,7 @@ which is widely used for testing maximum clique algorithms, and there are no
 barriers to obtaining or using it.
 
 For each selected instance, we ran our implementation of the algorithm $50$
-times on real hardware (using $4$ cores of a machine with dual Intel Xeon
+times on physical hardware (using $4$ cores of a machine with dual Intel Xeon
 E5-2640 v2 processors), and then $50$ times on a VM with $4$ cores on Microsoft
 Azure. Our measurements include only computation times and ignore the time
 taken to read in the problem instances from a file. We compare the coefficient
@@ -75,7 +75,7 @@ xtable(run_time,
        digits = c(0,3,3))
 @
 
-In both real and virtual hardware the coefficient of variation is very small
+In both physical and virtual hardware the coefficient of variation is very small
 (at or below $0.01$ in every case). We did not encounter any abnormalities when
 running on a VM; this is contrary to the experiences of
 Kotthoff~\cite{kotthoff}, who did not always see reliable \emph{sequential}
@@ -103,12 +103,12 @@ using cloud services, we deployed a Chord~\cite{chord} Distributed Hash Table
 (DHT) of $10$ nodes on $10$ dedicated machines, and tried to reproduce the same
 experiment on Microsoft Azure.
 
-Reproducing the same experiment on Microsoft Azure proved to be time consuming.
-Due to lack of time during the school, we were unable to reproduce the experiment. The main reason
-is the steep learning curve of using Microsoft Azure's API. The API itself lacks
-documentation and is complex in design. Since Azure is not as
-popular as the competitor products, it is harder to find examples of the API
-usage.
+Reproducing the same experiment on Microsoft Azure proved to be time consuming 
+and we could not reproduce the experiment during the Summer School. We were 
+unable to automate a required network-specific port allocation task used in 
+this experiment due to lack of time. It highlights the potential complexity of cloud 
+computing APIs when being applied in research experiments, as opposed to 
+more common deployment scenarios that have more examples and documentation.
 
 It is possible to run experiments across multiple machines reproducible by writing
 a vendor-specific script that starts and configures any needed VMs before running
@@ -121,5 +121,7 @@ script, and
 \item the script cannot be re-used on other cloud services.
 \end{inparaenum}
 
-Further studies are needed to identify best practices to make distributed experiments
-reproducible using VMs. 
+The use of vendor-agnostic cloud frameworks such as Docker and LibCloud, may 
+provide additional flexibility when deploying to different cloud infrastructures. Further 
+studies are needed to identify best practices to make distributed experiments reproducible 
+using VMs. 
