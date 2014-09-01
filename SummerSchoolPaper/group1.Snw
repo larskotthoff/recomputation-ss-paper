@@ -4,8 +4,8 @@
 Human subjects research involves the collection of data through interaction
 with individuals, or through collection of personally identifiable
 information. Such research poses specific barriers to reproducibility. In
-fields such as human-computer interaction, there are few replications of
-previous work, attributable to a culture which does not reward
+fields such as human-computer interaction (HCI), there are few replications of
+previous work, attributable to a culture that does not reward
 reproducibility, difficulty in replicating interaction techniques when
 materials are not shared, and an emphasis on formative work which proposes new
 techniques over summative work~\cite{hornbaek:replications}.
@@ -18,7 +18,7 @@ study. What we wish to make possible is the following scenario:
 \renewcommand{\labelenumi}{Step \arabic{enumi}:}
 \begin{enumerate}
 \item Alice undertakes an experiment where she collects human data. 
-\item Alice then analyses that data and publishes an academic paper.
+\item Alice then analyses those data and publishes an academic paper.
 \item To comply with recomputation standards Alice then creates a VM 
 which contains the data she collected and scripts to create the statistics
 used in the paper. She includes an ethics specification which enumerates
@@ -34,7 +34,7 @@ to avoid any confounding effects on his experiment.
 \item To comply with recomputation standards Bob then creates a VM which contains 
 the data he collected and Alice's data and scripts to create the statistics used in the paper. He includes his own ethics specification which can be directly compared to Alice's for
 the benefit of any further replications, 
-then places this VM on recomputation.org
+then places this VM on recomputation.org.
 \end{enumerate}
 \renewcommand{\labelenumi}{\arabic{enumi}}
 
@@ -80,7 +80,7 @@ coordination, there is no standardisation of ethics procedures.
 
 Indeed, reproducibility has only recently been considered an important
 ambition for HCI researchers, with nascent efforts including RepliCHI, which
-has operated as a CHI workshop since 2013. Despite such efforts however, the
+has operated as a CHI workshop since 2013~\cite{replichiVenue}. Despite such efforts however, the
 wider community has not considered these ethical challenges in detail.
 
 Next, we assess the state of the art in ethics procedures to determine what
@@ -95,7 +95,7 @@ experiments.
 \subsection{Comparison of Ethical Requirements across Universities}
 
 To understand the state of ethics procedures between institutions, we
-collected ethics applications forms for ten public universities located in the
+collected ethics applications forms for ten universities located in the
 UK, EU, USA, and Asia. A range of locations were chosen and a mixture of both large research intensive and smaller institutions to capture a range of
 cultural and regulatory expectations, which we expect will manifest in
 different procedures. All forms collected were derived from publicly
@@ -165,7 +165,7 @@ p <- ggplot(maps_frame_cdf, aes(x=value)) + scale_x_continuous(breaks=1:10,name=
 print(p)
 @
 \end{center}
-\caption{\label{p:ethicsFreq}CDF showing the distribution of high-level and sub-attributes across the forms we examine. Half of high-level attributes only occur in one form, while no sub-attributes appear in more than seven forms.}
+\caption{\label{p:ethicsFreq}CDF showing the distribution of high-level and sub-attributes across the ethics forms examined. Half of high-level attributes only occur in one form, while no sub-attributes appear in more than seven forms.}
 
 \end{minipage}
 \end{figure}
@@ -177,7 +177,7 @@ in only one form. Of these, 42\% are ``sub-attributes'', that is, requesting
 additional information requested on another form. For example, while 60\% of
 forms ask whether participants receive financial compensation, only one asks
 whether co-investigators are compensated. We are most interested in the unique
-``high-level attributes'' which emerge, as it is important to discern between
+``high-level attributes'' that emerge, as it is important to discern between
 questions which capture institution-specific requirements, or may constitute
 important issues which other IRBs ought to consider. We find instances of both
 in our results. For example, while UCL are the only institution to ask whether
@@ -222,7 +222,7 @@ This analysis is not intended as a rigorous survey
 of ethics procedures internationally. The selection of institutions is
 inherently biased, as we are only able to extract forms which are publicly
 accessible, a barrier to reproducibility, and we have a particular emphasis on
-the UK and US in this study. The intent of this exercise is not to make
+the UK and USA in this study. The intent of this exercise is not to make
 statistical inferences about the state of the art in ethics review, but rather
 to motivate the minimum set of attributes we recommend researchers disclose
 when sharing their experimental methodologies. We also wish to raise awareness of the
