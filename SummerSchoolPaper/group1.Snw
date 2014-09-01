@@ -155,7 +155,7 @@ maps_frame_cdf <- melt(maps_frame)
 maps_frame_cdf <- ddply(maps_frame_cdf, .(variable), transform, ecd=ecdf(value)(value))
 maps_frame_cdf <- subset(maps_frame_cdf,value!=0)
 
-p <- ggplot(maps_frame_cdf, aes(x=value)) + scale_x_continuous(breaks=1:10,name="Forms") + scale_y_continuous(name="Field frequency") + stat_ecdf(aes(colour=Var2)) + theme(panel.background = element_rect(fill = "transparent",colour = "black")) + scale_colour_manual(name="Field type",labels=c("High level","Sub-attribute"),values=c("#13456f", "#e02828"))
+p <- ggplot(maps_frame_cdf, aes(x=value)) + scale_x_continuous(breaks=1:10,name="Forms") + scale_y_continuous(name="Field frequency") + stat_ecdf(aes(colour=Var2)) + theme(panel.background = element_rect(fill = "transparent",colour = "black"),text=element_text(size=18)) + scale_colour_manual(name="Field type",labels=c("High level","Sub-attribute"),values=c("#13456f", "#e02828"))
 print(p)
 @
 \end{center}
