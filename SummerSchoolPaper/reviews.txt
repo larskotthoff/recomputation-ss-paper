@@ -1,0 +1,225 @@
+Dear Mr. Luke Hutton 
+
+We now have reviews of your above referenced submission to IEEE Transactions on Emerging Topics in Computing. Copies of the review comments are enclosed. 
+
+Unfortunately, based on these reviews, we are not able to recommend this submission for publication. 
+
+You may resubmit your paper, but it will be treated as a NEW submission and given a new log number. If you choose to resubmit your paper please include this original log number (TETCSI-2014-09-0161), and we will link your previous manuscript's history in its files. Be sure you include a detailed response to the reviewers and upload the document as a "Summary of Changes." The manuscript will then undergo a new review process. The Associate Editor has the following comments for you: 
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=- 
+Associate Editor 
+Comments to the Author: 
+The reviewers felt the paper needs considerable work to recast the discussion of the case studies. Either consider a deeper dive into one of the studies or develop a better tie between the work to allow for some common conclusions to be drawn. Further, the conclusions themselves were not very surprising and thus reduce the impact of the paper. Given the reviewer comments it would be helpful to take a deep look at how to reorganize the information of this paper and supplement it with a better comparison to the state of the art and considering relevant components such as workflow preservation. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=- 
+
+We hope that you will find the comments from the reviewers to be useful in your future work. As always, we appreciate that you chose to submit your work to IEEE Transactions on Emerging Topics in Computing, and we thank you for your interest. 
+
+Sincerely, 
+
+Fabrizio Lombardi, EIC 
+IEEE Transactions on Emerging Topics in Computing 
+lombardi@ece.neu.edu 
+
+======================================= 
+
+REVIEWS 
+
+
+Reviewer: 1 
+
+Recommendation: Author Should Prepare A Major Revision For a Second Review 
+
+Comments: 
+This paper is quite hard to review. As a report from a summer school on 
+experimental methodology, it brings together four experimental studies 
+around reproducibility, but those studies are mostly unrelated. Also, 
+taken separately, they are all very interesting, but still mostly 
+preliminary work. I would love to read four standalone papers describing 
+a later version of this work, and this would actually address most of my 
+concerns about this aggregate, as described below. 
+
+First, the overall structure of the paper could be made clearer. The fact that 
+it is composed of four distinct studies performed during a summer school is 
+only mentioned towards the end of the introduction (and in the abstract, but 
+one might skip the abstract for some reason). 
+
+There's no "this paper is structured as follows" paragraph, which would help 
+introduce the role of sec 2 and 3. 
+
+Section 2 is a very general SOTA of reproducibility. It could stay as is, but 
+each case study should include its own related works paragraph so that we 
+better understand how it stands. Currently, it's hard to measure which parts 
+of each studies are really new and how they differ from previous work. 
+
+More generally, it would be better to structure each Case Study as a 
+mini-paper, with its own intro, rel works, conclusions. Each Case Study 
+currently differs in terms of structure. At least the lack of related works 
+must be addressed if the paper is re-submitted, because it makes it difficult 
+to level the contributions. 
+
+Comments on Related Works: 
+Scientific workflows should be mentioned (e.g., [A]) and 
+maybe "literate programming" [B] as well since the authors use 
+Sweave. 
+[A] http://dl.acm.org/citation.cfm?id=1084814 
+[B] http://www.literateprogramming.com/knuthweb.pdf 
+
+Comments on Case Study #1: 
+This study is interesting and explores the element of reproducibility 
+which is unknown to me and probably many researchers. The results 
+of the analysis can be useful. 
+
+Comments on Case Study #2: 
+The first part of the study is about recomputing a parallel system 
+experiment and tries to reproduce a previous result. The second 
+tries to run the same distributed experiment on real and cloud platform. 
+- what is the result of this study? is it extension of the results 
+in [27] or the fact that they weren't reproduced? 
+- the inability to reproduce P2P study on the cloud platform 
+seems to be a bit anecdotal; maybe it is the Microsoft Azure 
+that is difficult to use and Amazon would be easier? 
+- my biggest concern is that the problem of reproducibility in CS 
+is well known and not being able to reproduce some results 
+is nothing new (see [6], for example, but also [C] where 
+unreproducibility is caused by lack of experiment description). There 
+is a also a lot of work on measuring the performance and its stability 
+on Cloud infrastructures. 
+[C] http://dl.acm.org/citation.cfm?id=1518552 
+
+Comments on Case Study #3: 
+The study considers non-CS recomputations. 
+- first, it is not explained why non-CS experiments 
+are different than CS ones from reproducibility 
+point of view (I noted legal issues) 
+- it is not true that there is "a lack of domain-specific 
+workflows for recomputation in non-CS journals"; 
+scientific workflows are used prominently in many 
+disciplines (see [D]) 
+- just like in Case Study #2, it seems that the difficulty 
+of reproducing results is well-known in non-CS domains 
+(this one from cancer research: [E]); the authors have 
+to formulate contributions from their study 
+[D] http://www.sciencedirect.com/science/article/pii/S0167739X13001970 
+[E] http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3655010/ 
+
+Comments on Case Study #4: 
+The study is about HCI experiments. this is an interesting subject 
+to investigate; I'm glad somebody studies it. 
+- how does HCI differ from general non-CS experiments? the way data 
+is collected is different, but it is not covered in this 
+study; the authors should elaborate on that; notice that 
+in 7.4.5 there is no single recommendation that is specific 
+to HCI. 
+
+Open, Executable, Reproducible: 
+- The authors mention that their approach is similar to [7]. 
+How does it differ? 
+
+Minor remarks: 
+- "HCI" could be defined sooner, arguably in the abstract, 
+as it is used all over the text 
+- "reanalysis" and "reanalysts" are unnecessary neologisms; 
+please rather use "reproducibility attempt" and "participants/authors" 
+
+Typos: 
+- "such an script" 
+- "institutions a represents" (remove 'a') 
+- first paragraph of the /emphResults (likely / -> \ in LaTeX) 
+
+Additional Questions: 
+1. Which category describes this manuscript?: Practice / Application / Case Study / Experience Report 
+
+2. How relevant is this manuscript to the readers? Explain under Public Comments.: Relevant 
+
+1. Please explain how this manuscript advances the field of research and/or contributes something new to the literature.: see public comment below 
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Appears to be - but didn't check completely 
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes 
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain under Public Comments below.: Important references are missing; more references are needed 
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain under Public Comments below.: Could be improved 
+
+4. How would you rate the organization of the manuscript? (Is it focused? Is the length appropriate for the topic?) Please explain under Public Comments below.: Satisfactory 
+
+5. Please rate the readability of the manuscript. Please explain under Public Comments below.: Readable - but requires some effort to understand 
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included 
+
+7. If yes to 6, should it be accepted: 
+
+Please rate the manuscript. Explain your choice: Good 
+
+
+Reviewer: 2 
+
+Recommendation: Reject 
+
+Comments: 
+This paper presents four case studies analysed during a summer school. It is well written and easy to follow. It tries to identify reasons why scientific experiments may not be reproducible (many of which are rather well-understood by the scientific community) rather than trying to provide answers on how to tackle these problems. The problems of reproducibility, data sharing, open access, etc. have been discussed already for some time within the community. These case studies do not reveal any new findings. Due to a wide range of use cases, the discussion is sometimes superficial. 
+The authors do not try to hide these limitations from the reader and are quite aware of the shortcomings stemming mainly from the limited time available during the summer school, which is honorable but does not make the paper gain in potential impact. 
+
+
+It is very visible that some of the case studies were well thought out and more effort was spent on them (case study #4), while there are some case studies (case study #2) that should actually not appear in this paper ("We were unable to reproduce (.) due to lack of time"). It seems to me, that none of the cases (apart form #4) would be publishable on its own and this proves their rather weak contribution to the state of the art. 
+
+
+Many of the problems mentioned in the paper are already being addressed by 
+funding institutions or existing research projects. The results of these have not been addressed sufficiently in the related work section, nor when considering and evaluating the case studies. Due to the fact that most authors have their 
+affiliation in the Great Britain, they should be rather aware of the Data 
+Management Plans required by most funding agencies and initiatives to prepare such Data Management Plans, both in the UK (e.g. by the DCC) but also globally. Data Management Plans would seem to resolve many of the problems described in the studies. For example, the legal and ethical issues are covered by them. In how far would the results of the case studies have looked differently if the scientists involved in these research activities had adopted such data management plans as are now being mandated by funding agencies? 
+
+
+
+When it comes to the automation of the process execution, it would be interesting to learn the authors view on the use of workflows to automate tasks. Many domains also use controlled environments in which the experiments are performed. A discussion whether solutions used (or suggested) in other domains are applicable to your domain would make an interesting case study (and would be more suitable 
+for this special issue). For example, how would the concepts of Research Objects, wor the use of workflow engines like Taverna, Kepler, activity, or workflow sharing platforms such as myexperiments.org help to mitigate the problems posed by the case studies? There is a significant body of related work on more controlled environments for performing computational science. Would these be sufficient/better than starting fromthe rather ad-hoc setting used in the case studies? 
+
+
+In general, the state of the art is somewhat fragmented and has a focus on the terminology of the topic, without being clear which terminology is actually used in the paper. The authors seem to settle for the term "recomputation" and then continue using all other terms without differentiation in the remainder of the paper. Furthermore the authors mention popular Web portals which allow sharing the data and in some cases complete experimentation sets, but those are merely sources for obtaining the data and documentation, but do not provide methods for actually reproducing any experiment. More specialized projects such as myExperiment, W4F and others are missing. 
+
+
+The first case study deals with ethical requirements for the recomputation and describes in length how ethical conduct can be guaranteed in experiments. It is clear how the implementation of an ethical code influences the design of an experiment. But, as the authors clearly state, hardly any standard ethics code framework exists. Hence it is a logical consequence that a knowledge which has not been formalized cannot be preserved and re-interpreted correctly by peers. The authors also reference a study claiming that only 2 % of all papers disclose any information on the topic. Thus, there is simply no material available which could be evaluated - what is not there can't be reproduced. This case study does not reflectconstitute a reproducibility issue of computational sciences, but rather a lack of formalization of ethical standards. This may impact reproducability (as do many other apsects), but this comes with little surprise. 
+
+
+The second case study describes an experiment testing the reproducibility of a parallel computation. The authors execute the same program on a physical machine with 4 cores and a VM in the Microsoft cloud, also using 4 cores. In remains unclear from the description what different effects the authors expected in terms of reproducibility as the authors only compared the variance of the results per machine. I am not convinced that this example is good for demonstrating the reproducibility of parallel algorithms. The second experiment is run on several machines and hence is a better example for demonstrating reproducibility issues, but the authors could not complete it during the lack of time. It remains unclear why this was included into the paper. The Table 1 in the paper lacks captions. 
+
+The third case study describes non-computer science reproducibility problems, although in my view also the first case study is not actually a computer science peculiarity. For targeting reproducibility the descriptions in this case study are very weak, e.g. "using piece of Java software". The legal issue described is unclear, the presence of IP rights does not necessarily mean that the code may not be published. In the solar physics experiments, the authors replace a proprietary software for image plotting with an open source alternative. It remains unclear if and how the authors could verify that their replacement was indeed correct. The atmospheric physics example is criticizing of the original experiment relying on specialized hardware, which is hardly a good argument. The discussion is based on legal issues, which are not per se related to computational experiments. This is acknowledged by the authors, but in my view not of much relevance to this topic. 
+
+Case study four is in the field of human computer interaction and provides an experiment where peers should reproduce an experiment from the HCI domain. This section is very verbose and includes many points which are not limited to HCI, nevertheless it provides very nice overview of the problems which can occur. In contrast to the previous case studies this one is particularly clear. 
+
+
+The authors describe how they collaborated in writing the paper and note that the paper itself is executable. The executability although is somewhat limited as it has several dependencies which are not described in detail. Also, it would merit further discussion to understand the benefit of any such "executability" - and which aspects are relevant for which purposes. Haveing the edit history of a paper available is not related at all to reproducability, but more to documenting the provenance. for this aspect, it would further be interesting to evaluate, which groups of stakeholders may be interested in what kind of provenance information for whcih purpose: the "standard" reader of the paper may have no interest whatsoever to find out which author may have written/edited which paragraph at which point in time. This may be of importance if the paper authors are accused o plagiarism, or if there are factual errors in the paper in order o identify the culprit; or - more positively - if one wants to trace each authors contribution and thus potential impact on the intelectual content of a paper for promotion evaluation. 
+The re-executability will likely be less linked to the compilation of the actual LaTeX code, but rather to the epxeriments performed. That these are integrated in the LaTeX code is a nice feature, but rather seems to be forcing the continuation of th e"paper" paradigm for communicating scientific results - as opposed to publishing the scientific methods, analyses, tools, and viewing the paper as a documentary to the research. 
+
+
+I agree more reports like this one may be needed to raise the 
+awareness of scientists to the problems in eScience, but I doubt this special issue is a suitable place for this. There seems to be too few new insights for a specialist audience, and a quite severe lack of the massive amount of related work and approaches to mitigate some of the problems highlighted by the case studies discussed during the summerschool. 
+I believe parts of this paper would be suitable for publication in some other venues, like workshop proceedings, etc. 
+
+
+Additional Questions: 
+1. Which category describes this manuscript?: Practice / Application / Case Study / Experience Report 
+
+2. How relevant is this manuscript to the readers? Explain under Public Comments.: Interesting - but not very relevant 
+
+1. Please explain how this manuscript advances the field of research and/or contributes something new to the literature.: This paper presents four case studies analysed during a summer school. The selection of case studies is broad and aims to depict different challenges to the reproducibility of computational science. Using the lessons learned from these studies, authors explain how they tried to make their paper reproducible. 
+
+The paper is well written and easy to follow. My main concern about this paper is that it tries to identify why the science may not be reproducible, While the aim of this call is to provide answers to these problems. The problems of reproducibility, data sharing, open access, etc. have been discussed already for some time within the community. These case studies do not reveal any new findings. Due to a wide range of use cases, the discussion is sometimes superficial. 
+
+2. Is the manuscript technically sound? Please explain your answer under Public Comments below.: Partially 
+
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes 
+
+2. Does the manuscript contain sufficient and appropriate references? Please explain under Public Comments below.: Important references are missing; more references are needed 
+
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please explain under Public Comments below.: Yes 
+
+4. How would you rate the organization of the manuscript? (Is it focused? Is the length appropriate for the topic?) Please explain under Public Comments below.: Satisfactory 
+
+5. Please rate the readability of the manuscript. Please explain under Public Comments below.: Easy to read 
+
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not apply, no supplementary files included 
+
+7. If yes to 6, should it be accepted: 
+
+Please rate the manuscript. Explain your choice: Fair
